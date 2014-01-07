@@ -1,0 +1,103 @@
+.quiz			
+			{ 
+				/* border: 1pt solid #00f ;  */
+			}
+
+.quiz
+	.quiz_title 	
+			{ 
+				margin-top: 0rem ; 
+			}
+
+.quiz
+	.question		
+			{ 
+				border: 1pt solid #aaa ; 
+				background: #eee ; 
+				padding: 1rem ; 
+				clear: both ; 
+				margin: 1rem 0rem ; 
+			}
+
+.quiz
+	.question 
+		h1			
+			{ 
+				font-size: 1.5rem ; 
+			}
+
+.quiz
+	.answers		
+			{ 
+				background: #ccc ; 
+				list-style-type: none ; 
+				margin: 0px ; 
+				padding-left: 0px ; 
+				list-style-position: inside ; 
+				width: auto ; 
+				overflow: hidden ; 
+				display: block ; 
+				vertical-align: top ; 
+			}
+
+.quiz
+	.answer 		
+			{ 
+				border: 1pt dashed #ccc ; 
+				padding: .5rem ; 
+				margin: .5rem ; 
+				background: #eee ; 
+			}
+
+.quiz
+	.answer 
+		input[type=checkbox]
+			{ 
+				background: #fff ; 
+				margin: 0px 1rem ; 
+				padding: 1rem ; 
+			}
+
+.quiz
+	.answer 
+		.text	
+			{ 
+				display: inline-block ; 
+			}
+
+.quiz
+	.image			
+			{ 
+				/* border: 1pt dashed #eee ;  */
+				background: #eee ;
+				margin: 1rem ; 
+				display: block ; 
+				float: left ; 
+			}
+
+.quiz
+	.clear_all		
+			{ 
+				clear: both ; 
+			}
+
+.quiz
+	.text_container
+			{
+				display: block ; 
+				border: 1pt solid #aaa ; 
+				padding: 1rem ; 
+				margin-bottom: 1rem ; 
+				background: #ddd ; 
+			}
+
+.quiz
+	.question 
+		> .image
+			{ 
+				border: 1pt solid #aaa ; 
+				background: #58b ; 
+				padding: 0rem ; 
+				clear: both ; 
+				margin: 0rem 1rem 0rem 0rem ; 
+			}

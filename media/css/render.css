@@ -1,0 +1,175 @@
+/* CSS Document */
+.reactor						
+			{ 
+				background: #eee ; 
+				padding: 1rem ; 
+				clear: both ;
+				margin: 1rem 0 ; 
+			}
+
+.reactor
+	.interaction_meta_data
+			{ 
+				background: #ddd ;
+				padding: 1% ;
+				font-size: .8rem ;
+			}
+
+.reactor
+	.interaction_details
+		label
+			{
+				width: 20% ;
+				padding: 1% ;
+				margin: 0 ;
+				display: inline-block ;
+			}
+			
+.reactor
+	.interaction_details
+		input[type=text],
+.reactor
+	.interaction_details
+		span
+			{
+				width: 74% ;
+				padding: .5% 1% ;
+				margin: 0 ;
+				display: inline-block ;
+				font-size: .8rem ;
+			}
+
+
+.reactor
+	.entries_container 
+			{ 
+				margin: 0 auto ; 
+				background: #eee ;
+				display: block ; 
+			}
+
+.reactor
+	.entries	
+			{ 
+				white-space: nowrap ; 
+				list-style-type: none ; 
+				list-style-position: inside ;
+				margin: 0rem auto ;
+				padding: 0px ; 
+				overflow: hidden ; 
+			}
+
+.reactor
+	.entry		
+			{ 
+				display: inline-block ; 
+				padding: 0% ; 
+				margin: 20px 0% ; 
+				list-style-position: inside ; 
+				width: 100% ;
+				background: #fff ; 
+				font-size: 1.2rem ; 
+			}
+
+.reactor
+	.entry >
+		div
+			{ 
+				margin: 0px ; 
+				padding: 0px ;
+			}
+
+.reactor
+	.entry 
+		div 
+			p
+			{ 
+				margin: 1% ; 
+				padding: 0px ; 
+			}
+
+.reactor
+	.entry 
+		label
+			{ 
+				font-size: 1rem ; 
+				padding: 1% 1% ;  
+				width: 16% ; 
+				display: inline-block ; 
+			}
+
+.reactor
+	.entry 
+		input[type=text]
+			{ 
+				font-size: 1rem ; 
+				padding: 1% 1% ;
+				width: 78% ;
+			}
+
+.reactor
+	.entry 
+		.long_question_text
+			{ 
+				font-size: 1rem ; 
+				padding: 1% 1% ;
+				width: 98% ;
+				min-height: 2rem ;
+			}
+
+.reactor
+	.entry
+		textarea
+			{ 
+				font-size: 1rem ;
+			}
+
+
+.reactor
+	.entry
+		.entry_text
+			{
+				width: 97% ;
+				padding: 1% ;
+				min-height: 256px ;
+				margin:0px ;
+			}
+
+.reactor
+	.answer_options_container
+			{
+				display: inline-block ;
+				vertical-align: middle ;
+				min-height: 270px ;
+				width: 68% ;
+				margin: 1% ;
+			}
+
+.reactor
+	.entry_text_container
+			{
+				display: inline-block ;
+				/* border: 1pt solid #0f0 ; */
+				vertical-align: middle ;
+				/*min-height: 270px ;*/
+				/*width: 68% ;*/
+				margin: 1% ;
+			}
+	
+.reactor		
+	.hero
+			{
+				margin: 0rem 1rem 0rem 0rem ;
+				/* border: 1pt solid #0f0 ; */
+				background: #ccc ;
+				display: inline-block ;
+				padding: 1rem ;
+				float: left ;
+			}
+
+.reactor
+	.hero 
+		.image
+			{
+				margin: 0rem !important ;
+			}

@@ -1,0 +1,32 @@
+.menu		
+			{ 
+				background: #FF5E00 ;
+				color: #fff ;
+				padding: .2rem ; 
+			}
+.menu 
+		input[type=button] 
+			{ 
+				font-size: 1.2rem ;
+				color: #fff ; 
+				background-color: #FF5E00 ; 
+				border: 1pt solid #fff ; 
+				margin: 0px ; 
+			}
+			
+.menu
+		input[type=button]:focus
+			{ 
+				font-size: 1.3rem ;
+				color: #FF5E00 ; 
+				background-color: #fff ; 
+				border: 1pt solid #fff ;  
+			}
+.menu 
+		input[type=button]:hover 
+			{ 
+				color: #FF5E00 ; 
+				background-color: #fff ; 
+				border: 1pt solid #fff ; 
+			}
+

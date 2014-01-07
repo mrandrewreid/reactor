@@ -1,0 +1,28 @@
+
+.image_selector 
+			{ 
+				margin: 1% ; 
+				padding: 1% ; 
+				border: 1pt solid #eee ; 
+				width: 25% ; 
+				height: auto ; 
+				display: inline-block ;
+				vertical-align: middle ;
+				font-size: .8rem ;
+			}
+			
+.image_selector 
+	.image_placeholder
+			{
+				background-image: url(../images/placeholder.jpg) ;
+				background-position: center center ;
+				/* border: 1pt dashed #f00 ; */
+				margin: 1rem 0rem ;
+				min-height: 150px ;
+			}
+
+.image_selector_controls 
+			{
+			}
+			
+			

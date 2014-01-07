@@ -1,0 +1,93 @@
+.expose 
+			{
+				border: 1pt solid #C928D4 ;
+			}
+
+.expose 
+	.interaction_title 	
+			{ 
+				margin-top: 0rem ; 
+				font-size: 1rem ; 
+				font-weight: bold ; 
+			}
+
+.expose 
+	.entries			
+			{ 
+				position: relative ; 
+				height: 500px ; 
+			}
+
+.expose 
+	.entry 				
+			{ 
+				position: absolute ; 
+				top: 0px ; 
+				left: 0px ;
+				display: block !important ; 
+				background: transparent ; 
+			}
+
+.expose 
+	.entry 
+		h1				
+			{ 
+				font-size: 1.5rem ; 
+			}
+
+.expose 
+	.image				
+			{ 
+				background: #369 ; 
+				margin: 1em ; 
+				display: block ; 
+				float: left ; 
+			}
+
+.expose 
+	.entry 
+		> .image
+			{ 
+				border: 1pt solid #aaa ; 
+				background: #58b ; 
+				padding: 0rem ; 
+				clear: both ; 
+				margin: 0rem 1rem 0rem 0rem ; 
+				display: inline-block ; 
+			}
+						
+.expose 
+	.entry 
+		.content		
+			{ 
+				border: 1pt dashed #cee ; 
+				background: #cee ; 
+				height: 80% ; 
+				position: relative ; 
+				top: 10% ; 
+				height: 400px ; 
+			}
+
+.expose 
+	.content 
+		div			
+			{ 
+				border: 1pt dashed #f00 !important ; 
+			}
+
+.expose 
+	.text_container	
+			{ 
+				display: block ; 
+				border: 1pt solid #aaa ; 
+				padding: 1rem ;
+				background: #ddd ; 
+				width: auto ; 
+				overflow: hidden ; 
+				height: 88% ; 
+				margin: 1% ; 
+			}
+
+
+.reveal_tab
+			{ width: 50px ; height: 50px ; position: relative ; left: 25px ; background: #f00 ; }

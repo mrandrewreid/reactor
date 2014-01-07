@@ -1,0 +1,74 @@
+{
+	"questions": 
+
+		[
+			{
+
+				"type": "question" ,
+				
+				"title": "A question to answer" ,
+
+				"text": "This is the question" ,
+
+				"image": 
+					{
+						"type": "image" ,
+						"height": 300 ,
+						"width": 300 
+					} ,
+
+				"feedback":
+					{
+						"type": "feedback" ,
+						"positive": "Correct!" ,
+						"negative": "Incorrect!" ,
+						"neutral": ""
+					} ,
+
+				"answers": 
+					[
+						{
+							"type": "answer" ,
+							"correct": "true" ,
+							"text": "True" ,
+							"image": 
+								{
+									"type": "image" ,
+									"height": "300" ,
+									"width": "300" 
+								} ,
+							"feedback": 
+								{
+									"type": "feedback" ,
+									"positive": "Correct!" ,
+									"negative": "Incorrect!" ,
+									"neutral": ""
+								}
+
+						} ,
+						
+						{
+							"type": "answer" ,
+							"correct": "false" ,
+							"text": "False" ,
+							"image": 
+								{
+									"type": "image" ,
+									"height": "300" ,
+									"width": "300" 
+								} ,
+							"feedback": 
+								{
+									"type": "feedback" ,
+									"positive": "Correct!" ,
+									"negative": "Incorrect!" ,
+									"neutral": ""
+								}
+						}
+
+					]
+
+			}
+		]
+
+}
