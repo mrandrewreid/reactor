@@ -1,0 +1,41 @@
+<h1>Edit</h1>
+
+
+<div style="display: inline-block; width: 40% ; ">
+	<h2>Modify</h2>
+	<p><label for="reactor_title">Title: <input ng-model="reactor.meta.title"></p>
+	<p><label for="reactor_description">Description</label></p>
+	<p><textarea style="width: 400px ;" name="reactor_description" ng-model="reactor.meta.description"></textarea></p>
+	<ul style="list-style-type: none ;">
+		<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}">
+			<p><label for="entry_title">Title:</label> <input name="entry_title" ng-model="entry.meta.title"></p>
+			<div><label for="entry_title">Text:</label><textarea style="width: 400px ;" name="entry_text" ng-model="entry.text"></textarea></div>
+		</li>
+	</ul>
+
+</div>
+
+<div class="reactor_preview" style="display: inline-block; width: 40% ; vertical-align: top ;">
+	<h2>Preview</h2>
+	<div class="reactor {{reactor.type}}">
+
+		<div class="meta">
+			<p>{{reactor.meta.title}}</p>
+			<p>{{reactor.meta.description}}</p>
+		</div>
+
+		<div class="entries_container">
+
+			<ul style="list-style-type: none ;">
+				<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}">
+					<h1>{{entry.meta.title}}</h1>
+					<div>{{entry.text}}</div>
+				</li>
+			</ul>
+			
+			
+		</div>
+
+	</div>
+
+</div>

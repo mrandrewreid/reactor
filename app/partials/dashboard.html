@@ -1,0 +1,44 @@
+<h1>Dashboard</h1>
+
+<p>Reactors: {{reactors.length}}</p>
+
+<div class="new_reactors">
+	<h2>Create a new Reactor</h2>
+	<ul>
+		<li ng-repeat="reactor in reactors"><a href="#">{{reactor.title}}</a></li>
+	</ul>
+</div>
+
+<div class="existing_reactors">
+	<h2>Your existing Reactors</h2>
+	<table style="text-align: center ;">
+		<tr>
+			<th width="20%">Title</th>
+			<th width="20%">Type</th>
+			<th width="20%">Last edited</th>
+			<th width="20%">Edit</th>
+			<th width="20%">Preview</th>
+		</tr>
+		<tr>
+			<td><a href="#">Quiz 1</a></td>
+			<td>Quiz</td>
+			<td>Yesterday</td>
+			<td><a href="#/edit">Edit</a></td>
+			<td><a href="">Preview</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Slideshow 1</a></td>
+			<td>Slideshow</td>
+			<td>Yesterday</td>
+			<td><a href="#/edit">Edit</a></td>
+			<td><a href="">Preview</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Expose 1</a></td>
+			<td>Expose</td>
+			<td>Yesterday</td>
+			<td><a href="#/edit">Edit</a></td>
+			<td><a href="">Preview</a></td>
+		</tr>
+	</table>
+</div>

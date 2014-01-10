@@ -28,3 +28,24 @@
   content: "";
   padding: 0;
 }
+
+
+
+
+
+.new_reactors
+	{
+		width: 40% ;
+		display: inline-block ;
+		margin: 1rem 1% ;
+		padding: 1rem 1% ;
+	}
+	
+.existing_reactors
+	{
+		width: 40% ;
+		display: inline-block ;
+		margin: 1rem 1% ;
+		padding: 1rem 1% ;
+		vertical-align: top ;
+	}
