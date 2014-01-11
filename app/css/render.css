@@ -236,3 +236,15 @@ ul.tabs
 			{
 				margin: 0rem !important ;
 			}
+			
+			
+			
+			
+.grey
+	{ border: 1pt solid #ccc ; }
+	
+.orange
+	{ border: 1pt solid #F0932D ; }
+	
+.blue
+	{ border: 1pt solid #4AB2D0 ; }
