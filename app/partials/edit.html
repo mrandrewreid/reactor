@@ -1,18 +1,22 @@
-<h1>Edit</h1>
-
+<h1 style="display:none ;">Edit</h1>
+	
 	<p>
-		<span><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</span>
+		<a ng-if="reactor.state.editing" class="toggle_button selected">Edit</a> 
+		<a ng-if="reactor.state.editing" class="toggle_button" ng-click="reactor.changeEditMode(false)">Preview</a>
+		<a ng-if="!reactor.state.editing" class="toggle_button" ng-click="reactor.changeEditMode(true)">Edit</a> 
+		<a ng-if="!reactor.state.editing" class="toggle_button selected">Preview</a>
 		<span style="margin:1rem ;"><label for="theme_select">Theme:</label> 
 			<select ng-if="reactor.state.editing" name="theme_select" ng-model="reactor.theme.selected"><option ng-repeat="theme in reactor.theme.available_themes" value="{{theme}}">{{theme}}</option></select>
 			<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
-		</span>
+		</span>	
 	</p>
+	
 
 	<div class="reactor {{reactor.type}} {{reactor.theme.selected}}">
 
 		<div class="meta" ng-if="!reactor.state.editing">
 			<h1 ng-if="reactor.meta.title.include">{{reactor.meta.title.text}}</h1>
-			<p ng-if="reactor.meta.title.include">{{reactor.meta.description.text}}</p>
+			<p ng-if="reactor.meta.description.include">{{reactor.meta.description.text}}</p>
 		</div>
 		
 		<div class="meta" ng-if="reactor.state.editing">
@@ -21,65 +25,79 @@
 		</div>
 
 		<!-- include the instructions if selected -->
-		<div class="instructions" ng-if="reactor.instructions.include && !reactor.state.editing">{{reactor.meta.instructions.text}}</div>
+		<div class="instructions" ng-if="reactor.instructions.include && !reactor.state.editing">{{reactor.instructions.text}}</div>
 		<!-- edit the instructions -->
 		<div class="instructions" ng-if="reactor.state.editing">
 			<p><input type="checkbox" ng-model="reactor.instructions.include" /> <label for="reactor_instructions">Instructions:</label> <textarea style="width: 700px ; vertical-align:middle;" name="reactor_instructions" ng-model="reactor.instructions.text"></textarea></p>
 		</div>
 
 		<div class="entries_container">
-
 			<input ng-if="reactor.state.editing" type="button" value="add a slide +" ng-click="reactor.add()">
 			<ul class="entries" style="list-style-type: none ;">
 				<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="!reactor.state.editing">
 					<div>
-						<p>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
-						<h1 class="entry_title">{{entry.meta.title.text}}</h1>
+						<p ng-if="reactor.navigation.entry_of_entries.include">{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
+						<h1 ng-if="entry.meta.title.include" class="entry_title">{{entry.meta.title.text}}</h1>
 						<div class="text_container">{{entry.text}}</div>
 					</div>
 				</li>
 
 				<li ng-repeat="entry in reactor.entries" ng-if="reactor.state.editing" class="entry {{entry.type}}">
 					<div>
-						<p>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
-						<h1 class="interaction_title"><label for="entry_title">Title:</label> <input name="entry_title" ng-model="entry.meta.title.text"></h1>
+						<p><input type="checkbox" ng-model="reactor.navigation.entry_of_entries.include" /> Include entry of entries</span></p>
+						<p ng-if="reactor.navigation.entry_of_entries.include"><span>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
+
+						<h1 class="entry_title"><input type="checkbox" ng-model="entry.meta.title.include" /><label for="entry_title">Title:</label> <input name="entry_title" ng-model="entry.meta.title.text" class="entry_title"></h1>
 						<div class="text_container"><label for="entry_title">Text:</label> <textarea style="width: 700px ;" name="entry_text" ng-model="entry.text"></textarea></div>
 					</div>
 				</li>
 			</ul>
-			<input ng-if="reactor.state.editing" type="button" value="add a slide +" ng-click="reactor.add()">
-
-
-
-
-			<div class="entries_controls" ng-if="reactor.navigation.controls.include && !reactor.state.editing">
-				<input type="button" 
-					ng-repeat="button in reactor.navigation.controls.buttons" 
-					class="{{button.subtype}}_entry_button" 
-					value="{{button.label}}" 
-					ng-click="reactor.navigation.goto( button.response )" 
-					ng-if="button.include"
-				/>
-				<ul class="pagination" ng-if="reactor.navigation.controls.pagination.include">
-					<li ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
-				</ul>
-			</div>
-			
-			<p ng-if="reactor.state.editing"><input type="checkbox" ng-model="reactor.navigation.controls.include" /> Include navigation controls</p>
-			<div class="entries_controls" ng-if="reactor.navigation.controls.include && reactor.state.editing">
-				<span ng-repeat="button in reactor.navigation.controls.buttons" class="{{button.subtype}}_entry_button" style="background: #ccc ; margin: 3px ; padding: 3px ;">
-					<input type="checkbox" ng-model="button.include" /><input type="text" ng-model="button.label" />
-				</span>
-				<p><input type="checkbox" ng-model="reactor.navigation.controls.pagination.include" /> Include pagination</p>
-				<ul class="pagination" ng-if="reactor.navigation.controls.pagination.include">
-					<li ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
-				</ul>
-			</div>
-
-			
+			<!--<input ng-if="reactor.state.editing" type="button" value="add a slide +" ng-click="reactor.add()">-->		
 			
 		</div>
 
+		<!-- entries controls -->
+		<div class="entries_controls" ng-if="reactor.navigation.controls.include && !reactor.state.editing">
+			<input type="button" 
+				ng-repeat="button in reactor.navigation.controls.buttons" 
+				class="{{button.subtype}}_entry_button" 
+				value="{{button.label}}" 
+				ng-click="reactor.navigation.goto( button.response )" 
+				ng-if="button.include"
+			/>
+			<ul class="pagination" ng-if="reactor.navigation.controls.pagination.include">
+				<li ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
+			</ul>
+		</div>
+		
+		<!-- entries controls -->
+		<p ng-if="reactor.state.editing"><input type="checkbox" ng-model="reactor.navigation.controls.include" /> Include navigation controls</p>
+		<div class="entries_controls" ng-if="reactor.navigation.controls.include && reactor.state.editing">
+			<span ng-repeat="button in reactor.navigation.controls.buttons" class="{{button.subtype}}_entry_button" style="background: #ccc ; margin: 3px ; padding: 3px ;">
+				<input type="checkbox" ng-model="button.include" /><input type="text" ng-model="button.label" />
+			</span>
+			<p><input type="checkbox" ng-model="reactor.navigation.controls.pagination.include" /> Include pagination</p>
+			<ul class="pagination" ng-if="reactor.navigation.controls.pagination.include">
+				<li ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
+			</ul>
+		</div>
+
+
+
+
+
 	</div>
 
+	<p>
+		<a ng-if="reactor.state.editing" class="toggle_button selected">Edit</a> 
+		<a ng-if="reactor.state.editing" class="toggle_button" ng-click="reactor.changeEditMode(false)">Preview</a>
+		<a ng-if="!reactor.state.editing" class="toggle_button" ng-click="reactor.changeEditMode(true)">Edit</a> 
+		<a ng-if="!reactor.state.editing" class="toggle_button selected">Preview</a>
+		<span style="margin:1rem ;"><label for="theme_select">Theme:</label> 
+			<select ng-if="reactor.state.editing" name="theme_select" ng-model="reactor.theme.selected"><option ng-repeat="theme in reactor.theme.available_themes" value="{{theme}}">{{theme}}</option></select>
+			<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
+		</span>	
+	</p>
+
 	<p><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</p>
+	

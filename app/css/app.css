@@ -49,3 +49,45 @@
 		padding: 1rem 1% ;
 		vertical-align: top ;
 	}
+	
+.toggle_button
+	{
+		display: inline-block ;
+		border: 1pt outset #aaa ;
+		background: #aaa ;
+		padding: .5rem ;
+		min-width: 5rem ;
+		text-align: center ;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		cursor: pointer ;
+	}
+	
+a.toggle_button, 
+a:visited.toggle_button,
+a:link.toggle_button
+	{
+		text-decoration: none ;
+		color: #555 ;
+	}
+
+a:focus.toggle_button:not(.selected),
+a:hover.toggle_button:not(.selected)
+	{
+		border-color: #4AB2D0 ;
+		color: #000 ;
+		background: #ccc ;
+	}
+	
+.toggle_button.selected
+	{
+		display: inline-block ;
+		border: 1pt inset  #4AB2D0 ;
+		background: #4AB2D0 ;
+		color: #fff ;
+		cursor: default ;
+	}

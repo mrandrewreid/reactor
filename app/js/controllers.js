@@ -9,7 +9,8 @@ angular.module( 'reactor.controllers', [] ).
 	$scope.reactors = [
 		{type:'expose', title:'Exposé'},
 		{type:'slideshow', title:'Slideshow'},
-		{type:'quiz',title:'Quiz'}
+		{type:'quiz',title:'Quiz'},
+		{type:'sequencer',title:'Sequencer'}
 	] ;
 	$scope.orderProp = 'age' ;
 
@@ -18,6 +19,9 @@ angular.module( 'reactor.controllers', [] ).
   .controller('Edit', [ '$scope' , function( $scope ) {
 	$scope.reactor = { 
 		editable: true ,
+		changeEditMode: function( new_val ) {
+			this.state.editing = new_val ;
+		} ,
 		state: {
 			editing: true ,		
 		},
@@ -71,6 +75,7 @@ angular.module( 'reactor.controllers', [] ).
 				}
 			],
 		navigation: {
+			entry_of_entries: { include: true } ,
 			controls: {
 					include: true ,
 					pagination: {

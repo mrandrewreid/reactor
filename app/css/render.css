@@ -5,6 +5,8 @@
 				padding: 1rem ; 
 				clear: both ;
 				margin: 1rem 0 ; 
+				height: 600px ;
+				overflow: auto ;
 			}
 
 
@@ -118,8 +120,9 @@ ul.tabs
 				list-style-type: none ; 
 				list-style-position: inside ;
 				margin: 0rem auto ;
-				padding: 0px ; 
-				overflow: hidden ; 
+				padding: 0rem ; 
+				/* overflow: hidden ;  */
+				overflow: auto ;
 			}
 
 .reactor
@@ -127,9 +130,9 @@ ul.tabs
 			{ 
 				display: inline-block ; 
 				padding: 0% ; 
-				margin: 20px 0% ; 
+				margin: 20px 2% ; 
 				list-style-position: inside ; 
-				width: 100% ;
+				width: 96% ;
 				background: #fff ; 
 				font-size: 1.2rem ; 
 			}
