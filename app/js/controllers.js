@@ -28,27 +28,37 @@ angular.module( 'reactor.controllers', [] ).
 		add: function() { 
 			this.entries.push( 
 				{ 
-					type:'slide' ,
-					meta: { title: 'Slide ' + ( this.entries.length + 1 ) } , 
+					type: 'slide' ,
+					meta: { 
+						title: { text: 'Slide ' + ( this.entries.length + 1 ) , include: true } 
+					} , 
 					text: 'Enter the text for slide ' + ( this.entries.length + 1 )
 				}
 			) ;
 		},
 		meta: {
-			title: 'A new slideshow' , 
-			description: 'Here is a description of this reactor.' ,
+			title: { text: 'A new slideshow' , include: true } , 
+			description: { 
+				text:'Here is a description of this reactor.' , 
+				include: true 
+			} ,
 			author: { first_name: 'Bill' , last_name: 'Bagins' , organisation: '' } ,
-			modified: 'This is a description of this reactor.' ,
+			created: 'date created' ,
+			modified: 'last date modified' ,
 		} ,
 		entries: [
 				{ 
 					type: 'slide' , 
-					meta: { title: 'the title of slide 1' } ,
+					meta: { 
+						title: { text: 'the title of slide 1' , include: true } 
+					} ,
 					text: 'This is all the text of the slide and it is beautiful.'  
 				} ,
 				{ 
 					type: 'slide' , 
-					meta: { title: 'the title of slide 2' },
+					meta: { 
+						title: { text: 'the title of slide 2' , include: true } 
+					} ,
 					text: 'This is a bunch of text to display as the content of the slide.' 
 				}
 			],

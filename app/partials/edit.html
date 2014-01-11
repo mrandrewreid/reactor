@@ -1,63 +1,36 @@
 <h1>Edit</h1>
 
-<p><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</p>
+	<p><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</p>
 
-<div class="reactor_preview" style=" vertical-align: top ; margin: 1rem 2.5% ;">
-	<h2>Modify</h2>
-	<p><label for="reactor_title">Title: <input ng-model="reactor.meta.title"></p>
-	<p><label for="reactor_description">Description</label></p>
-	<p><textarea style="width: 400px ;" name="reactor_description" ng-model="reactor.meta.description"></textarea></p>
-
-	
-	<p><input type="checkbox" ng-model="reactor.navigation.controls.include" /> Include navigation controls</p>
-	<ul ng-if="reactor.navigation.controls.include">
-		<li>
-			<ul>
-				<li ng-repeat="button in reactor.navigation.controls.buttons">
-					<p><input type="checkbox" ng-model="button.include" /> Include {{button.subtype}} button.<br /><br>
-						{{ button.subtype }} button label: <input type="text" ng-model="button.label" /></p>
-				</li>
-			</ul>
-		<li><input type="checkbox" ng-model="reactor.navigation.controls.pagination.include" /> Include pagination</li>
-	</ul>
-
-	<div>
-		<p>Entries</p>
-		<ul style="list-style-type: none ; height: 200px ; overflow: auto ;">
-			<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" style="border: 1pt dashed #ccc ; margin: .5rem">
-				<p><label for="entry_title">Title:</label> <input name="entry_title" ng-model="entry.meta.title"></p>
-				<div><label for="entry_title">Text:</label> <textarea style="width: 700px ;" name="entry_text" ng-model="entry.text"></textarea></div>
-			</li>
-		</ul>
-		<p><button ng-click="reactor.add()">Add an entry</button></p>
-	</div>
-
-</div>
-
-<div class="reactor_preview">
-	<h2>Preview</h2>
 	<div class="reactor {{reactor.type}}">
 
 		<div class="meta" ng-if="!reactor.state.editing">
-			<p>{{reactor.meta.title}}</p>
-			<p>{{reactor.meta.description}}</p>
+			<h1>{{reactor.meta.title.text}}</h1>
+			<p>{{reactor.meta.description.text}}</p>
 		</div>
 		
 		<div class="meta" ng-if="reactor.state.editing">
-			<p><label for="reactor_title">Title: <input ng-model="reactor.meta.title"></p>
-			<p><label for="reactor_description">Description</label></p>
-			<p><textarea style="width: 400px ;" name="reactor_description" ng-model="reactor.meta.description"></textarea></p>
+			<h1 class="interaction_title"><label for="reactor_title">Title:</label> <input class="interaction_title" ng-model="reactor.meta.title.text" /></h1>
+			<p><label for="reactor_description">Description:</label> <textarea style="width: 700px ; vertical-align:middle;" name="reactor_description" ng-model="reactor.meta.description.text"></textarea></p>
 		</div>
 
 		<div class="entries_container">
 
 			<input ng-if="reactor.state.editing" type="button" value="add a slide +" ng-click="reactor.add()">
 			<ul class="entries" style="list-style-type: none ;">
-				<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}">
+				<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="!reactor.state.editing">
 					<div>
 						<p>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
-						<h1>{{entry.meta.title}}</h1>
-						<div>{{entry.text}}</div>
+						<h1 class="entry_title">{{entry.meta.title.text}}</h1>
+						<div class="text_container">{{entry.text}}</div>
+					</div>
+				</li>
+
+				<li ng-repeat="entry in reactor.entries" ng-if="reactor.state.editing" class="entry {{entry.type}}">
+					<div>
+						<p>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
+						<h1 class="interaction_title"><label for="entry_title">Title:</label> <input name="entry_title" ng-model="entry.meta.title.text"></h1>
+						<div class="text_container"><label for="entry_title">Text:</label> <textarea style="width: 700px ;" name="entry_text" ng-model="entry.text"></textarea></div>
 					</div>
 				</li>
 			</ul>
@@ -81,7 +54,7 @@
 			
 			<p ng-if="reactor.state.editing"><input type="checkbox" ng-model="reactor.navigation.controls.include" /> Include navigation controls</p>
 			<div class="entries_controls" ng-if="reactor.navigation.controls.include && reactor.state.editing">
-				<span ng-repeat="button in reactor.navigation.controls.buttons" style="background: #ccc ; margin: 3px ; padding: 3px ;">
+				<span ng-repeat="button in reactor.navigation.controls.buttons" class="{{button.subtype}}_entry_button" style="background: #ccc ; margin: 3px ; padding: 3px ;">
 					<input type="checkbox" ng-model="button.include" /><input type="text" ng-model="button.label" />
 				</span>
 				<p><input type="checkbox" ng-model="reactor.navigation.controls.pagination.include" /> Include pagination</p>
@@ -95,6 +68,5 @@
 		</div>
 
 	</div>
-	<p><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</p>
 
-</div>
+	<p><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</p>
