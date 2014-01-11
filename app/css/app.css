@@ -91,3 +91,13 @@ a:hover.toggle_button:not(.selected)
 		color: #fff ;
 		cursor: default ;
 	}
+	
+textarea, 
+input, 
+select, 
+option,
+label
+	{ 
+		font-size: 1rem ;
+		padding: .5rem ;
+	}

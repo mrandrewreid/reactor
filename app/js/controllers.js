@@ -88,31 +88,42 @@ angular.module( 'reactor.controllers', [] ).
 							subtype: 'first' ,
 							include: true ,
 							label: 'First' ,
-							response: 'goto first'
+							response: 'first'
 						},
 						{
 							type: 'button' ,
 							subtype: 'previous' ,
 							include: true ,
 							label: 'Previous' ,
-							response: 'goto previous'
+							response: 'previous'
 						},
 						{
 							type: 'button' ,
 							subtype: 'next' ,
 							include: true ,
 							label: 'Next' ,
-							response: 'goto next'
+							response: 'next'
 						},
 						{
 							type: 'button' ,
 							subtype: 'last' ,
 							include: true ,
 							label: 'Last' ,
-							response: 'goto last'
+							response: 'last'
 						}
 					]
 				},
+			goto: function( new_index ) {
+				switch( new_index ) {
+					case 'first' : 	alert( 'go to the first item' ) ; 		break ;
+					case 'previous' : 	alert( 'go to the previous item' ) ; 	break ;
+					case 'next' : 		alert( 'go to the next item' ) ; 		break ;
+					case 'last' : 		alert( 'go to the las item' ) ; 			break ;
+					default :
+						alert( 'goto item #' + new_index ) ;
+					break;
+				}
+			},
 
 			first: function(){ alert('first'); },
 			previous: function(){ alert('previous'); },
