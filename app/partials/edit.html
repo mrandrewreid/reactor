@@ -1,17 +1,30 @@
 <h1>Edit</h1>
 
-	<p><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</p>
+	<p>
+		<span><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</span>
+		<span style="margin:1rem ;"><label for="theme_select">Theme:</label> 
+			<select ng-if="reactor.state.editing" name="theme_select" ng-model="reactor.theme.selected"><option ng-repeat="theme in reactor.theme.available_themes" value="{{theme}}">{{theme}}</option></select>
+			<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
+		</span>
+	</p>
 
-	<div class="reactor {{reactor.type}}">
+	<div class="reactor {{reactor.type}} {{reactor.theme.selected}}">
 
 		<div class="meta" ng-if="!reactor.state.editing">
-			<h1>{{reactor.meta.title.text}}</h1>
-			<p>{{reactor.meta.description.text}}</p>
+			<h1 ng-if="reactor.meta.title.include">{{reactor.meta.title.text}}</h1>
+			<p ng-if="reactor.meta.title.include">{{reactor.meta.description.text}}</p>
 		</div>
 		
 		<div class="meta" ng-if="reactor.state.editing">
-			<h1 class="interaction_title"><label for="reactor_title">Title:</label> <input class="interaction_title" ng-model="reactor.meta.title.text" /></h1>
-			<p><label for="reactor_description">Description:</label> <textarea style="width: 700px ; vertical-align:middle;" name="reactor_description" ng-model="reactor.meta.description.text"></textarea></p>
+			<h1 class="interaction_title"><input type="checkbox" ng-model="reactor.meta.title.include" /> <label for="reactor_title">Title:</label> <input class="interaction_title" ng-model="reactor.meta.title.text" /></h1>
+			<p><input type="checkbox" ng-model="reactor.meta.description.include" /> <label for="reactor_description">Description:</label> <textarea style="width: 700px ; vertical-align:middle;" name="reactor_description" ng-model="reactor.meta.description.text"></textarea></p>
+		</div>
+
+		<!-- include the instructions if selected -->
+		<div class="instructions" ng-if="reactor.instructions.include && !reactor.state.editing">{{reactor.meta.instructions.text}}</div>
+		<!-- edit the instructions -->
+		<div class="instructions" ng-if="reactor.state.editing">
+			<p><input type="checkbox" ng-model="reactor.instructions.include" /> <label for="reactor_instructions">Instructions:</label> <textarea style="width: 700px ; vertical-align:middle;" name="reactor_instructions" ng-model="reactor.instructions.text"></textarea></p>
 		</div>
 
 		<div class="entries_container">

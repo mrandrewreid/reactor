@@ -39,12 +39,20 @@ angular.module( 'reactor.controllers', [] ).
 		meta: {
 			title: { text: 'A new slideshow' , include: true } , 
 			description: { 
-				text:'Here is a description of this reactor.' , 
+				text: 'Here is a description of this reactor.' , 
 				include: true 
 			} ,
 			author: { first_name: 'Bill' , last_name: 'Bagins' , organisation: '' } ,
 			created: 'date created' ,
 			modified: 'last date modified' ,
+		} ,
+		theme: {
+			selected: 'grey' ,
+			available_themes: [ 'grey' , 'blue' , 'orange' ]
+		} ,
+		instructions: { 
+			text: 'Click all the lovely buttons.' , 
+			include: true 
 		} ,
 		entries: [
 				{ 
