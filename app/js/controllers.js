@@ -17,7 +17,10 @@ angular.module( 'reactor.controllers', [] ).
  
   .controller('Edit', [ '$scope' , function( $scope ) {
 	$scope.reactor = { 
-		edit: true ,
+		editable: true ,
+		state: {
+			editing: true ,		
+		},
 		type: 'slideshow' ,
 		pretty_type: 'Slideshow' ,
 		child_type: 'slide' ,
