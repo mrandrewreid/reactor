@@ -1,0 +1,57 @@
+.slideshow	
+			{ 
+				/* border: 1pt solid #0f0 ; */
+			}
+
+.slideshow
+	.interaction_title 	
+			{ 
+				margin-top: 0rem ; 
+				font-size: 1rem ; 
+				font-weight: bold ; 
+			}
+
+
+
+/*.entries				{ background: #eee ; padding: 1rem ; clear: both ; margin: 1rem 0rem ; height: auto ; }*/
+
+.slideshow
+	.entry 
+		h1				
+			{ 
+				font-size: 1.5rem ; 
+			}
+					
+.slideshow
+	.image				
+			{ 
+				background: #369 ; 
+				margin: 1em ; 
+				display: block ; 
+				float: left ; 
+			}
+
+.slideshow
+	.text_container	
+			{ 
+				display: block ; 
+				border: 1pt solid #aaa ; 
+				padding: 1rem ; 
+				background: #ddd ; 
+				width: auto ; 
+				overflow: hidden ; 
+			}
+
+.slideshow
+	.entry 
+		> .image
+			{ 
+				border: 1pt solid #aaa ; 
+				background: #58b ; 
+				padding: 0rem ; 
+				clear: both ; 
+				margin: 1rem ; 
+				display: inline-block ;
+			}	
+			
+			

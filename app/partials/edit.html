@@ -1,21 +1,39 @@
 <h1>Edit</h1>
 
 
-<div style="display: inline-block; width: 40% ; ">
+<div class="reactor_preview" style=" vertical-align: top ; margin: 1rem 2.5% ;">
 	<h2>Modify</h2>
 	<p><label for="reactor_title">Title: <input ng-model="reactor.meta.title"></p>
 	<p><label for="reactor_description">Description</label></p>
 	<p><textarea style="width: 400px ;" name="reactor_description" ng-model="reactor.meta.description"></textarea></p>
-	<ul style="list-style-type: none ;">
-		<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}">
-			<p><label for="entry_title">Title:</label> <input name="entry_title" ng-model="entry.meta.title"></p>
-			<div><label for="entry_title">Text:</label><textarea style="width: 400px ;" name="entry_text" ng-model="entry.text"></textarea></div>
-		</li>
+
+	
+	<p><input type="checkbox" ng-model="reactor.navigation.controls.include" /> Include navigation controls</p>
+	<ul ng-if="reactor.navigation.controls.include">
+		<li>
+			<ul>
+				<li ng-repeat="button in reactor.navigation.controls.buttons">
+					<p><input type="checkbox" ng-model="button.include" /> Include {{button.subtype}} button.<br /><br>
+						{{ button.subtype }} button label: <input type="text" ng-model="button.label" /></p>
+				</li>
+			</ul>
+		<li><input type="checkbox" ng-model="reactor.navigation.controls.pagination.include" /> Include pagination</li>
 	</ul>
+
+	<div>
+		<p>Entries</p>
+		<ul style="list-style-type: none ; height: 200px ; overflow: auto ;">
+			<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" style="border: 1pt dashed #ccc ; margin: .5rem">
+				<p><label for="entry_title">Title:</label> <input name="entry_title" ng-model="entry.meta.title"></p>
+				<div><label for="entry_title">Text:</label> <textarea style="width: 700px ;" name="entry_text" ng-model="entry.text"></textarea></div>
+			</li>
+		</ul>
+		<p><button ng-click="reactor.add()">Add an entry</button></p>
+	</div>
 
 </div>
 
-<div class="reactor_preview" style="display: inline-block; width: 40% ; vertical-align: top ;">
+<div class="reactor_preview">
 	<h2>Preview</h2>
 	<div class="reactor {{reactor.type}}">
 
@@ -25,13 +43,45 @@
 		</div>
 
 		<div class="entries_container">
+		
+				<input 
+					ng-if="reactor.edit_mode"
+					type="button" 
+					value="+" 
+					ng-click="reactor.add()"
+					style="float: right;"
+				>
 
-			<ul style="list-style-type: none ;">
+			<ul class="entries" style="list-style-type: none ;">
 				<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}">
-					<h1>{{entry.meta.title}}</h1>
-					<div>{{entry.text}}</div>
+					<div>
+						<p>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
+						<h1>{{entry.meta.title}}</h1>
+						<div>{{entry.text}}</div>
+					</div>
 				</li>
 			</ul>
+
+			<div class="entries_controls" ng-if="reactor.navigation.controls.include">
+			
+
+				<input type="button" 
+					ng-repeat="button in reactor.navigation.controls.buttons" 
+					class="{{button.subtype}}_entry_button" 
+					value="{{button.label}}" 
+					ng-click="reactor.navigation.goto( button.response )" 
+				/>
+				<input 
+					type="button" 
+					value="+" 
+					ng-click="reactor.add()"
+					style="float: right;"
+				>
+				<ul class="pagination" ng-if="reactor.navigation.controls.pagination.include">
+					<li ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
+				</ul>
+
+			</div>
 			
 			
 		</div>
