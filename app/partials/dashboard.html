@@ -1,3 +1,4 @@
+<h1>{{ reactor_app.reacor_j }}</h1>
 <h1>Dashboard</h1>
 
 <div>Welcome back, {{user.account.first_name}}</div>
@@ -23,10 +24,10 @@
 		</tr>
 
 		<tr ng-repeat="reactor in user.account.available_saved_reactors">
-			<td><a href="#">{{reactor.meta.title.text}}</a></td>
+			<td><a href="#/edit/{{reactor.meta.id}}/0/">{{reactor.meta.title.text}}</a></td>
 			<td>{{reactor.meta.pretty_type}}</td>
 			<td>{{reactor.meta.edited}}</td>
-			<td><a href="#/edit/{{reactor.meta.id}}/">Edit</a></td>
+			<td><a href="#/edit/{{reactor.meta.id}}?1/">Edit</a></td>
 		</tr>
 	</table>
 </div>

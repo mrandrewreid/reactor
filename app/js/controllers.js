@@ -14,14 +14,22 @@ angular.module( 'reactor.controllers', [] ).
 
   }])
  
-	.controller('Edit', [ '$scope' , '$routeParams' , '$http' , function( $scope , $routeParams , $http ) {
-
-		
+	.controller('Edit', [ '$scope' , '$routeParams' , '$http' , '$location' , function( $scope , $routeParams , $http , $location ) {
+	
 		$scope.reactor_id = $routeParams.reactor_id ;
 		
+
 		
-		$http.get('users/00001/slideshow_01/materials.json').success( function( data ) {
+		$scope.changeEditMode = function( bool ) {
+			$scope.reactor.state.editing = bool ;
+			var numerical_bool = 0 ;
+			if ( bool == true ) numerical_bool = 1 ;
+			$location.path('/edit/' + $scope.reactor_id + '/' + numerical_bool );
+		}
+
+		$http.get( 'users/00001/slideshow_01/materials.json' ).success( function( data ) {
 			$scope.reactor = data ;
+			if ( $routeParams.editing == 0 ) $scope.changeEditMode( false ) ;
 		});
 
   }])
