@@ -33,23 +33,52 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 .new_reactors
 	{
-		width: 40% ;
+		width: auto ;
 		display: inline-block ;
-		margin: 1rem 1% ;
-		padding: 1rem 1% ;
+		margin: 1% 1% 1% 0 ;
+		padding: 1% 1% ;
+		border: 1pt dashed #4AB2D0 ;
 	}
+.new_reactors h2 { margin-top: 0 ;}
 	
 .existing_reactors
 	{
-		width: 40% ;
 		display: inline-block ;
-		margin: 1rem 1% ;
-		padding: 1rem 1% ;
+		width: auto ;
+		margin: 1% 0 1% 0 ;
+		padding: 1% 1% ;
 		vertical-align: top ;
+		border: 1pt dashed #4AB2D0 ;
 	}
 	
+.existing_reactors table 		{ border: 1pt solid #ccc ; width: 100% ; }
+.existing_reactors table td 	{ padding: .5rem ; border: 1pt solid #eee ; }
+
+.user_details
+	{
+		border: 1pt dashed #4AB2D0 ;
+		padding: 1rem ;
+	}
+
+
+
+.new_reactors h2, .exisiting_reactors h2, .user_details h2 { margin-top: 0 ;}
+
+
+
+
 .toggle_button
 	{
 		display: inline-block ;

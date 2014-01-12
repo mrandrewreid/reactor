@@ -1,44 +1,36 @@
 <h1>Dashboard</h1>
 
-<p>Reactors: {{reactors.length}}</p>
+<div>Welcome back, {{user.account.first_name}}</div>
 
 <div class="new_reactors">
 	<h2>Create a new Reactor</h2>
 	<ul>
-		<li ng-repeat="reactor in reactors"><a href="#">{{reactor.title}}</a></li>
+		<li ng-repeat="reactor in user.account.available_reactor_templates"><a href="#">{{reactor.meta.pretty_type}}</a></li>
 	</ul>
 </div>
 
 <div class="existing_reactors">
-	<h2>Your existing Reactors</h2>
+	<h2>Your Reactors</h2>
 	<table style="text-align: center ;">
+
 		<tr>
-			<th width="20%">Title</th>
-			<th width="20%">Type</th>
-			<th width="20%">Last edited</th>
-			<th width="20%">Edit</th>
-			<th width="20%">Preview</th>
+			<th>Title</th>
+			<th>Type</th>
+			<th>Edited</th>
+			<th>Edit</th>
 		</tr>
-		<tr>
-			<td><a href="#">Quiz 1</a></td>
-			<td>Quiz</td>
-			<td>Yesterday</td>
-			<td><a href="#/edit">Edit</a></td>
-			<td><a href="">Preview</a></td>
-		</tr>
-		<tr>
-			<td><a href="#">Slideshow 1</a></td>
-			<td>Slideshow</td>
-			<td>Yesterday</td>
-			<td><a href="#/edit">Edit</a></td>
-			<td><a href="">Preview</a></td>
-		</tr>
-		<tr>
-			<td><a href="#">Expose 1</a></td>
-			<td>Expose</td>
-			<td>Yesterday</td>
-			<td><a href="#/edit">Edit</a></td>
-			<td><a href="">Preview</a></td>
+
+		<tr ng-repeat="reactor in user.account.available_saved_reactors">
+			<td><a href="#">{{reactor.meta.title.text}}</a></td>
+			<td>{{reactor.meta.pretty_type}}</td>
+			<td>{{reactor.meta.edited}}</td>
+			<td><a href="#/edit/{{reactor.meta.id}}">Edit</a></td>
 		</tr>
 	</table>
+</div>
+
+
+<div class="user_details">
+	<h2>Your user details</h2>
+	<p><strong>Name</strong>: {{user.account.first_name + ' ' + user.account.last_name }}
 </div>

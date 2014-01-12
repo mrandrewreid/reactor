@@ -4,134 +4,22 @@
 
 angular.module( 'reactor.controllers', [] ).
 
-  controller('Dashboard', [ '$scope' , function( $scope ) {
+  controller('Dashboard', [ '$scope' , '$http' , function( $scope , $http ) {
 
-	$scope.reactors = [
-		{type:'expose', title:'Exposé'},
-		{type:'slideshow', title:'Slideshow'},
-		{type:'quiz',title:'Quiz'},
-		{type:'sequencer',title:'Sequencer'}
-	] ;
+	$http.get('users/ajr.json').success( function( data ) {
+		$scope.user = data ;
+	});
+
 	$scope.orderProp = 'age' ;
 
   }])
  
-  .controller('Edit', [ '$scope' , function( $scope ) {
-	$scope.reactor = { 
-		editable: true ,
-		changeEditMode: function( new_val ) {
-			this.state.editing = new_val ;
-		} ,
-		state: {
-			editing: true ,		
-		},
-		type: 'slideshow' ,
-		pretty_type: 'Slideshow' ,
-		child_type: 'slide' ,
-		pretty_child_type: 'Slide' , 
-		add: function() { 
-			this.entries.push( 
-				{ 
-					type: 'slide' ,
-					meta: { 
-						title: { text: 'Slide ' + ( this.entries.length + 1 ) , include: true } 
-					} , 
-					text: 'Enter the text for slide ' + ( this.entries.length + 1 )
-				}
-			) ;
-		},
-		meta: {
-			title: { text: 'A new slideshow' , include: true } , 
-			description: { 
-				text: 'Here is a description of this reactor.' , 
-				include: true 
-			} ,
-			author: { first_name: 'Bill' , last_name: 'Bagins' , organisation: '' } ,
-			created: 'date created' ,
-			modified: 'last date modified' ,
-		} ,
-		theme: {
-			selected: 'grey' ,
-			available_themes: [ 'grey' , 'blue' , 'orange' ]
-		} ,
-		instructions: { 
-			text: 'Click all the lovely buttons.' , 
-			include: true 
-		} ,
-		entries: [
-				{ 
-					type: 'slide' , 
-					meta: { 
-						title: { text: 'the title of slide 1' , include: true } 
-					} ,
-					text: 'This is all the text of the slide and it is beautiful.'  
-				} ,
-				{ 
-					type: 'slide' , 
-					meta: { 
-						title: { text: 'the title of slide 2' , include: true } 
-					} ,
-					text: 'This is a bunch of text to display as the content of the slide.' 
-				}
-			],
-		navigation: {
-			entry_of_entries: { include: true } ,
-			controls: {
-					include: true ,
-					pagination: {
-						include: true ,
-						format: 'numerical' ,
-					},
-					buttons: [
- 						{
-							type: 'button' ,
-							subtype: 'first' ,
-							include: true ,
-							label: 'First' ,
-							response: 'first'
-						},
-						{
-							type: 'button' ,
-							subtype: 'previous' ,
-							include: true ,
-							label: 'Previous' ,
-							response: 'previous'
-						},
-						{
-							type: 'button' ,
-							subtype: 'next' ,
-							include: true ,
-							label: 'Next' ,
-							response: 'next'
-						},
-						
-						{
-							type: 'button' ,
-							subtype: 'last' ,
-							include: true ,
-							label: 'Last' ,
-							response: 'last'
-						}
-					]
-				},
-			goto: function( new_index ) {
-				switch( new_index ) {
-					case 'first' : 	alert( 'go to the first item' ) ; 		break ;
-					case 'previous' : 	alert( 'go to the previous item' ) ; 	break ;
-					case 'next' : 		alert( 'go to the next item' ) ; 		break ;
-					case 'last' : 		alert( 'go to the las item' ) ; 			break ;
-					default :
-						alert( 'goto item #' + new_index ) ;
-					break;
-				}
-			},
+	.controller('Edit', [ '$scope' , '$http' , function( $scope , $http ) {
+		
+		$http.get('reactors/slideshow_01.json').success( function( data ) {
+			$scope.reactor = data ;
+		});
 
-			first: function(){ alert('first'); },
-			previous: function(){ alert('previous'); },
-			next: function(){ alert('next'); },
-			last: function(){ alert('last'); },
-		}
-		} ;
   }])
 
   .controller('MyCtrl1', [ '$scope' , function( $scope ) {
@@ -141,3 +29,155 @@ angular.module( 'reactor.controllers', [] ).
   .controller('MyCtrl2', [ '$scope' , function( $scope ) {
 
   }]);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  		/*
+		$scope.reactor = { 
+			editable: true ,
+			changeEditMode: function( new_val ) {
+				this.state.editing = new_val ;
+			} ,
+	
+			state: {
+				editing: true ,		
+			},
+			type: 'slideshow' ,
+			pretty_type: 'Slideshow' ,
+			child_type: 'slide' ,
+			pretty_child_type: 'Slide' , 
+			add: function() { 
+				this.entries.push( 
+					{ 
+						type: 'slide' ,
+						meta: { 
+							title: { text: 'Slide ' + ( this.entries.length + 1 ) , include: true } 
+						} , 
+						text: 'Enter the text for slide ' + ( this.entries.length + 1 )
+					}
+				) ;
+			},
+			meta: {
+				title: { text: 'A new slideshow' , include: true } , 
+				description: { 
+					text: 'Here is a description of this reactor.' , 
+					include: true 
+				} ,
+				author: { first_name: 'Bill' , last_name: 'Bagins' , organisation: '' } ,
+				created: 'date created' ,
+				modified: 'last date modified' ,
+			} ,
+			theme: {
+				selected: 'grey' ,
+				available_themes: [ 'grey' , 'blue' , 'orange' ]
+			} ,
+			instructions: { 
+				text: 'Click all the lovely buttons.' , 
+				include: true 
+			} ,
+			entries: [
+					{ 
+						type: 'slide' , 
+						meta: { 
+							title: { text: 'the title of slide 1' , include: true } 
+						} ,
+						text: 'This is all the text of the slide and it is beautiful.'  
+					} ,
+					{ 
+						type: 'slide' , 
+						meta: { 
+							title: { text: 'the title of slide 2' , include: true } 
+						} ,
+						text: 'This is a bunch of text to display as the content of the slide.' 
+					}
+				],
+			navigation: {
+				type: 'slide' ,
+				state: {
+					postion: { entry_index: 0 }  ,
+					history: [] 
+				} ,
+				entry_of_entries: { include: true } ,
+				controls: {
+						include: true ,
+						pagination: {
+							include: true ,
+							format: 'numerical' ,
+						},
+						buttons: [
+							{
+								type: 'button' ,
+								subtype: 'first' ,
+								include: true ,
+								label: 'First' ,
+								response: 'first'
+							},
+							{
+								type: 'button' ,
+								subtype: 'previous' ,
+								include: true ,
+								label: 'Previous' ,
+								response: 'previous'
+							},
+							{
+								type: 'button' ,
+								subtype: 'next' ,
+								include: true ,
+								label: 'Next' ,
+								response: 'next'
+							},
+							{
+								type: 'button' ,
+								subtype: 'last' ,
+								include: true ,
+								label: 'Last' ,
+								response: 'last'
+							}
+						]
+					},
+				goto: function( new_index ) {
+					alert( 'new_index: ' + new_index ) ;
+				},
+	
+				first: function(){ alert('first'); },
+				previous: function(){ alert('previous'); },
+				next: function(){ alert('next'); },
+				last: function(){ alert('last'); },
+			}
+		}*/
