@@ -1,0 +1,47 @@
+{
+  "account": {
+    "first_name": "Tester",
+    "last_name": "Secondary",
+    "id": "00001",
+    "available_saved_reactors": [
+      {
+        "meta": {
+          "id": "00001",
+          "pretty_type": "Slideshow",
+          "title": {
+            "text": "Slideshow 1"
+          },
+          "file": "users/00002/quiz_01.json",
+          "created": "20140110",
+          "edited": "20141011"
+        }
+      }
+    ],
+    "available_reactor_templates": [
+      {
+        "meta": {
+          "type": "expose",
+          "pretty_type": "Exposé"
+        }
+      },
+      {
+        "meta": {
+          "type": "slideshow",
+          "pretty_type": "Slideshow"
+        }
+      },
+      {
+        "meta": {
+          "type": "quiz",
+          "pretty_type": "Quiz"
+        }
+      },
+      {
+        "meta": {
+          "type": "sequencer",
+          "pretty_type": "Sequencer"
+        }
+      }
+    ]
+  }
+}

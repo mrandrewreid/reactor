@@ -2,6 +2,8 @@
 
 <div>Welcome back, {{user.account.first_name}}</div>
 
+<p><a href="#/edit">Edit</a></p>
+
 <div class="new_reactors">
 	<h2>Create a new Reactor</h2>
 	<ul>
@@ -24,7 +26,7 @@
 			<td><a href="#">{{reactor.meta.title.text}}</a></td>
 			<td>{{reactor.meta.pretty_type}}</td>
 			<td>{{reactor.meta.edited}}</td>
-			<td><a href="#/edit/{{reactor.meta.id}}">Edit</a></td>
+			<td><a href="#/edit/{{reactor.meta.id}}/">Edit</a></td>
 		</tr>
 	</table>
 </div>

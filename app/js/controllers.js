@@ -6,7 +6,7 @@ angular.module( 'reactor.controllers', [] ).
 
   controller('Dashboard', [ '$scope' , '$http' , function( $scope , $http ) {
 
-	$http.get('users/ajr.json').success( function( data ) {
+	$http.get('users/00001/user.json').success( function( data ) {
 		$scope.user = data ;
 	});
 
@@ -14,9 +14,13 @@ angular.module( 'reactor.controllers', [] ).
 
   }])
  
-	.controller('Edit', [ '$scope' , '$http' , function( $scope , $http ) {
+	.controller('Edit', [ '$scope' , '$routeParams' , '$http' , function( $scope , $routeParams , $http ) {
+
 		
-		$http.get('reactors/slideshow_01.json').success( function( data ) {
+		$scope.reactor_id = $routeParams.reactor_id ;
+		
+		
+		$http.get('users/00001/slideshow_01/materials.json').success( function( data ) {
 			$scope.reactor = data ;
 		});
 
