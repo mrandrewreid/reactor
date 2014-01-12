@@ -104,6 +104,7 @@ angular.module( 'reactor.controllers', [] ).
 							label: 'Next' ,
 							response: 'next'
 						},
+						
 						{
 							type: 'button' ,
 							subtype: 'last' ,
