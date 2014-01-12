@@ -9,7 +9,6 @@ angular.module( 'reactor.controllers', [] ).
 	$http.get('users/00001/user.json').success( function( data ) {
 		$scope.user = data ;
 	});
-
 	$scope.orderProp = 'age' ;
 
   }])
@@ -17,7 +16,7 @@ angular.module( 'reactor.controllers', [] ).
 	.controller('Edit', [ '$scope' , '$routeParams' , '$http' , '$location' , function( $scope , $routeParams , $http , $location ) {
 	
 		$scope.reactor_id = $routeParams.reactor_id ;
-		
+		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
 
 		
 		$scope.changeEditMode = function( bool ) {
@@ -34,9 +33,22 @@ angular.module( 'reactor.controllers', [] ).
 
   }])
 
+
   .controller('MyCtrl1', [ '$scope' , function( $scope ) {
 
+		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
+
+		$scope.testing = 'HERE IS MY TEST' ;
+				
   }])
+  
+	.directive('bigTextArea', function () {
+		return {
+		  restrict: 'A',
+		  templateUrl: 'partials/bigTextArea.html' ,
+
+	  }
+	})
 
   .controller('MyCtrl2', [ '$scope' , function( $scope ) {
 

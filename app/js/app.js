@@ -6,7 +6,7 @@ var reactor_app = angular.module('reactor', [
   'ngRoute',
   'reactor.filters',
   'reactor.services',
-  'reactor.directives',
+  'reactor_directives',
   'reactor.controllers'
 ]).
 config( [ '$routeProvider' , function( $routeProvider ) {
@@ -23,6 +23,7 @@ config( [ '$routeProvider' , function( $routeProvider ) {
 
   $routeProvider.otherwise({redirectTo: '/dashboard'});
   
-  var reactor_j = 'this is the reactor' ;
+	//  you can pass global variables, but i bet you're not meant to //
+	//	var reactor_j = 'this is the reactor' ;
 
 }]);
