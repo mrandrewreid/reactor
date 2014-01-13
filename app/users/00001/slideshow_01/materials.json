@@ -16,8 +16,14 @@
 		"options": { "include": true } 
     },
     "description": {
-      "text": "Here is a description of this reactor.",
-      "include": true
+		"type": "description",
+		"pretty_type": "Description", 
+		"text": "Here is a description of this reactor." , 
+		"settings": { 
+			"edit": { "editable": true , "locked": true , "allow_type_change": true } , 
+			"optional": true , "type": "multiple" 
+		} ,
+		"options": { "include": true }
     },
     "author": {
       "first_name": "Bill",
@@ -35,10 +41,13 @@
       "orange"
     ]
   },
-  "instructions": {
-    "text": "Click all the lovely buttons.",
-    "include": true
-  },
+	"instructions": {
+		"type": "instruction",
+		"pretty_type": "Instructions", 
+		"text": "Click all the lovely buttons" , 
+		"settings": { "edit": { "editable": true , "locked": true , "allow_type_change": true } , "optional": true , "type": "single" } ,
+		"options": { "include": true } 
+    },
   "entries": [
     {
       "type": "slide",

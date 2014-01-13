@@ -44,7 +44,7 @@ angular.module( 'reactor_directives', [] ).
 	
 
 
-	.directive('text', function () {
+	.directive('reactorText', function () {
 
 		return {
 
@@ -52,7 +52,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				text: "="
 			},
-			templateUrl: 'partials/text.html' 
+			templateUrl: 'partials/reactorText.html' 
 
 		}
 
