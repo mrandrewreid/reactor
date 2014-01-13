@@ -123,11 +123,18 @@
 		"pretty_type": "Entry of entries"
     },
     "controls": {
-      "include": true,
-      "pagination": {
-        "include": true,
-        "format": "numerical"
-      },
+		"type": "navigation controls",
+		"pretty_type": "Navigation controls" , 
+		"settings": { 
+			"edit": { "editable": true , "locked": false } , 
+			"optional": true
+		} ,
+		"options": { "include": true },
+		"include": true,
+		"pagination": {
+			"include": true,
+			"format": "numerical"
+		},
       "buttons": [
         {
           "type": "button",
