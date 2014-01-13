@@ -1,11 +1,1 @@
-<p>Includer: 
-<label 
-	ng-if="element.settings.edit.editable" 
-	ng-disabled="element.settings.edit.locked">
-<input 
-	ng-if="element.settings.optional" 
-	type="checkbox" 
-	ng-model="element.options.include" 
-	ng-disabled="element.settings.edit.locked" /> Include
-</label>
-</p>
+<div class="includer">Includer: <label ng-if="element.settings.edit.editable" ng-disabled="element.settings.edit.locked"><input ng-if="element.settings.optional" type="checkbox" ng-model="element.options.include" ng-disabled="element.settings.edit.locked" /> Include</label></div>
