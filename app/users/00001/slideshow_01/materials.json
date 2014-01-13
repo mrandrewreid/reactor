@@ -52,12 +52,27 @@
     {
       "type": "slide",
       "meta": {
-        "title": {
-          "text": "the title of slide 1",
-          "include": true
-        }
+			"title": {
+				"type": "title",
+				"pretty_type": "Title", 
+				"text": "Slide 1" , 
+				"settings": { 
+					"edit": { "editable": true , "locked": true , "allow_type_change": false } , 
+					"optional": true , "type": "single" 
+				} ,
+				"options": { "include": true } 
+			}
       },
-      "text": "This is all the text of the slide and it is beautiful."
+      "text": {
+			"type": "text",
+			"pretty_type": "Text", 
+			"text": "This is all the text of the slide and it is beautiful." , 
+			"settings": { 
+				"edit": { "editable": true , "locked": true , "allow_type_change": false } , 
+				"optional": true , "type": "multiple" 
+			} ,
+			"options": { "include": true } 
+		}
     },
     {
       "type": "slide",

@@ -29,15 +29,6 @@
 		<!-- include the instructions if selected -->
 		<div class="instructions" ng-if="reactor.instructions.include && !reactor.state.editing">{{reactor.instructions.text}}</div>
 
-		<!-- edit the instructions 
-		<div class="instructions" ng-if="reactor.state.editing">
-			<p><input type="checkbox" ng-model="reactor.instructions.include" /> <label for="reactor_instructions">Instructions:</label> 
-				<textarea ng-if="!reactor.instructions.include" style="width: 700px ; vertical-align:middle;" name="reactor_instructions" ng-model="reactor.instructions.text" disabled="true"></textarea>
-				<textarea ng-if="reactor.instructions.include" style="width: 700px ; vertical-align:middle;" name="reactor_instructions" ng-model="reactor.instructions.text"></textarea>
-			</p>
-		</div>
-		-->
-
 		<div class="entries_container">
 			<input ng-if="reactor.state.editing" type="button" value="add a slide +" ng-click="reactor.add()">
 			<ul class="entries" style="list-style-type: none ;">
@@ -54,11 +45,15 @@
 						<p><input type="checkbox" ng-model="reactor.navigation.entry_of_entries.include" /> Include entry of entries</span></p>
 						<p ng-if="reactor.navigation.entry_of_entries.include"><span>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
 
+						<div reactor-text text="entry.meta.title"></div>
+						<!--
 						<h1 class="entry_title"><input type="checkbox" ng-model="entry.meta.title.include" /><label for="entry_title">Title:</label> 
 							<input ng-if="!entry.meta.title.include" name="entry_title" ng-model="entry.meta.title.text" class="entry_title" disabled="true">
 							<input ng-if="entry.meta.title.include" name="entry_title" ng-model="entry.meta.title.text" class="entry_title">
 						</h1>
-						<div class="text_container"><label for="entry_title">Text:</label> <textarea style="width: 700px ;" name="entry_text" ng-model="entry.text"></textarea></div>
+						-->
+						<div reactor-text text="entry.text"></div>
+						<!--<div class="text_container"><label for="entry_title">Text:</label> <textarea style="width: 700px ;" name="entry_text" ng-model="entry.text"></textarea></div>-->
 					</div>
 				</li>
 			</ul>
