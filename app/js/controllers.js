@@ -30,32 +30,41 @@ angular.module( 'reactor.controllers', [] ).
 			$scope.reactor = data ;
 			if ( $routeParams.editing == 0 ) $scope.changeEditMode( false ) ;
 			$scope.reactor.add = function() {
-				
 				var new_entry = { 
-									type: "slide",
-									meta: {
-										title: {
-											type: "title",
-											pretty_type: "Title", 
-											text: "Slide 1" , 
-											settings: { 
-												edit: { 
-													editable: true , 
-													locked: true , 
-													allow_type_change: false 
-												} , 
-												optional: true , 
-												type: "single" 
-											} ,
-											options: { include: true } 
-										}
-									}
-				} ;
-				$scope.reactor.entries.push( new_entry ) ;
-				alert( 'BAM' ) ;
-				
-			}
-		});
+						type: "slide",
+						meta: {
+							title: {
+								type: "title",
+								pretty_type: "Title", 
+								text: "Slide " + $scope.reactor.entries.length + 1 , 
+								settings: { 
+									edit: { 
+										editable: true , 
+										locked: true , 
+										allow_type_change: false 
+									} , 
+									optional: true , 
+									type: "single" 
+								} ,
+								options: { include: true } 
+							}
+						},
+						text: {
+							type: "text",
+							pretty_type: "Text", 
+							text: "This is the text for slide " + ( $scope.reactor.entries.length + 1 ) , 
+							settings: { 
+								edit: { editable: true , locked: true , allow_type_change: false } , 
+								optional: true , 
+								type: "multiple" 
+							} ,
+							options: { include: true } 
+						}
+						
+					} ;
+					$scope.reactor.entries.push( new_entry ) ;
+		}
+	});
 
   }])
 
