@@ -1,0 +1,8 @@
+{
+	"text": "HERE IS A TITLE" , 
+	"settings": { 
+		"edit": { "editable": true , "locked": true } ,
+		"optional": true 
+	} ,
+	"options": { "include": true } ,
+}

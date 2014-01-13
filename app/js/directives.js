@@ -89,3 +89,4 @@ angular.module( 'reactor_directives', [] ).
 				link: link
 			};
 		})
+		

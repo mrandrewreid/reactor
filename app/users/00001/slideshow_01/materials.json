@@ -9,8 +9,9 @@
   "pretty_child_type": "Slide",
   "meta": {
     "title": {
-      "text": "A new slideshow",
-      "include": true
+		"text": "HERE IS A TITLE... A new slideshow" , 
+		"settings": { "edit": { "editable": true , "locked": true } , "optional": true , "type": "single" } ,
+		"options": { "include": true } 
     },
     "description": {
       "text": "Here is a description of this reactor.",

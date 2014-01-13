@@ -45,8 +45,6 @@ angular.module( 'reactor.controllers', [] ).
 			options: { include: true } ,
 		} ;
 
-		$scope.testing = 'HERE IS MY TEST' ;
-
 		$scope.format = 'M/d/yy h:mm:ss a';
 				
   }])

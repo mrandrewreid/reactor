@@ -1,5 +1,11 @@
 <div>
-	<div unlocker settings="text.settings"></div>
+	<p><span unlocker settings="text.settings"></span> Type: <select style="font-size: 8pt ; padding: .1rem ;" ng-model="text.settings.type" ng-disabled="text.settings.edit.locked">
+		<option style="font-size: 8pt ; padding: .1rem ;" value="single">Single</option>
+		<option style="font-size: 8pt ; padding: .1rem ;" value="multiple">Multiple</option>
+	</select></p>
 	<div includer element="text"></div>
-	<div style="border:1pt dashed #ccc ; width: auto ;"><textarea ng-disabled="!text.options.include || text.settings.edit.locked" style="width: 98% ; min-height: 4rem ; padding : 1% ;" ng-model="text.text"></textarea></div>
+	<div style="border:1pt dashed #ccc ; width: auto ;">
+		<input type="text" ng-if="text.settings.type == 'single'" ng-disabled="!text.options.include || text.settings.edit.locked" style="width: 98% ; padding : 1% ;" value="text.text" ng-model="text.text" />
+		<textarea ng-if="text.settings.type == 'multiple'" ng-disabled="!text.options.include || text.settings.edit.locked" style="width: 98% ; min-height: 4rem ; padding : 1% ;" ng-model="text.text"></textarea>
+	</div>
 <div>
