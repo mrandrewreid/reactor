@@ -29,6 +29,32 @@ angular.module( 'reactor.controllers', [] ).
 		$http.get( 'users/00001/slideshow_01/materials.json' ).success( function( data ) {
 			$scope.reactor = data ;
 			if ( $routeParams.editing == 0 ) $scope.changeEditMode( false ) ;
+			$scope.reactor.add = function() {
+				
+				var new_entry = { 
+									type: "slide",
+									meta: {
+										title: {
+											type: "title",
+											pretty_type: "Title", 
+											text: "Slide 1" , 
+											settings: { 
+												edit: { 
+													editable: true , 
+													locked: true , 
+													allow_type_change: false 
+												} , 
+												optional: true , 
+												type: "single" 
+											} ,
+											options: { include: true } 
+										}
+									}
+				} ;
+				$scope.reactor.entries.push( new_entry ) ;
+				alert( 'BAM' ) ;
+				
+			}
 		});
 
   }])

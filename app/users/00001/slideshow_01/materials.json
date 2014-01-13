@@ -134,7 +134,7 @@
 			"type": "pagination",
 			"pretty_type": "Pagination" , 
 			"settings": { 
-				"edit": { "editable": true , "locked": false } , 
+				"edit": { "editable": true , "locked": true } , 
 				"optional": true
 			} ,
 			"options": { "include": true },
