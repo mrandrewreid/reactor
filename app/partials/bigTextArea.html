@@ -1,3 +1,2 @@
-<div style="width: 100% ; margin:0px ; padding:0px ; border: 1pt dashed #ccc ;">
-	<textarea style="width: 100% ; height: 4em; padding:0">{{title.text}} . {{testing}}</textarea>
-</div>
+<div><input type="checkbox" ng-model="title.include" /></div>
+<div style="border:1pt dashed #ccc ;"><textarea ng-disabled="!title.include" style="width: 98% ; min-height: 4rem ; padding : 1% ;" ng-model="title.text"></textarea></div>
