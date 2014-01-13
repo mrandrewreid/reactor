@@ -35,16 +35,16 @@
 				<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="!reactor.state.editing">
 					<div>
 						<p ng-if="reactor.navigation.entry_of_entries.include">{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
-						<h1 ng-if="entry.meta.title.include" class="entry_title">{{entry.meta.title.text}}</h1>
-						<div class="text_container">{{entry.text}}</div>
+						<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
+						<div class="text_container">{{entry.text.text}}</div>
 					</div>
 				</li>
 
 				<li ng-repeat="entry in reactor.entries" ng-if="reactor.state.editing" class="entry {{entry.type}}">
 
 					<div>
-						<!--<p><input type="checkbox" ng-model="reactor.navigation.entry_of_entries.include" /> Include entry of entries</span></p>-->
-						<p><span includer element="reactor.navigation.entry_of_entries"></span><br/></p>
+						<span includer element="reactor.navigation.entry_of_entries"></span>
+						<br/>
 						<p ng-if="reactor.navigation.entry_of_entries.options.include"><span>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
 
 						<div reactor-text text="entry.meta.title"></div>
