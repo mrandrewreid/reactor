@@ -41,19 +41,14 @@
 				</li>
 
 				<li ng-repeat="entry in reactor.entries" ng-if="reactor.state.editing" class="entry {{entry.type}}">
+
 					<div>
-						<p><input type="checkbox" ng-model="reactor.navigation.entry_of_entries.include" /> Include entry of entries</span></p>
-						<p ng-if="reactor.navigation.entry_of_entries.include"><span>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
+						<!--<p><input type="checkbox" ng-model="reactor.navigation.entry_of_entries.include" /> Include entry of entries</span></p>-->
+						<p><span includer element="reactor.navigation.entry_of_entries"></span><br/></p>
+						<p ng-if="reactor.navigation.entry_of_entries.options.include"><span>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
 
 						<div reactor-text text="entry.meta.title"></div>
-						<!--
-						<h1 class="entry_title"><input type="checkbox" ng-model="entry.meta.title.include" /><label for="entry_title">Title:</label> 
-							<input ng-if="!entry.meta.title.include" name="entry_title" ng-model="entry.meta.title.text" class="entry_title" disabled="true">
-							<input ng-if="entry.meta.title.include" name="entry_title" ng-model="entry.meta.title.text" class="entry_title">
-						</h1>
-						-->
 						<div reactor-text text="entry.text"></div>
-						<!--<div class="text_container"><label for="entry_title">Text:</label> <textarea style="width: 700px ;" name="entry_text" ng-model="entry.text"></textarea></div>-->
 					</div>
 				</li>
 			</ul>

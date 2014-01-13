@@ -69,7 +69,8 @@
 			"text": "This is all the text of the slide and it is beautiful." , 
 			"settings": { 
 				"edit": { "editable": true , "locked": true , "allow_type_change": false } , 
-				"optional": true , "type": "multiple" 
+				"optional": true , 
+				"type": "multiple" 
 			} ,
 			"options": { "include": true } 
 		}
@@ -94,7 +95,16 @@
       "history": []
     },
     "entry_of_entries": {
-      "include": true
+		"options": { "include": true } ,
+		"settings": { 
+			"edit": { 
+				"editable": true , 
+				"locked": false 
+			},
+			 "optional": true 
+		},
+		"type": "entry of entries" ,
+		"pretty_type": "Entry of entries"
     },
     "controls": {
       "include": true,
