@@ -1,6 +1,7 @@
 <div>
-	<div unlocker settings="title.settings"></div>
-	<label ng-if="title.settings.edit.editable"><input type="checkbox" ng-model="title.settings.edit.locked" /> Locked</label>
-	<label ng-if="title.settings.edit.editable"><input ng-if="title.settings.optional" type="checkbox" ng-model="title.roptions.include" ng-disabled="title.settings.edit.locked" /> Include</label>
-	<div style="border:1pt dashed #ccc ; width: auto ;"><textarea ng-disabled="!title.roptions.include || title.settings.edit.locked" style="width: 98% ; min-height: 4rem ; padding : 1% ;" ng-model="title.text"></textarea></div>
+	<div unlocker settings="text.settings"></div>
+	<div includer element="text"></div>
+	<!--<label ng-if="text.settings.edit.editable"><input type="checkbox" ng-model="text.settings.edit.locked" /> Locked</label>-->
+	<!--<label ng-if="text.settings.edit.editable" ng-disabled="text.settings.edit.locked"><input ng-if="text.settings.optional" type="checkbox" ng-model="text.options.include" ng-disabled="text.settings.edit.locked" /> Include</label>-->
+	<div style="border:1pt dashed #ccc ; width: auto ;"><textarea ng-disabled="!text.options.include || text.settings.edit.locked" style="width: 98% ; min-height: 4rem ; padding : 1% ;" ng-model="text.text"></textarea></div>
 <div>

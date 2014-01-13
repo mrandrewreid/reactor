@@ -17,4 +17,75 @@ angular.module( 'reactor_directives', [] ).
 		} ;
 	})
 	
+  
+	.directive('unlocker', function () {
 
+		return {
+			restrict: 'A',
+			scope: {
+				settings: "="
+			},
+			templateUrl: 'partials/unlocker.html' 
+		}
+
+	})
+
+	.directive('includer', function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				element: "="
+			},
+			templateUrl: 'partials/includer.html' 
+		}
+
+	})
+	
+
+
+	.directive('bigTextArea', function () {
+
+		return {
+
+			restrict: 'A',
+			scope: {
+				text: "="
+			},
+			templateUrl: 'partials/bigTextArea.html' 
+
+		}
+
+	})
+	
+	
+	.directive('myCurrentTime', function($interval, dateFilter) {
+		 
+		function link( scope , element , attrs ) {
+
+			var format ,
+			timeoutId ;
+			 
+			function updateTime() {
+				element.text( dateFilter( new Date(), format ) ) ;
+			}
+			 
+			scope.$watch( attrs.myCurrentTime, function( value ) {
+				format = value;
+				updateTime() ;
+			});
+			 
+			element.on('$destroy', function() {
+				$interval.cancel(timeoutId);
+			});
+			 
+			// start the UI update process; save the timeoutId for canceling
+			timeoutId = $interval( function() {
+				updateTime() ; // update DOM
+				}, 1000 ) ;
+			}
+			 
+			return {
+				link: link
+			};
+		})

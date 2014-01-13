@@ -42,7 +42,7 @@ angular.module( 'reactor.controllers', [] ).
 				edit: { editable: true , locked: true } ,
 				optional: true 
 			} ,
-			roptions: { include: true } ,
+			options: { include: true } ,
 		} ;
 
 		$scope.testing = 'HERE IS MY TEST' ;
@@ -50,61 +50,7 @@ angular.module( 'reactor.controllers', [] ).
 		$scope.format = 'M/d/yy h:mm:ss a';
 				
   }])
-  
-	.directive('unlocker', function () {
 
-		return {
-			restrict: 'A',
-			scope: {
-				settings: "="
-			},
-			templateUrl: 'partials/unlocker.html' 
-		}
-
-	})
-
-	.directive('bigTextArea', function () {
-
-		return {
-
-		  restrict: 'A',
-		  templateUrl: 'partials/bigTextArea.html' 
-
-		}
-
-	})
-	
-	
-	.directive('myCurrentTime', function($interval, dateFilter) {
-		 
-		function link( scope , element , attrs ) {
-
-			var format ,
-			timeoutId ;
-			 
-			function updateTime() {
-				element.text( dateFilter( new Date(), format ) ) ;
-			}
-			 
-			scope.$watch( attrs.myCurrentTime, function( value ) {
-				format = value;
-				updateTime() ;
-			});
-			 
-			element.on('$destroy', function() {
-				$interval.cancel(timeoutId);
-			});
-			 
-			// start the UI update process; save the timeoutId for canceling
-			timeoutId = $interval( function() {
-				updateTime() ; // update DOM
-				}, 1000 ) ;
-			}
-			 
-			return {
-				link: link
-			};
-		})
 	
 	
 	
