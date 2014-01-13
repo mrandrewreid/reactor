@@ -126,7 +126,7 @@
 		"type": "navigation controls",
 		"pretty_type": "Navigation controls" , 
 		"settings": { 
-			"edit": { "editable": true , "locked": false } , 
+			"edit": { "editable": true , "locked": true } , 
 			"optional": true
 		} ,
 		"options": { "include": true },

@@ -36,7 +36,7 @@ angular.module( 'reactor.controllers', [] ).
 							title: {
 								type: "title",
 								pretty_type: "Title", 
-								text: "Slide " + $scope.reactor.entries.length + 1 , 
+								text: "Slide " + ( $scope.reactor.entries.length + 1 ) , 
 								settings: { 
 									edit: { 
 										editable: true , 
