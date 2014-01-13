@@ -44,7 +44,7 @@ angular.module( 'reactor_directives', [] ).
 	
 
 
-	.directive('bigTextArea', function () {
+	.directive('text', function () {
 
 		return {
 
@@ -52,7 +52,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				text: "="
 			},
-			templateUrl: 'partials/bigTextArea.html' 
+			templateUrl: 'partials/text.html' 
 
 		}
 

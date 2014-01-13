@@ -9,8 +9,10 @@
   "pretty_child_type": "Slide",
   "meta": {
     "title": {
+		"type": "title",
+		"pretty_type": "Title", 
 		"text": "HERE IS A TITLE... A new slideshow" , 
-		"settings": { "edit": { "editable": true , "locked": true } , "optional": true , "type": "single" } ,
+		"settings": { "edit": { "editable": true , "locked": true , "allow_type_change": false } , "optional": true , "type": "single" } ,
 		"options": { "include": true } 
     },
     "description": {
