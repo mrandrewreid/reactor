@@ -36,7 +36,14 @@ angular.module( 'reactor.controllers', [] ).
 
   .controller('MyCtrl1', [ '$scope' , function( $scope ) {
 
-		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
+		$scope.title = { 
+			text: 'HERE IS A TITLE' , 
+			settings: { 
+				edit: { editable: true , locked: true } ,
+				optional: true 
+			} ,
+			roptions: { include: true } ,
+		} ;
 
 		$scope.testing = 'HERE IS MY TEST' ;
 
@@ -44,6 +51,18 @@ angular.module( 'reactor.controllers', [] ).
 				
   }])
   
+	.directive('unlocker', function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				settings: "="
+			},
+			templateUrl: 'partials/unlocker.html' 
+		}
+
+	})
+
 	.directive('bigTextArea', function () {
 
 		return {
