@@ -71,23 +71,22 @@
 		</div>
 		
 		<!-- entries controls -->
-		
-		
 		<span ng-if="reactor.state.editing" includer element="reactor.navigation.controls"></span>
-		<p ng-if="reactor.state.editing"><input type="checkbox" ng-model="reactor.navigation.controls.include" /> Include navigation controls</p>
+		<br ng-if="reactor.state.editing" />
+
 		<div class="entries_controls" ng-if="reactor.navigation.controls.options.include && reactor.state.editing">
+			
 			<span ng-repeat="button in reactor.navigation.controls.buttons" class="{{button.subtype}}_entry_button" style="background: #ccc ; margin: 3px ; padding: 3px ; display: inline-block ;">
 				<input type="checkbox" ng-model="button.include" /><input type="text" size="8" ng-model="button.label" />
 			</span>
-			<p><input type="checkbox" ng-model="reactor.navigation.controls.pagination.include" /> Include pagination</p>
-			<ul class="pagination" ng-if="reactor.navigation.controls.pagination.include">
+
+			<br ng-if="reactor.state.editing" />
+			<span ng-if="reactor.state.editing" includer element="reactor.navigation.controls.pagination"></span>
+			<br ng-if="reactor.state.editing" />
+			<ul class="pagination" ng-if="reactor.navigation.controls.pagination.options.include">
 				<li ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
 			</ul>
 		</div>
-
-
-
-
 
 	</div>
 

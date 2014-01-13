@@ -130,9 +130,14 @@
 			"optional": true
 		} ,
 		"options": { "include": true },
-		"include": true,
 		"pagination": {
-			"include": true,
+			"type": "pagination",
+			"pretty_type": "Pagination" , 
+			"settings": { 
+				"edit": { "editable": true , "locked": false } , 
+				"optional": true
+			} ,
+			"options": { "include": true },
 			"format": "numerical"
 		},
       "buttons": [
