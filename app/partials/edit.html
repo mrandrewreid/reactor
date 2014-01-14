@@ -46,7 +46,6 @@
 
 					<div>
 						<span includer element="reactor.navigation.entry_of_entries"></span>
-						<br/>
 						<p ng-if="reactor.navigation.entry_of_entries.options.include"><span>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
 
 						<div reactor-text text="entry.meta.title"></div>
@@ -88,7 +87,6 @@
 
 			<br />
 			<span ng-if="reactor.state.editing" unlocker settings="reactor.navigation.controls.pagination.settings"></span>
-			<br />
 			<span includer element="reactor.navigation.controls.pagination"></span>
 			<br ng-if="reactor.state.editing" />
 
