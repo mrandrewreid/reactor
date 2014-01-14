@@ -76,8 +76,8 @@ ul.tabs
 	.interaction_details
 		label
 			{
-				width: 20% ;
-				padding: 1% ;
+				/*width: 20% ;*/
+				/* padding: 1% ; */
 				margin: 0 ;
 				display: inline-block ;
 			}
@@ -177,8 +177,8 @@ ul.tabs
 		label
 			{ 
 				font-size: 1rem ; 
-				padding: 1% 1% ;  
-				width: 16% ; 
+				/* padding: 1% 1% ;   */
+				/* width: 16% ;  */
 				display: inline-block ; 
 			}
 

@@ -5,28 +5,9 @@
 
 		<div class="entries_container">
 
-			<input ng-if="reactor.state.editing" type="button" value="add a slide +" ng-click="reactor.add()">
+			<div style="margin: 0 1% 0 1% ;"><input ng-if="reactor.state.editing" type="button" value="add a slide +" ng-click="reactor.add()"></div>
 
-			<ul class="entries" style="list-style-type: none ;">
-				<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="!reactor.state.editing">
-					<div>
-						<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include">{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
-						<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
-						<div class="text_container">{{entry.text.text}}</div>
-					</div>
-				</li>
-
-				<li ng-repeat="entry in reactor.entries" ng-if="reactor.state.editing" class="entry {{entry.type}}">
-
-					<div>
-						<span includer element="reactor.navigation.entry_of_entries"></span>
-						<p ng-if="reactor.navigation.entry_of_entries.options.include"><span>{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
-
-						<div reactor-text text="entry.meta.title"></div>
-						<div reactor-text text="entry.text"></div>
-					</div>
-				</li>
-			</ul>
+			<ul reactor-entries reactor="reactor" class="entries" style="list-style-type: none ;"></ul>
 			
 		</div>
 

@@ -18,17 +18,18 @@ angular.module( 'reactor.controllers', [] ).
 		$scope.reactor_id = $routeParams.reactor_id ;
 		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
 
-		
-		$scope.changeEditMode = function( bool ) {
-			$scope.reactor.state.editing = bool ;
-			var numerical_bool = 0 ;
-			if ( bool == true ) numerical_bool = 1 ;
-			//$location.path('/edit/' + $scope.reactor_id + '/' + numerical_bool );
-		}
-
 		$http.get( 'users/00001/slideshow_01/materials.json' ).success( function( data ) {
 			$scope.reactor = data ;
-			if ( $routeParams.editing == 0 ) $scope.changeEditMode( false ) ;
+
+			$scope.reactor.changeEditMode = function( bool ) {
+				$scope.reactor.state.editing = bool ;
+				var numerical_bool = 0 ;
+				if ( bool == true ) numerical_bool = 1 ;
+				//$location.path('/edit/' + $scope.reactor_id + '/' + numerical_bool );
+			}
+
+			if ( $routeParams.editing == 0 ) $scope.reactor.changeEditMode( false ) ;
+
 			$scope.reactor.add = function() {
 				var new_entry = { 
 						type: "slide",

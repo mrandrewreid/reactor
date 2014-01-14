@@ -11,7 +11,8 @@
 
 	<span includer element="text"></span>
 
-	<div style="display: block ; overflow: hidden ; border:1pt dashed #ccc ; width: auto ; margin: 1% ;">
+	<!--  style="display: block ; overflow: hidden ; border:1pt dashed #ccc ; width: auto ; margin: 1% ;" -->
+	<div>
 		<input type="text" ng-if="text.settings.type == 'single'" ng-disabled="!text.options.include || text.settings.edit.locked" style="width: 96% ; padding : 1% ; margin: 1% ;" value="text.text" ng-model="text.text" />
 		<textarea ng-if="text.settings.type == 'multiple'" ng-disabled="!text.options.include || text.settings.edit.locked" style="width: 96% ; min-height: 4rem ; padding : 1% ; margin: 1% ;" ng-model="text.text"></textarea>
 	</div>

@@ -1,29 +1,16 @@
-	<!--<textarea style="display: inline-block ; width: 30% ; height: 100% ; left:0px ; top: 0px ; background: #000 ; color: #fff ; font-size: xx-small ; position: absolute ; float: left ;">{{ reactor | json }}</textarea>-->
+	<textarea ng-if="reactor.options.dev" style="display: inline-block ; width: 30% ; height: 100% ; left:0px ; top: 0px ; background: #000 ; color: #fff ; font-size: xx-small ; position: absolute ; float: left ;">{{ reactor | json }}</textarea>
 
-<h1 style="display:none ;">Edit</h1>
-	
-	<p>
-		<a ng-if="reactor.state.editing" class="toggle_button selected">Edit</a> 
-		<a ng-if="reactor.state.editing" class="toggle_button" ng-click="changeEditMode(false)">Preview</a>
-		<a ng-if="!reactor.state.editing" class="toggle_button" ng-click="changeEditMode(true)">Edit</a> 
-		<a ng-if="!reactor.state.editing" class="toggle_button selected">Preview</a>
-		<span style="margin:1rem ; font-size: 1rem ; "><label for="theme_select">Theme:</label> 
-			<select style="font-size: 1rem ; padding: .2rem .5rem ;" ng-if="reactor.state.editing" name="theme_select" ng-model="reactor.theme.selected"><option style="font-size: 1rem ; padding: .2rem .5rem ;" ng-repeat="theme in reactor.theme.available_themes" value="{{theme}}">{{theme}}</option></select>
-			<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
-		</span>	
-	</p>
+	<h1 style="display:none ;">Edit</h1>
 
+
+	<!-- show the toolbar for the reactor -->
+	<p reactor-toolbar reactor="reactor"></p>
+
+	<!-- output the reactor -->
 	<div reactor-output reactor="reactor"></div>
 
-	<p>
-		<a ng-if="reactor.state.editing" class="toggle_button selected">Edit</a> 
-		<a ng-if="reactor.state.editing" class="toggle_button" ng-click="changeEditMode(false)">Preview</a>
-		<a ng-if="!reactor.state.editing" class="toggle_button" ng-click="changeEditMode(true)">Edit</a> 
-		<a ng-if="!reactor.state.editing" class="toggle_button selected">Preview</a>
-		<span style="margin:1rem ; font-size: 1rem ; "><label for="theme_select">Theme:</label> 
-			<select style="font-size: 1rem ; padding: .2rem .5rem ;" ng-if="reactor.state.editing" name="theme_select" ng-model="reactor.theme.selected"><option style="font-size: 1rem ; padding: .2rem .5rem ;" ng-repeat="theme in reactor.theme.available_themes" value="{{theme}}">{{theme}}</option></select>
-			<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
-		</span>	
-	</p>
-	<p><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</p>
-	
+	<!-- show the toolbar for the reactor -->
+	<p reactor-toolbar reactor="reactor"></p>
+
+
+	<!--<p><input type="checkbox" ng-model="reactor.state.editing" /> Edit mode</p>-->

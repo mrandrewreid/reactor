@@ -17,6 +17,18 @@ angular.module( 'reactor_directives', [] ).
 		} ;
 	})
 	
+	.directive( 'reactorToolbar' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				reactor: "="
+			},
+			templateUrl: 'partials/reactorToolbar.html' 
+		}
+
+	})
+	
 	.directive( 'reactorOutput' , function () {
 
 		return {
@@ -25,6 +37,19 @@ angular.module( 'reactor_directives', [] ).
 				reactor: "="
 			},
 			templateUrl: 'partials/reactorOutput.html' 
+		}
+
+	})
+	
+	
+	.directive( 'reactorEntries' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				reactor: "="
+			},
+			templateUrl: 'partials/reactorEntries.html' 
 		}
 
 	})
