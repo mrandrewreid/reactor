@@ -2,17 +2,9 @@
 
 .menu {
   list-style: none;
-  border-bottom: 0.1em solid black;
+  border-bottom: 0.1em solid #ddd ;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
 }
 
 .menu > li {
@@ -21,7 +13,7 @@
 
 .menu > li:before {
   content: "|";
-  padding-right: 0.3em;
+  padding-right: 0.3rem ;
 }
 
 .menu > li:nth-child(1):before {
