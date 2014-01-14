@@ -45,7 +45,15 @@
 		"type": "instruction",
 		"pretty_type": "Instructions", 
 		"text": "Click all the lovely buttons" , 
-		"settings": { "edit": { "editable": true , "locked": true , "allow_type_change": true } , "optional": true , "type": "single" } ,
+		"settings": { 
+			"edit": { 
+				"editable": true , 
+				"locked": true , 
+				"allow_type_change": true 
+				} ,
+			"optional": true , 
+			"type": "single" 
+		} ,
 		"options": { "include": true } 
     },
   "entries": [

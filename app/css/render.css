@@ -2,13 +2,17 @@
 .reactor						
 			{ 
 				background: #eee ; 
-				padding: 1rem ; 
+				padding: 0rem ; 
 				clear: both ;
 				margin: 1rem 0 ; 
 				height: 600px ;
 				overflow: auto ;
 			}
 
+.metadata
+			{
+				padding: 1rem ;
+			}
 
 ul.tabs 
 			{
@@ -102,7 +106,13 @@ ul.tabs
 			}
 
 
-
+.reactor
+	.entry_of_entries
+			{
+				margin: 0 ;
+				font-size: .7rem ;
+				text-align: center ;
+			}
 
 
 
@@ -129,12 +139,19 @@ ul.tabs
 	.entry		
 			{ 
 				display: inline-block ; 
-				padding: 0% ; 
-				margin: 20px 2% ; 
+				padding: 1% ; 
+				margin: 1% ; 
 				list-style-position: inside ; 
 				width: 96% ;
 				background: #fff ; 
 				font-size: 1.2rem ; 
+			}
+			
+.reactor
+	.entry	
+		h1	
+			{ 
+				margin: 1.5rem 0px ; 
 			}
 
 .reactor
@@ -144,7 +161,7 @@ ul.tabs
 				margin: 0px ; 
 				padding: 0px ;
 			}
-
+/*
 .reactor
 	.entry 
 		div 
@@ -153,6 +170,7 @@ ul.tabs
 				margin: 1% ; 
 				padding: 0px ; 
 			}
+*/
 
 .reactor
 	.entry 

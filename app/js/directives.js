@@ -17,6 +17,18 @@ angular.module( 'reactor_directives', [] ).
 		} ;
 	})
 	
+	.directive( 'metadata' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				reactor: "="
+			},
+			templateUrl: 'partials/metadata.html' 
+		}
+
+	})
+
 	.directive( 'pagination' , function () {
 
 		return {

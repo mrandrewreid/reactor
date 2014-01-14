@@ -15,19 +15,7 @@
 
 	<div class="reactor {{reactor.type}} {{reactor.theme.selected}}">
 
-		<div class="meta" ng-if="!reactor.state.editing">
-			<h1 ng-if="reactor.meta.title.options.include">{{reactor.meta.title.text}}</h1>
-			<p ng-if="reactor.meta.description.include">{{reactor.meta.description.text}}</p>
-		</div>
-		
-		<div class="meta" ng-if="reactor.state.editing">
-			<div reactor-text text="reactor.meta.title"></div>
-			<div reactor-text text="reactor.meta.description"></div>
-			<div reactor-text text="reactor.instructions"></div>
-		</div>
-
-		<!-- include the instructions if selected -->
-		<div class="instructions" ng-if="reactor.instructions.include && !reactor.state.editing">{{reactor.instructions.text}}</div>
+		<div metadata reactor="reactor"></div>
 
 		<div class="entries_container">
 
@@ -36,7 +24,7 @@
 			<ul class="entries" style="list-style-type: none ;">
 				<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="!reactor.state.editing">
 					<div>
-						<p ng-if="reactor.navigation.entry_of_entries.include">{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
+						<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include">{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}</span></p>
 						<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
 						<div class="text_container">{{entry.text.text}}</div>
 					</div>
@@ -66,10 +54,13 @@
 				ng-if="button.include"
 			/>
 
-			<div ng-if="reactor.navigation.controls.pagination.options.include" pagination reactor="reactor"></div>
-			<!--<ul class="pagination" ng-if="reactor.navigation.controls.pagination.options.include">
-				<li ng-click="reactor.navigation.goto( $index )" ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
-			</ul>-->
+			<div 
+				ng-if="reactor.navigation.controls.pagination.options.include" 
+				pagination 
+				reactor="reactor"
+			>
+			</div>
+
 		</div>
 		
 		<!-- entries controls -->
@@ -78,10 +69,9 @@
 		<br ng-if="reactor.state.editing" />
 
 
-
 		<div class="entries_controls" ng-if="reactor.navigation.controls.options.include && reactor.state.editing">
 			
-			<span ng-repeat="button in reactor.navigation.controls.buttons" class="{{button.subtype}}_entry_button" style="background: #ccc ; margin: 3px ; padding: 3px ; display: inline-block ;">
+			<span ng-repeat="button in reactor.navigation.controls.buttons" class="{{button.subtype}}_entry_button">
 				<input ng-disabled="reactor.navigation.controls.settings.edit.locked" type="checkbox" ng-model="button.include" /><input ng-disabled="reactor.navigation.controls.settings.edit.locked" type="text" size="8" ng-model="button.label" />
 			</span>
 
@@ -89,11 +79,7 @@
 			<span ng-if="reactor.state.editing" unlocker settings="reactor.navigation.controls.pagination.settings"></span>
 			<span includer element="reactor.navigation.controls.pagination"></span>
 			<br ng-if="reactor.state.editing" />
-
 			<div ng-if="reactor.navigation.controls.pagination.options.include" pagination reactor="reactor"></div>
-			<!--<ul class="pagination" ng-if="reactor.navigation.controls.pagination.options.include">
-				<li ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
-			</ul>-->
 		</div>
 
 	</div>

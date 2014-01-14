@@ -1,11 +1,14 @@
 <div>
+
 	<span unlocker settings="text.settings"></span>
+
 	<span ng-if="text.settings.edit.allow_type_change" >Type: 
 		<select style="font-size: 8pt ; padding: .1rem ;" ng-model="text.settings.type" ng-disabled="text.settings.edit.locked">
 			<option style="font-size: 8pt ; padding: .1rem ;" value="single">Single</option>
 			<option style="font-size: 8pt ; padding: .1rem ;" value="multiple">Multiple</option>
 		</select>
 	</span>
+
 	<span includer element="text"></span>
 
 	<div style="display: block ; overflow: hidden ; border:1pt dashed #ccc ; width: auto ; margin: 1% ;">
