@@ -17,6 +17,18 @@ angular.module( 'reactor_directives', [] ).
 		} ;
 	})
 	
+	.directive( 'reactorOutput' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				reactor: "="
+			},
+			templateUrl: 'partials/reactorOutput.html' 
+		}
+
+	})
+	
 	.directive( 'metadata' , function () {
 
 		return {
