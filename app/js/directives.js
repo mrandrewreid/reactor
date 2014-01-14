@@ -17,6 +17,17 @@ angular.module( 'reactor_directives', [] ).
 		} ;
 	})
 	
+	.directive( 'pagination' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				reactor: "="
+			},
+			templateUrl: 'partials/pagination.html' 
+		}
+
+	})
   
 	.directive('unlocker', function () {
 
