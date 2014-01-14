@@ -11,7 +11,7 @@
 
 		<div>
 			<span includer element="reactor.navigation.entry_of_entries"></span>
-			<p ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor"></span></p>
+			<p ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
 <!--{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}-->
 			<div reactor-text text="entry.meta.title"></div>
 			<div reactor-text text="entry.text"></div>
