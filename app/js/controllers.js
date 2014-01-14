@@ -23,7 +23,7 @@ angular.module( 'reactor.controllers', [] ).
 			$scope.reactor.state.editing = bool ;
 			var numerical_bool = 0 ;
 			if ( bool == true ) numerical_bool = 1 ;
-			$location.path('/edit/' + $scope.reactor_id + '/' + numerical_bool );
+			//$location.path('/edit/' + $scope.reactor_id + '/' + numerical_bool );
 		}
 
 		$http.get( 'users/00001/slideshow_01/materials.json' ).success( function( data ) {

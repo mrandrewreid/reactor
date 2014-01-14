@@ -58,7 +58,7 @@
 		</div>
 
 		<!-- entries controls -->
-		<div class="entries_controls" ng-if="reactor.navigation.controls.include && !reactor.state.editing">
+		<div class="entries_controls" ng-if="reactor.navigation.controls.options.include && !reactor.state.editing">
 			<input type="button" 
 				ng-repeat="button in reactor.navigation.controls.buttons" 
 				class="{{button.subtype}}_entry_button" 
@@ -66,8 +66,8 @@
 				ng-click="reactor.navigation.goto( button.response )" 
 				ng-if="button.include"
 			/>
-			<ul class="pagination" ng-if="reactor.navigation.controls.pagination.include">
-				<li ng-click="reactor.navigation.goto($index)" ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
+			<ul class="pagination" ng-if="reactor.navigation.controls.pagination.options.include">
+				<li ng-click="reactor.navigation.goto( $index )" ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
 			</ul>
 		</div>
 		
