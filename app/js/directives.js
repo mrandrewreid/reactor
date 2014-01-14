@@ -53,6 +53,18 @@ angular.module( 'reactor_directives', [] ).
 		}
 
 	})
+
+	.directive( 'entryOfEntries' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				reactor: "="
+			},
+			templateUrl: 'partials/entryOfEntries.html' 
+		}
+
+	})
 	
 	.directive( 'metadata' , function () {
 
