@@ -4,14 +4,14 @@
 
 angular.module( 'reactor.controllers', [] ).
 
-  controller('Dashboard', [ '$scope' , '$http' , function( $scope , $http ) {
-
-	$http.get('users/00001/user.json').success( function( data ) {
-		$scope.user = data ;
-	});
-	$scope.orderProp = 'age' ;
-
-  }])
+	controller('Dashboard', [ '$scope' , '$http' , function( $scope , $http ) {
+	
+		$http.get('users/00001/user.json').success( function( data ) {
+			$scope.user = data ;
+		});
+		$scope.orderProp = 'age' ;
+	
+	}])
  
 	.controller('Edit', [ '$scope' , '$routeParams' , '$http' , '$location' , function( $scope , $routeParams , $http , $location ) {
 	
