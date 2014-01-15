@@ -47,7 +47,8 @@ angular.module( 'reactor_directives', [] ).
 		return {
 			restrict: 'A',
 			scope: {
-				reactor: "="
+				reactor: "=",
+				index: "="
 			},
 			templateUrl: 'partials/reactorEntries.html' 
 		}

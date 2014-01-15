@@ -1,19 +1,17 @@
 
-	<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="!reactor.state.editing">
-		<div>
+	<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="$index == reactor.navigation.state.position.entry_index">
+
+		<div ng-if="!reactor.state.editing">
 			<p ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor"></span></p>
 			<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
 			<div class="text_container">{{entry.text.text}}</div>
 		</div>
-	</li>
 
-	<li ng-repeat="entry in reactor.entries" ng-if="reactor.state.editing" class="entry {{entry.type}}">
-
-		<div>
+		<div ng-if="reactor.state.editing">
 			<span includer element="reactor.navigation.entry_of_entries"></span>
 			<p ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
-<!--{{reactor.pretty_child_type}} <span class="entry_number">{{$index+1}}</span> of <span class="total_entries_number">{{reactor.entries.length}}-->
 			<div reactor-text text="entry.meta.title"></div>
 			<div reactor-text text="entry.text"></div>
 		</div>
+
 	</li>
