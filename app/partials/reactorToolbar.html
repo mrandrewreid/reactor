@@ -1,8 +1,18 @@
+<label>Edit<input type="radio" name="edit_mode" ng-value="true" ng-model="reactor.state.editing" /></label>
+<label>Preview<input type="radio" name="edit_mode" ng-value="false" ng-model="reactor.state.editing" /></label>
+
+<label for="theme_select">Theme:
+	<select ng-if="reactor.state.editing" name="theme_select" ng-model="reactor.theme.selected">
+	<option ng-repeat="theme in reactor.theme.available_themes" value="{{theme}}">{{theme}}</option>
+	</select>
+</label> 
+
+	<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
+	
+<!--<span style="margin:1rem ; font-size: 1rem ; "></span>-->
+<!--
 <p>
 	<a ng-if="reactor.state.editing" class="toggle_button selected">Edit</a> <a ng-if="reactor.state.editing" class="toggle_button" ng-click="reactor.changeEditMode(false)">Preview</a>
 	<a ng-if="!reactor.state.editing" class="toggle_button" ng-click="reactor.changeEditMode(true)">Edit</a> <a ng-if="!reactor.state.editing" class="toggle_button selected">Preview</a>
-	<span style="margin:1rem ; font-size: 1rem ; "><label for="theme_select">Theme:</label> 
-		<select style="font-size: 1rem ; padding: .2rem .5rem ;" ng-if="reactor.state.editing" name="theme_select" ng-model="reactor.theme.selected"><option style="font-size: 1rem ; padding: .2rem .5rem ;" ng-repeat="theme in reactor.theme.available_themes" value="{{theme}}">{{theme}}</option></select>
-		<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
-	</span>	
 </p>
+-->

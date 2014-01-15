@@ -31,6 +31,7 @@ angular.module( 'reactor.controllers', [] ).
 		$http.get( 'users/00001/slideshow_01/materials.json' ).success( function( data ) {
 			$scope.reactor = data ;
 
+			
 			$scope.reactor.changeEditMode = function( bool ) {
 				$scope.reactor.state.editing = bool ;
 				var numerical_bool = 0 ;
