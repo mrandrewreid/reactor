@@ -1,3 +1,5 @@
 <ul class="pagination" ng-if="reactor.navigation.controls.pagination.options.include">
-	<li ng-repeat="entry in reactor.entries"><a>{{ $index + 1 }}</a></li>
+	<li ng-repeat="entry in reactor.entries">
+		<input name="pagination" type="radio" value="{{$index}}" ng-model="reactor.navigation.state.position.entry_index" /><!--<a>{{$index + 1}}--></a>
+	</li>
 </ul>

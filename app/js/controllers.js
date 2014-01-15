@@ -9,11 +9,21 @@ angular.module( 'reactor.controllers', [] ).
 		$http.get('users/00001/user.json').success( function( data ) {
 			$scope.user = data ;
 		});
+
 		$scope.orderProp = 'age' ;
 	
 	}])
  
-	.controller('Edit', [ '$scope' , '$routeParams' , '$http' , '$location' , function( $scope , $routeParams , $http , $location ) {
+	.controller(
+		'Edit', 
+		[ 
+			'$scope' , 
+			'$routeParams' , 
+			'$http' , 
+			'$location' , 
+			'server' , 
+			function( $scope , $routeParams , $http , $location , server ) 
+		{
 	
 		$scope.reactor_id = $routeParams.reactor_id ;
 		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
@@ -29,6 +39,9 @@ angular.module( 'reactor.controllers', [] ).
 			}
 
 			if ( $routeParams.editing == 0 ) $scope.reactor.changeEditMode( false ) ;
+
+			//if ( $routeParams.editing == 0 ) { server.saveReactor( '' ) } ;
+			//if ( $routeParams.editing == 1 ) { server.loadReactor( '00001' ) } ;
 
 			$scope.reactor.add = function() {
 				var new_entry = { 
