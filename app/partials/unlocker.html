@@ -1,1 +1,4 @@
-<label ng-if="settings.edit.editable" style="display: inline-block;"><input type="checkbox" ng-model="settings.edit.locked" /> L</label>
+<label ng-class="['sprite','unlocker',settings.edit.locked]" ng-if="settings.edit.editable" style="display: inline-block;">
+	<span ng-if="settings.edit.locked"><input type="checkbox" ng-model="settings.edit.locked" /> Locked</span>
+	<span ng-if="!settings.edit.locked"><input type="checkbox" ng-model="settings.edit.locked" /> Unlocked</span>
+</label>

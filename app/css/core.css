@@ -40,3 +40,32 @@ h1
 				margin: 0 1rem ; 
 				font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace ; 
 			}
+
+
+
+
+
+
+
+.sprite		{ 
+				background-repeat: no-repeat ;
+				width: 16px ;
+				height: 16px ;
+				text-indent: -10000rem ;
+			}
+.unlocker
+			{
+				background-image: url( ../img/sprites/unlocker.png ) ;
+			}
+			
+.unlocker input[type="checkbox"] { display: none ; }
+			
+.unlocker.true
+			{
+				background-position: top left ;
+			}
+			
+.unlocker.false
+			{
+				background-position: bottom left ;
+			}
