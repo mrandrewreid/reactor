@@ -41,6 +41,18 @@ angular.module( 'reactor_directives', [] ).
 
 	})
 	
+	.directive( 'reactorControls' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				element: "="
+			},
+			templateUrl: 'partials/reactorControls.html' 
+		}
+
+	})
+	
 	
 	.directive( 'reactorEntries' , function () {
 

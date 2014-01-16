@@ -1,5 +1,7 @@
 <div>
 
+	<p class="controls" reactor-controls element="text" ng-if="text.settings.edit.editable"></p>
+<!--
 	<span unlocker settings="text.settings"></span>
 
 	<span includer element="text"></span>
@@ -9,7 +11,7 @@
 		<option style="font-size: 8pt ; padding: .1rem ;" value="single">Single</option>
 		<option style="font-size: 8pt ; padding: .1rem ;" value="multiple">Multiple</option>
 	</select>
-
+-->
 	<div>
 		<input type="text" ng-if="text.settings.type == 'single'" ng-disabled="!text.options.include || text.settings.edit.locked" style="width: 96% ; padding : 1% ; margin: 1% ;" value="text.text" ng-model="text.text" />
 		<textarea ng-if="text.settings.type == 'multiple'" ng-disabled="!text.options.include || text.settings.edit.locked" style="width: 96% ; padding : 1% ; margin: 1% ;" ng-model="text.text"></textarea>

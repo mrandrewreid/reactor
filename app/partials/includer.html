@@ -1,12 +1,15 @@
-<span>
-	<label 
-		ng-class="['sprite','includer', element.options.include]" 
-		ng-if="element.settings.edit.editable" 
-		ng-disabled="element.settings.edit.locked">
+<label 
+	ng-class="['sprite','includer', element.options.include]" 
+	ng-if="element.settings.edit.editable" 
+	ng-disabled="element.settings.edit.locked">
+
 	<input 
 		ng-if="element.settings.optional"
 		 type="checkbox" 
 		 ng-model="element.options.include" 
-		 ng-disabled="element.settings.edit.locked" /> Include {{element.pretty_type}}
-	</label>
-</span>
+		 ng-disabled="element.settings.edit.locked" /> 
+		 
+	Include {{element.pretty_type}}
+
+	 
+</label>

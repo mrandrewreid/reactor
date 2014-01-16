@@ -1,0 +1,12 @@
+<span unlocker settings="element.settings"></span>
+
+<!-- this div will show if the user unlocks the editable region -->
+<div ng-if="!element.settings.edit.locked" class="specific_controls" style="display: inline-block ;">
+
+	<span includer element="element"></span>
+	<span ng-if="element.settings.edit.allow_type_change">Type: </span>
+	<select ng-if="element.settings.edit.allow_type_change" style="font-size: 8pt ; padding: .1rem ;" ng-model="element.settings.type" ng-disabled="element.settings.edit.locked">
+		<option style="font-size: 8pt ; padding: .1rem ;" value="single">Single</option>
+		<option style="font-size: 8pt ; padding: .1rem ;" value="multiple">Multiple</option>
+	</select>
+</div>

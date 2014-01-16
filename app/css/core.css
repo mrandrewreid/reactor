@@ -47,6 +47,9 @@ h1
 
 
 
+.controls
+			{ margin: 0 ; padding: 0px ; }
+
 .sprite		{ 
 				background-repeat: no-repeat ;
 				width: 16px ;
@@ -61,5 +64,5 @@ h1
 .unlocker	{ background-image: url( ../img/sprites/unlocker.png ) ; }
 .unlocker input[type="checkbox"] { display: none ; }
 				
-.includer	{ background-image: url( ../img/sprites/unlocker.png ) ; padding-left: 16px ; }
+.includer	{ background-image: url( ../img/sprites/tick_cross.png ) ; padding-left: 16px ; }
 .includer input[type="checkbox"] { display: none ; }
