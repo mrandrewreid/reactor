@@ -59,28 +59,13 @@ h1
 			}
 			
 .unlocker input[type="checkbox"] { display: none ; }
+			
 .unlocker.true
-			{
-				background-position: 0px 0px ;
-			}
-.unlocker.false
-			{
-				background-position: 0px 16px ;
-			}
-			
-/*			
-.includer
-			{
-				background-image: url( ../img/sprites/includer.png ) ;
-			}
-			
-.includer input[type="checkbox"] { display: none ; }
-.includer.true
 			{
 				background-position: top left ;
 			}
-.includer.false
+			
+.unlocker.false
 			{
 				background-position: bottom left ;
 			}
-*/
