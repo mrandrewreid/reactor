@@ -52,20 +52,14 @@ h1
 				width: 16px ;
 				height: 16px ;
 				text-indent: -10000rem ;
+				display: inline-block ;
 			}
-.unlocker
-			{
-				background-image: url( ../img/sprites/unlocker.png ) ;
-			}
-			
+.sprite.true	{ background-position: top left ; }
+.sprite.false	{ background-position: bottom left ; }
+
+
+.unlocker	{ background-image: url( ../img/sprites/unlocker.png ) ; }
 .unlocker input[type="checkbox"] { display: none ; }
-			
-.unlocker.true
-			{
-				background-position: top left ;
-			}
-			
-.unlocker.false
-			{
-				background-position: bottom left ;
-			}
+				
+.includer	{ background-image: url( ../img/sprites/unlocker.png ) ; padding-left: 16px ; }
+.includer input[type="checkbox"] { display: none ; }
