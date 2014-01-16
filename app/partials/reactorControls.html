@@ -1,8 +1,5 @@
-<span unlocker settings="element.settings"></span>
-
 <!-- this div will show if the user unlocks the editable region -->
-<div ng-if="!element.settings.edit.locked" class="specific_controls" style="display: inline-block ;">
-
+<div ng-if="!element.settings.edit.locked" class="specific_controls">
 	<span includer element="element"></span>
 	<span ng-if="element.settings.edit.allow_type_change">Type: </span>
 	<select ng-if="element.settings.edit.allow_type_change" style="font-size: 8pt ; padding: .1rem ;" ng-model="element.settings.type" ng-disabled="element.settings.edit.locked">

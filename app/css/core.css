@@ -46,9 +46,29 @@ h1
 
 
 
+.full_width
+			{
+				width: 96% ; 
+				padding : 1% ; 
+				margin: 1% ;
+			}
+
+
 
 .controls
-			{ margin: 0 ; padding: 0px ; }
+			{ 
+				margin: 0 ; 
+				padding: 0px ; 
+				font-size: 8pt ; 
+				position: relative ; 
+				top:0px ; 
+				vertical-align: bottom ; 
+				background: #fff ;
+				color: #000 ;
+			}
+			
+.specific_controls
+			{ margin: 0px ; padding: 0px ; vertical-align: top ; display: inline-block ; }
 
 .sprite		{ 
 				background-repeat: no-repeat ;
