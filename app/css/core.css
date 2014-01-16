@@ -48,27 +48,34 @@ h1
 
 .full_width
 			{
+				width: 98% ; 
+				padding: 1% ;
+			}
+
+.1pc_margin_and_padding
+			{
 				width: 96% ; 
 				padding : 1% ; 
 				margin: 1% ;
 			}
 
 
-
 .controls
 			{ 
 				margin: 0 ; 
-				padding: 0px ; 
+				padding: 5px ; 
 				font-size: 8pt ; 
-				position: relative ; 
-				top:0px ; 
-				vertical-align: bottom ; 
 				background: #fff ;
 				color: #000 ;
 			}
+.controls span
+			{
+				vertical-align: middle ;
+			}
 			
+
 .specific_controls
-			{ margin: 0px ; padding: 0px ; vertical-align: top ; display: inline-block ; }
+			{ margin: 0px ; padding: 1% ; vertical-align: top ; width: auto ; }
 
 .sprite		{ 
 				background-repeat: no-repeat ;
@@ -76,13 +83,15 @@ h1
 				height: 16px ;
 				text-indent: -10000rem ;
 				display: inline-block ;
+				margin: 0 ;
 			}
+
 .sprite.true	{ background-position: top left ; }
 .sprite.false	{ background-position: bottom left ; }
 
 
 .unlocker	{ background-image: url( ../img/sprites/unlocker.png ) ; }
-.unlocker input[type="checkbox"] { display: none ; }
+.unlocker input[type="checkbox"] { opacity: .01 ; }
 				
 .includer	{ background-image: url( ../img/sprites/tick_cross.png ) ; padding-left: 16px ; }
-.includer input[type="checkbox"] { display: none ; }
+.includer input[type="checkbox"] { opacity: .01 ; }

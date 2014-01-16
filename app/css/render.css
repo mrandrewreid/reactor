@@ -81,7 +81,7 @@ ul.tabs
 				margin: 0 ;
 				display: inline-block ;
 			}
-			
+/*		
 .reactor
 	.interaction_details
 		input[type=text],
@@ -95,7 +95,7 @@ ul.tabs
 				display: inline-block ;
 				font-size: .8rem ;
 			}
-
+*/
 
 .reactor
 	.entries_container 
