@@ -2,15 +2,16 @@
 	<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="$index == reactor.navigation.state.position.entry_index">
 
 		<div ng-if="!reactor.state.editing">
-			<p ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
+			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
 			<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
 			<div class="text_container">{{entry.text.text}}</div>
 		</div>
 
 		<div ng-if="reactor.state.editing">
-			<span includer element="reactor.navigation.entry_of_entries"></span>
-			<p ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
-			<h1 reactor-text text="entry.meta.title"></h1>
+			<span style="float: left; " includer element="reactor.navigation.entry_of_entries"></span>
+			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
+
+			<h1 style="clear: both;"><span reactor-text text="entry.meta.title"></span></h1>
 			<div reactor-text text="entry.text"></div>
 		</div>
 

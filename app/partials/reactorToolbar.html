@@ -1,3 +1,5 @@
+<a class="button" ng-click="reactor.save()">Save</a> <a class="button" ng-click="reactor.export()">Export</a>
+
 <label>Edit<input type="radio" name="edit_mode" ng-value="true" ng-model="reactor.state.editing" /></label>
 <label>Preview<input type="radio" name="edit_mode" ng-value="false" ng-model="reactor.state.editing" /></label>
 
@@ -7,8 +9,10 @@
 	</select>
 </label> 
 
-	<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
-	
+<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
+
+
+
 <!--<span style="margin:1rem ; font-size: 1rem ; "></span>-->
 <!--
 <p>

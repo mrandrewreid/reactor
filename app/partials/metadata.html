@@ -1,12 +1,11 @@
-<div class="metadata" ng-if="!reactor.state.editing">
-	<h1 ng-if="reactor.meta.title.options.include">{{reactor.meta.title.text}}</h1>
-	<p ng-if="reactor.meta.description.options.include">{{reactor.meta.description.text}}</p>
-	<div ng-if="reactor.instructions.options.include">{{reactor.instructions.text}}</div>
-</div>
-
-
 <div class="metadata" ng-if="reactor.state.editing">
 	<h1 reactor-text text="reactor.meta.title"></h1>
 	<p reactor-text text="reactor.meta.description"></p>
 	<div reactor-text text="reactor.instructions"></div>
+</div>
+
+<div class="metadata" ng-if="!reactor.state.editing">
+	<h1>{{reactor.meta.title.text}}</h1>
+	<p>{{reactor.meta.description.text}}</p>
+	<div>{{reactor.instructions.text}}</div>
 </div>

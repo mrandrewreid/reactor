@@ -71,6 +71,84 @@
 
 
 
+
+
+
+
+
+
+.button
+	{
+		display: inline-block ;
+		border: 1pt outset #aaa ;
+		background: #aaa ;
+		padding: .5rem ;
+		min-width: 5rem ;
+		text-align: center ;
+		margin: 2pt ;
+		
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		cursor: pointer ;
+	}
+	
+a.button, 
+a:visited.button,
+a:link.button
+	{
+		text-decoration: none ;
+		color: #555 ;
+	}
+
+a:focus.button,
+a:hover.button
+	{
+		display: inline-block ;
+		border: 1pt outset #4AB2D0 ;
+		background: #4AB2D0 ;
+		color: #fff ;
+		cursor: default ;
+	}
+
+a:active.button
+	{
+		display: inline-block ;
+		border: 1pt inset #4AB2D0 ;
+		background: #4AB2D0 ;
+		color: #2C6B7D ;
+		cursor: default ;
+		margin: 1pt 2pt 2pt 2pt ;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .toggle_button
 	{
 		display: inline-block ;
@@ -119,6 +197,14 @@ label
 	{ 
 		font-size: 1rem ;
 		/* padding: .5rem ; */
+	}
+	
+	
+textarea:disabled, 
+input:disabled, 
+label:disabled
+	{ 
+		opacity: .3;
 	}
 	
 	

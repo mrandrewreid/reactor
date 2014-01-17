@@ -2,7 +2,7 @@
 
 html		{ 
 				margin: 0px ; 
-				padding: 0px ; 
+				padding: 0 1% ; 
 				font-size: large ; 
 			}
 body		{ 
@@ -24,6 +24,14 @@ h1
 				color: #aaa ; 
 				margin: 0 ;
 				font-size: 1.3rem ; 
+			}
+
+h1 input[type=text],
+h1	textarea
+			{
+				font-size: 1.3rem !important ;
+				font-weight: bold ;
+				color: #aaa ; 
 			}
 
 

@@ -81,7 +81,7 @@ ul.tabs
 				margin: 0 ;
 				display: inline-block ;
 			}
-/*		
+			
 .reactor
 	.interaction_details
 		input[type=text],
@@ -95,7 +95,7 @@ ul.tabs
 				display: inline-block ;
 				font-size: .8rem ;
 			}
-*/
+
 
 .reactor
 	.entries_container 
@@ -110,7 +110,7 @@ ul.tabs
 	.entry_of_entries
 			{
 				margin: 0 ;
-				font-size: .7rem ;
+				font-size: .8rem ;
 				text-align: center ;
 			}
 
@@ -151,7 +151,7 @@ ul.tabs
 	.entry	
 		h1	
 			{ 
-				margin: 1.5rem 0px ; 
+				margin: 0 0 1rem 0 ; 
 			}
 
 .reactor
