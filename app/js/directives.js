@@ -81,6 +81,18 @@ angular.module( 'reactor_directives', [] ).
 
 	})
 
+	.directive( 'navigationControlsEdit' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				reactor: "=",
+			},
+			templateUrl: 'partials/navigationControls.edit.html' 
+		}
+
+	})
+
 
 	.directive( 'entryOfEntries' , function () {
 

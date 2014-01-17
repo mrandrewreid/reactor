@@ -12,18 +12,15 @@
 		</div>
 
 		<!-- entries controls -->
-		<div class="entries_controls" ng-if="reactor.navigation.controls.options.include && !reactor.state.editing">
-			<input type="button" 
-				ng-repeat="button in reactor.navigation.controls.buttons" 
-				class="{{button.subtype}}_entry_button" 
-				value="{{button.label}}" 
-				ng-click="reactor.navigation.goto( button.response )" 
-				ng-if="button.include"
-			/>
-
-			<div pagination reactor="reactor" ng-if="reactor.navigation.controls.pagination.options.include"></div>
-
+		<div 
+			navigation-controls 
+		 	reactor="reactor" 
+			class="entries_controls" 
+			ng-if="reactor.navigation.controls.options.include && !reactor.state.editing"
+		>
 		</div>
+
+
 		
 		<!-- entries controls -->
 		<span ng-if="reactor.state.editing" unlocker settings="reactor.navigation.controls.settings"></span>
@@ -31,24 +28,12 @@
 		<br ng-if="reactor.state.editing" />
 
 		<!--  -->
-		<div
-		 navigation-controls 
-		 reactor="reactor" 
-		 ng-if="reactor.navigation.controls.options.include && reactor.state.editing"
-		 class="entries_controls"></div>
-
-<!--
-		<div class="entries_controls" ng-if="reactor.navigation.controls.options.include && reactor.state.editing">
-			
-			<span ng-repeat="button in reactor.navigation.controls.buttons" class="{{button.subtype}}_entry_button">
-				<input ng-disabled="reactor.navigation.controls.settings.edit.locked" type="checkbox" ng-model="button.include" /><input ng-disabled="reactor.navigation.controls.settings.edit.locked" type="text" size="8" ng-model="button.label" />
-			</span>
-
-			<br />
-			<span ng-if="reactor.state.editing" unlocker settings="reactor.navigation.controls.pagination.settings"></span>
-			<span includer element="reactor.navigation.controls.pagination"></span>
-			<br ng-if="reactor.state.editing" />
-			<div ng-if="reactor.navigation.controls.pagination.options.include" pagination reactor="reactor"></div>
+		<div 
+			navigation-controls-edit 
+		 	reactor="reactor" 
+		 	ng-if="reactor.navigation.controls.options.include && reactor.state.editing"
+		 	class="entries_controls"
+		>
 		</div>
--->
+
 	</div>
