@@ -74,7 +74,8 @@ angular.module( 'reactor_directives', [] ).
 		return {
 			restrict: 'A',
 			scope: {
-				reactor: "=",
+				reactor: "="
+				
 			},
 			templateUrl: 'partials/navigationControls.html' 
 		}
@@ -86,7 +87,7 @@ angular.module( 'reactor_directives', [] ).
 		return {
 			restrict: 'A',
 			scope: {
-				reactor: "=",
+				reactor: "="
 			},
 			templateUrl: 'partials/navigationControls.edit.html' 
 		}

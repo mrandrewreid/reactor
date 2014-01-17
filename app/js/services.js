@@ -6,11 +6,19 @@ var reactor_services = angular.module( 'reactor.services', [] );
 	reactor_services.factory( 'server' , [ 
 		function() {
 			var server = {} ;
-				server.saveReactor = function( data ){ alert( 'save reactor file' ) ; } ;
-				server.loadReactor = function( id ){ alert( 'load reactor file with id: ' + id ) ; } ;
-				server.getTemplates = function( id ){ 
+
+				server.saveReactor = function( reactor_data , user_data ){ 
+					alert( 'save reactor file' ) ; 
+				} ;
+
+				server.loadReactor = function( reactor_id , user_id ){ 
+					alert( 'load reactor file with id: ' + reactor_id + ' for user: ' + user_id ) ; 
+				} ;
+
+				server.getAvailableTemplates = function( user_id ) {
 					alert( 'load reactor file with id: ' + id ) ; 
 				} ;
+
 			return server ;
 		}
 	]) ;

@@ -5,7 +5,7 @@
 			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
 			<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
 			<!--<div class="text_container">{{entry.text.text}}</div>-->
-			<div class="text_container">HEYP {{entry.text.text}}</div>
+			<div class="text_container">{{entry.text.text}}</div>
 		</div>
 
 		<div ng-if="reactor.state.editing">

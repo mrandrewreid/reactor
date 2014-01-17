@@ -37,12 +37,10 @@ angular.module( 'reactor.controllers', [] ).
 
 			$scope.reactor = data ;
 
-
 			$scope.first = 	function() { return navigationService.first( $scope.reactor ) } ;
 			$scope.previous = 	function() { return navigationService.previous( $scope.reactor ) } ;
 			$scope.next = 		function() { return navigationService.next( $scope.reactor ) } ;
 			$scope.last = 		function() { return navigationService.last( $scope.reactor ); } ;
-
 
 			$scope.reactor.goto = 		function( str ) { 
 				//alert( str ) ; 
@@ -52,6 +50,14 @@ angular.module( 'reactor.controllers', [] ).
 					case 'next' : 		$scope.next( $scope.reactor ) ; 		break ;
 					case 'last' : 		$scope.last( $scope.reactor ) ; 		break ;
 				}
+			} ;
+			
+			$scope.reactor.save = 		function() { 
+				alert( 'save' ) ;
+			} ;
+			
+			$scope.reactor.export = 		function() { 
+				alert( 'export' ) ;
 			} ;
 
 			$scope.reactor.changeEditMode = function( bool ) {
