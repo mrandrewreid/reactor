@@ -25,7 +25,7 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 
 				server.loadReactor = function( reactor_id , user_id ){ 
 					alert( 'load reactor file with id: ' + reactor_id + ' for user: ' + user_id ) ; 
-					$http.get( 'users/' + user_id + '/' + reactor_id + '/materials.json' ).success( function( data ) {
+					$http.get( 'users/' + user_id + '/' + reactor_id + '/materials.json?t=' + new Date() ).success( function( data ) {
 						//$scope.user = data ;
 						console.log( 'YAY: ' +  data ) ;
 					});
