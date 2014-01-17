@@ -67,6 +67,21 @@ angular.module( 'reactor_directives', [] ).
 
 	})
 
+	
+	
+	.directive( 'navigationControls' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				reactor: "=",
+			},
+			templateUrl: 'partials/navigationControls.html' 
+		}
+
+	})
+
+
 	.directive( 'entryOfEntries' , function () {
 
 		return {

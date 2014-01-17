@@ -30,7 +30,14 @@
 		<span ng-if="reactor.state.editing" includer element="reactor.navigation.controls"></span>
 		<br ng-if="reactor.state.editing" />
 
+		<!--  -->
+		<div
+		 navigation-controls 
+		 reactor="reactor" 
+		 ng-if="reactor.navigation.controls.options.include && reactor.state.editing"
+		 class="entries_controls"></div>
 
+<!--
 		<div class="entries_controls" ng-if="reactor.navigation.controls.options.include && reactor.state.editing">
 			
 			<span ng-repeat="button in reactor.navigation.controls.buttons" class="{{button.subtype}}_entry_button">
@@ -43,5 +50,5 @@
 			<br ng-if="reactor.state.editing" />
 			<div ng-if="reactor.navigation.controls.pagination.options.include" pagination reactor="reactor"></div>
 		</div>
-
+-->
 	</div>
