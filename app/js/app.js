@@ -4,6 +4,7 @@
 // Declare app level module which depends on filters, and services
 var reactor_app = angular.module('reactor', [
   'ngRoute',
+  'ngResource',
   'reactor.filters',
   'reactor.services',
   'reactor_directives',

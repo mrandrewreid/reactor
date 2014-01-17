@@ -1,4 +1,5 @@
 {
+	"id": "00001",
   "account": {
     "first_name": "Andrew",
     "last_name": "Reid",
@@ -6,7 +7,7 @@
     "available_saved_reactors": [
       {
         "meta": {
-          "id": "00001",
+          "id": "slideshow_01",
           "pretty_type": "Slideshow",
           "title": {
             "text": "Slideshow 1"

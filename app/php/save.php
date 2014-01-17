@@ -1,6 +1,6 @@
 <?php
 
-	$json = json_decode(file_get_contents("php://input"), true);
+	$json = json_decode( file_get_contents("php://input"), true );
 	// Access your $json['this']
 
 	//should save to: users/:userID/:reactorID/materials.json
@@ -10,24 +10,28 @@
 	$filename = 'materials' . $extension ;
 	$backup_filename = 'materials_' . time() . $extension ;
 
+	$u = $json[ 'user' ] ;
+	$r = $json[ 'reactor' ] ;
 
-	$interaction_author = $json[ 'author' ] ;
-	$interaction_id = $json[ 'id' ] ;
-	$interaction_path = 'users/' . $interaction_author . '/' . $interaction_id . '/data/' ;
+	$user_id = $json[ 'user' ][ 'id' ] ;
+	$reactor_id = $json[ 'reactor' ][ 'id' ] ;
+	$save_path = '../users/' . $user_id . '/' . $reactor_id . '/' ;
+	//$save_path = '../users/' . '00001' . '/' . 'slideshow_01' . '/' ;
 
 	
-	if ( !file_exists( $interaction_path ) ) {
-		mkdir( $interaction_path , 0777, true ) ;
+	if ( !file_exists( $save_path ) ) {
+		mkdir( $save_path , 0777, true ) ;
 	}
 
-	$file = $interaction_path . time() . $extension ;
-	$json_data = json_encode( $json ) ;
+	//$file = $save_path . time() . $extension ;
+	$file = $save_path . $filename ;
+	$json_data = json_encode( $json[ 'reactor' ] ) ;
 	file_put_contents( $file, $json_data ) ;
 
   
 	// then when you are done
 	header("Content-type: application/json") ;
-	print json_encode( array( "file" => $file , "response" => "success" ) ) ;
+	print json_encode( array( "file" => $file , "r" => $reactor_id , "u" => $user_id , "response" => "success" ) ) ;
 
 ?>
 

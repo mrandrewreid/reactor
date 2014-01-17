@@ -6,7 +6,7 @@ angular.module( 'reactor.controllers', [] ).
 
 	controller('Dashboard', [ '$scope' , '$http' , function( $scope , $http ) {
 	
-		$http.get('users/00001/user.json').success( function( data ) {
+		$http.get( 'users/00001/user.json' ).success( function( data ) {
 			$scope.user = data ;
 		});
 
@@ -29,11 +29,14 @@ angular.module( 'reactor.controllers', [] ).
 		$scope.reactor_id = $routeParams.reactor_id ;
 		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
 
+		$http.get( 'users/00001/user.json' ).success( function( data ) {
+			$scope.user = data ;
+		});
 
-
-		$http.get( 'users/00001/slideshow_01/materials.json' ).success( function( data ) {
+		$http.get( 'users/00001/' + $routeParams.reactor_id + '/materials.rctr' ).success( function( data ) {
 
 			$scope.navigationService = navigationService ;
+			$scope.server = server ;
 
 			$scope.reactor = data ;
 
@@ -53,7 +56,7 @@ angular.module( 'reactor.controllers', [] ).
 			} ;
 			
 			$scope.reactor.save = 		function() { 
-				alert( 'save' ) ;
+				$scope.server.saveReactor( $scope.reactor , $scope.user ) ;
 			} ;
 			
 			$scope.reactor.export = 		function() { 
