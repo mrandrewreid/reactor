@@ -1,9 +1,9 @@
-			<input type="button" 
-				ng-repeat="button in reactor.navigation.controls.buttons" 
-				class="{{button.subtype}}_entry_button" 
-				value="{{button.label}}" 
-				ng-click="reactor.navigation.goto( button.response )" 
-				ng-if="button.include"
-			/>
+<input type="button" 
+	ng-repeat="button in reactor.navigation.controls.buttons" 
+	class="{{button.subtype}}_entry_button" 
+	value="{{button.label}}" 
+	ng-click="reactor.goto( button.response )" 
+	ng-if="button.include"
+/>
 
-			<div pagination reactor="reactor" ng-if="reactor.navigation.controls.pagination.options.include"></div>
+<div pagination reactor="reactor" ng-if="reactor.navigation.controls.pagination.options.include"></div>

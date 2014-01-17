@@ -5,9 +5,11 @@
 				padding: 0rem ; 
 				clear: both ;
 				margin: 1rem 0 ; 
-				height: 600px ;
+				min-height: 700px ;
 				overflow: auto ;
 			}
+
+h1 p {margin:0; padding:0;}
 
 .metadata
 			{
@@ -126,7 +128,7 @@ ul.tabs
 .reactor
 	.entries	
 			{ 
-				white-space: nowrap ; 
+				/* white-space: nowrap ;  */
 				list-style-type: none ; 
 				list-style-position: inside ;
 				margin: 0rem auto ;

@@ -22,16 +22,38 @@ angular.module( 'reactor.controllers', [] ).
 			'$http' , 
 			'$location' , 
 			'server' , 
-			function( $scope , $routeParams , $http , $location , server ) 
+			'navigationService',
+			function( $scope , $routeParams , $http , $location , server , navigationService ) 
 		{
-	
+
 		$scope.reactor_id = $routeParams.reactor_id ;
 		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
 
+
+
 		$http.get( 'users/00001/slideshow_01/materials.json' ).success( function( data ) {
+
+			$scope.navigationService = navigationService ;
+
 			$scope.reactor = data ;
 
-			
+
+			$scope.first = 	function() { return navigationService.first( $scope.reactor ) } ;
+			$scope.previous = 	function() { return navigationService.previous( $scope.reactor ) } ;
+			$scope.next = 		function() { return navigationService.next( $scope.reactor ) } ;
+			$scope.last = 		function() { return navigationService.last( $scope.reactor ); } ;
+
+
+			$scope.reactor.goto = 		function( str ) { 
+				//alert( str ) ; 
+				switch( str ) {
+					case 'first' : 	$scope.first( $scope.reactor ) ; 	break ;
+					case 'previous' : 	$scope.previous( $scope.reactor ) ; 	break ;
+					case 'next' : 		$scope.next( $scope.reactor ) ; 		break ;
+					case 'last' : 		$scope.last( $scope.reactor ) ; 		break ;
+				}
+			} ;
+
 			$scope.reactor.changeEditMode = function( bool ) {
 				$scope.reactor.state.editing = bool ;
 				var numerical_bool = 0 ;
@@ -45,6 +67,7 @@ angular.module( 'reactor.controllers', [] ).
 			//if ( $routeParams.editing == 1 ) { server.loadReactor( '00001' ) } ;
 
 			$scope.reactor.add = function() {
+
 				var new_entry = { 
 						type: "slide",
 						meta: {
@@ -78,6 +101,7 @@ angular.module( 'reactor.controllers', [] ).
 						
 					} ;
 					$scope.reactor.entries.push( new_entry ) ;
+					$scope.navigationService.last( $scope.reactor ) ;
 		}
 	});
 
