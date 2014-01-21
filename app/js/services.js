@@ -14,6 +14,10 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 					} else { 
 						reactor_data.meta.version++ 
 					}
+					
+					// set the last date modified to this bloody second //
+					reactor_data.meta.modified = new Date() ;
+					
 					// this is supposed to be written differently if i want it to be a restful architecture //
 					// but i just want it to work for now //
 					$http.post( 'php/save.php?t=' + new Date() , { reactor: reactor_data , user: user_data } ).success( function( data ) {

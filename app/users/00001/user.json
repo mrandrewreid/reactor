@@ -12,11 +12,38 @@
           "title": {
             "text": "Slideshow 1"
           },
-          "file": "reactors/00001/slideshow_01.json",
+          "file": "reactors/00001/slideshow_01/materials.rctr",
           "created": "20140110",
           "edited": "20141011"
         }
+      } ,
+
+      {
+        "meta": {
+          "id": "slideshow_02",
+          "pretty_type": "Slideshow",
+          "title": {
+            "text": "Slideshow 2"
+          },
+          "file": "reactors/00001/slideshow_02/materials.rctr",
+          "created": "20140120",
+          "edited": "20140120"
+        }
+      } ,
+
+      {
+        "meta": {
+          "id": "quiz_01",
+          "pretty_type": "Quiz",
+          "title": {
+            "text": "Quiz 1"
+          },
+          "file": "reactors/00001/quiz_01/materials.rctr",
+          "created": "20140121",
+          "edited": "20140121"
+        }
       }
+
     ],
     "available_reactor_templates": [
       {
