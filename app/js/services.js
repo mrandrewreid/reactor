@@ -83,5 +83,66 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 			return navigationService ;
 		}
 	]) ;
+	
+	
+	reactor_services.factory( 'modifierService' , [ 
+
+		function() {
+
+			var modifierService = {} ;
+
+				modifierService.add = function( data , new_entry_type ) {
+
+					var new_entry = {} ;
+
+					switch ( new_entry_type ) {
+
+						case 'slide' :
+
+							new_entry = { 
+								type: "slide",
+								meta: { title: { type: "title", pretty_type: "Title", text: "Slide " + ( data.length + 1 ) , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "single" } , options: { include: true } } },
+								text: { type: "text", pretty_type: "Text", text: "This is the text for slide " + ( data.length + 1 ) , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "multiple" } ,options: { include: true } 
+								}
+							} ;
+
+						break ;
+						
+						case 'question' :
+
+							new_entry = { 
+								type: "question",
+								meta: { title: { type: "title", pretty_type: "Title", text: "Question " + ( data.length + 1 ) , settings: { edit: { editable: false , locked: true , allow_type_change: false } , optional: false , type: "single" } , options: { include: true } } },
+								text: { type: "text", pretty_type: "Text", text: "Enter your question... " , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "multiple" } ,options: { include: true } 
+								}
+							} ;
+
+						break ;			
+						
+						
+					}
+	
+					data.push( new_entry ) ;
+					
+					return { success: true , new_position: data.length - 1 } ;
+
+				} ;
+
+
+				modifierService.remove = function( data , index ) {
+					
+					if ( data.length > 1 && data.length > index ) { 
+						data.splice( index , 1 ) ;
+						return true ;
+					} else {
+						return false 
+					}
+					
+					
+				}
+
+			return modifierService ;
+		}
+	]) ;
 
 

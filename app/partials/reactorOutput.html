@@ -7,7 +7,10 @@
 
 		<div class="entries_container">
 
-			<div style="margin: 0 1% 0 1% ;"><input ng-if="reactor.state.editing" type="button" value="add a slide +" ng-click="reactor.add()"></div>
+			<div style="margin: 0 1% 0 1% ;" ng-if="reactor.state.editing" ng-switch="reactor.type">
+				<input ng-switch-when="slideshow" type="button" value="add a slide +" ng-click="reactor.add( reactor.entries , 'slide' )">
+				<input ng-switch-when="quiz" type="button" value="add a question +" ng-click="reactor.add( reactor.entries ,'question')">
+			</div>
 
 			<ul reactor-entries reactor="reactor" class="entries" style="list-style-type: none ;"></ul>
 			

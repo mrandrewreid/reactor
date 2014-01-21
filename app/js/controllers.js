@@ -23,7 +23,8 @@ angular.module( 'reactor.controllers', [] ).
 			'$location' , 
 			'server' , 
 			'navigationService',
-			function( $scope , $routeParams , $http , $location , server , navigationService ) 
+			'modifierService',
+			function( $scope , $routeParams , $http , $location , server , navigationService , modifierService ) 
 		{
 
 		$scope.reactor_id = $routeParams.reactor_id ;
@@ -37,6 +38,7 @@ angular.module( 'reactor.controllers', [] ).
 
 			$scope.navigationService = navigationService ;
 			$scope.server = server ;
+			$scope.modifierService = modifierService ;
 
 			$scope.reactor = data ;
 
@@ -75,42 +77,11 @@ angular.module( 'reactor.controllers', [] ).
 			//if ( $routeParams.editing == 0 ) { server.saveReactor( '' ) } ;
 			//if ( $routeParams.editing == 1 ) { server.loadReactor( '00001' ) } ;
 
-			$scope.reactor.add = function() {
+			$scope.reactor.add = function( collection , entry_type ) {
 
-				var new_entry = { 
-						type: "slide",
-						meta: {
-							title: {
-								type: "title",
-								pretty_type: "Title", 
-								text: "Slide " + ( $scope.reactor.entries.length + 1 ) , 
-								settings: { 
-									edit: { 
-										editable: true , 
-										locked: true , 
-										allow_type_change: false 
-									} , 
-									optional: true , 
-									type: "single" 
-								} ,
-								options: { include: true } 
-							}
-						},
-						text: {
-							type: "text",
-							pretty_type: "Text", 
-							text: "This is the text for slide " + ( $scope.reactor.entries.length + 1 ) , 
-							settings: { 
-								edit: { editable: true , locked: true , allow_type_change: false } , 
-								optional: true , 
-								type: "multiple" 
-							} ,
-							options: { include: true } 
-						}
-						
-					} ;
-					$scope.reactor.entries.push( new_entry ) ;
-					$scope.navigationService.last( $scope.reactor ) ;
+				var result = $scope.modifierService.add( collection , entry_type ) ;
+				if ( result.success == true ) $scope.navigationService.last( $scope.reactor ) ;
+
 		}
 	});
 
