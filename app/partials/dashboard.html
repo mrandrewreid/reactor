@@ -1,22 +1,23 @@
 <h1>Dashboard</h1>
 
-<div>Welcome back, {{user.account.first_name}}</div>
-
-<p><a href="#/edit">Edit</a></p>
+<div>
+	<p>Welcome back, {{user.account.first_name}}</p>
+</div>
 
 <div class="new_reactors">
 	<ol>
-		<li>Template</li>
-		<li>Create</li>
-		<li>Populate</li>
-		<li>Emulate</li>
-		<li>Renovate</li>
-		<li>Generate</li>
+		<li><strong>Create</strong> a new Reactor Template (top level users only)</li>
+		<li><strong>Renovate</strong> an existing Reactor Template (top level users only)</li>
+
+		<li><strong>Populate</strong> an existing Reactor Template</li>
+		<li><strong>Generate</strong> an output version of a Reactor</li>
+		<li><strong>Emulate</strong> an existing Reactor</li>
+		<li><strong>Decorate</strong> an existing Reactor (theming)</li>
 	</ol>
 </div>
 
 <div class="new_reactors">
-	<h2>Create a new Reactor</h2>
+	<h2>Create a new Reactor from an existing template</h2>
 	<ul><li ng-repeat="reactor in user.account.available_reactor_templates"><a href="#">{{reactor.meta.pretty_type}}</a></li></ul>
 </div>
 
@@ -33,7 +34,7 @@
 			<td><a href="#/edit/{{reactor.meta.id}}/0/">{{reactor.meta.title.text}}</a></td>
 			<td>{{reactor.meta.pretty_type}}</td>
 			<td>{{reactor.meta.edited}}</td>
-			<td><a href="#/edit/{{reactor.meta.id}}/1/">Edit</a></td>
+			<td><a href="#/edit/{{reactor.meta.id}}/1/">Renovate</a></td>
 		</tr>
 	</table>
 </div>

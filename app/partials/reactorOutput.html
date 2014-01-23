@@ -21,7 +21,7 @@
 			navigation-controls 
 		 	reactor="reactor" 
 			class="entries_controls" 
-			ng-if="reactor.navigation.controls.options.include && !reactor.state.editing"
+			ng-if="reactor.navigation.controls.options.include && !reactor.state.editing && reactor.entries.length > 1"
 		>
 		</div>
 
@@ -36,7 +36,7 @@
 		<div 
 			navigation-controls-edit 
 		 	reactor="reactor" 
-		 	ng-if="reactor.navigation.controls.options.include && reactor.state.editing"
+		 	ng-if="reactor.navigation.controls.options.include && reactor.state.editing && reactor.entries.length > 1"
 		 	class="entries_controls"
 		>
 		</div>

@@ -13,6 +13,15 @@ angular.module( 'reactor.controllers', [] ).
 		$scope.orderProp = 'age' ;
 	
 	}])
+	
+
+	.controller('MyAccount', [ '$scope' , '$http' , function( $scope , $http ) {
+	
+		$http.get( 'users/00001/user.json' ).success( function( data ) {
+			$scope.user = data ;
+		});
+	
+	}])
  
 	.controller(
 		'Edit', 
@@ -82,7 +91,22 @@ angular.module( 'reactor.controllers', [] ).
 				var result = $scope.modifierService.add( collection , entry_type ) ;
 				if ( result.success == true ) $scope.navigationService.last( $scope.reactor ) ;
 
-		}
+			}
+
+			$scope.reactor.remove = function( collection , index ) {
+
+				var item_to_remove = collection[ index ] ;
+				var item_type_in_lower_case = item_to_remove.pretty_type.toLowerCase();
+				var carry_on = confirm( 'Are you sure you want to delete this ' + item_type_in_lower_case + '?' ) ;
+				if ( carry_on ) {
+
+					$scope.navigationService.previous( $scope.reactor ) ;
+
+					var result = $scope.modifierService.remove( collection , index ) ;
+				}
+				//if ( result.success == true ) $scope.navigationService.last( $scope.reactor ) ;
+
+			}
 	});
 
   }])

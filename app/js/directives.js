@@ -13,7 +13,7 @@ angular.module( 'reactor_directives', [] ).
   
 	.directive('appMenu', function() {
 		return {
-			templateUrl: 'partials/appMenu.html' 
+			templateUrl: 'partials/appMenu.html?t=' + new Date() 
 		} ;
 	})
 	
@@ -24,7 +24,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				reactor: "="
 			},
-			templateUrl: 'partials/reactorToolbar.html' 
+			templateUrl: 'partials/reactorToolbar.html?t=' + new Date() 
 		}
 
 	})
@@ -36,7 +36,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				reactor: "="
 			},
-			templateUrl: 'partials/reactorOutput.html' 
+			templateUrl: 'partials/reactorOutput.html?t=' + new Date() 
 		}
 
 	})
@@ -48,7 +48,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				element: "="
 			},
-			templateUrl: 'partials/reactorControls.html' 
+			templateUrl: 'partials/reactorControls.html?t=' + new Date() 
 		}
 
 	})
@@ -62,7 +62,7 @@ angular.module( 'reactor_directives', [] ).
 				reactor: "=",
 				index: "="
 			},
-			templateUrl: 'partials/reactorEntries.html' 
+			templateUrl: 'partials/reactorEntries.html?t=' + new Date() 
 		}
 
 	})
@@ -77,7 +77,7 @@ angular.module( 'reactor_directives', [] ).
 				reactor: "="
 				
 			},
-			templateUrl: 'partials/navigationControls.html' 
+			templateUrl: 'partials/navigationControls.html?t=' + new Date() 
 		}
 
 	})
@@ -89,7 +89,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				reactor: "="
 			},
-			templateUrl: 'partials/navigationControls.edit.html' 
+			templateUrl: 'partials/navigationControls.edit.html?t=' + new Date() 
 		}
 
 	})
@@ -103,7 +103,7 @@ angular.module( 'reactor_directives', [] ).
 				reactor: "=",
 				index: "="
 			},
-			templateUrl: 'partials/entryOfEntries.html' 
+			templateUrl: 'partials/entryOfEntries.html?t=' + new Date() 
 		}
 
 	})
@@ -115,7 +115,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				reactor: "="
 			},
-			templateUrl: 'partials/metadata.html' 
+			templateUrl: 'partials/metadata.html?t=' + new Date() 
 		}
 
 	})
@@ -127,7 +127,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				reactor: "="
 			},
-			templateUrl: 'partials/pagination.html' 
+			templateUrl: 'partials/pagination.html?t=' + new Date() 
 		}
 
 	})
@@ -139,7 +139,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				settings: "="
 			},
-			templateUrl: 'partials/unlocker.html' 
+			templateUrl: 'partials/unlocker.html?t=' + new Date() 
 		}
 
 	})
@@ -151,7 +151,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				element: "="
 			},
-			templateUrl: 'partials/includer.html' 
+			templateUrl: 'partials/includer.html?t=' + new Date() 
 		}
 
 	})
@@ -166,7 +166,7 @@ angular.module( 'reactor_directives', [] ).
 			scope: {
 				text: "="
 			},
-			templateUrl: 'partials/reactorText.html' 
+			templateUrl: 'partials/reactorText.html?t=' + new Date() 
 
 		}
 

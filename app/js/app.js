@@ -13,6 +13,8 @@ var reactor_app = angular.module('reactor', [
 config( [ '$routeProvider' , function( $routeProvider ) {
 	
   $routeProvider.when( '/dashboard', { templateUrl: 'partials/dashboard.html', controller: 'Dashboard'});
+  
+  $routeProvider.when( '/myAccount', { templateUrl: 'partials/myAccount.html', controller: 'Dashboard'});
 
   $routeProvider.when( '/edit/:reactor_id/:editing' , { templateUrl: 'partials/edit.html', controller: 'Edit' });
 

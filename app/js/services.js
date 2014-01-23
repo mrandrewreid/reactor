@@ -101,6 +101,7 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 
 							new_entry = { 
 								type: "slide",
+								pretty_type: "Slide",
 								meta: { title: { type: "title", pretty_type: "Title", text: "Slide " + ( data.length + 1 ) , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "single" } , options: { include: true } } },
 								text: { type: "text", pretty_type: "Text", text: "This is the text for slide " + ( data.length + 1 ) , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "multiple" } ,options: { include: true } 
 								}
@@ -112,8 +113,25 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 
 							new_entry = { 
 								type: "question",
+								pretty_type: "Question",
 								meta: { title: { type: "title", pretty_type: "Title", text: "Question " + ( data.length + 1 ) , settings: { edit: { editable: false , locked: true , allow_type_change: false } , optional: false , type: "single" } , options: { include: true } } },
-								text: { type: "text", pretty_type: "Text", text: "Enter your question... " , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "multiple" } ,options: { include: true } 
+								text: { type: "text", pretty_type: "Text", text: "Enter your question... " , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "multiple" } ,options: { include: true } ,
+								answers: {
+									type: 'answers' ,
+									pretty_type: 'Answers' ,
+									entries: { 
+										type: "answer" , 
+										pretty_type: "Answer" ,
+										text: { 
+											type: "text", 
+											pretty_type: "Text", 
+											text: "Enter your answer... " , 
+											settings: { 
+												edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "multiple" } ,
+												options: { include: true }
+											}
+										}
+									}
 								}
 							} ;
 

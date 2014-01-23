@@ -1,0 +1,29 @@
+<h1>My Account</h1>
+
+<div>
+	<p>Here are your account details, {{user.account.first_name}}.</p>
+</div>
+
+<div class="user_details">
+	<h2>Your user details</h2>
+	<p><strong>Name</strong>: {{user.account.first_name + ' ' + user.account.last_name }}
+</div>
+
+<div class="existing_reactors">
+	<h2>Your Reactors</h2>
+	<table style="text-align: center ;">
+		<tr>
+			<th>Title</th>
+			<th>Type</th>
+			<th>Edited</th>
+			<th>Edit</th>
+		</tr>
+		<tr ng-repeat="reactor in user.account.available_saved_reactors">
+			<td><a href="#/edit/{{reactor.meta.id}}/0/">{{reactor.meta.title.text}}</a></td>
+			<td>{{reactor.meta.pretty_type}}</td>
+			<td>{{reactor.meta.edited}}</td>
+			<td><a href="#/edit/{{reactor.meta.id}}/1/">Renovate</a></td>
+		</tr>
+	</table>
+</div>
+
