@@ -21,54 +21,57 @@
 		,"pretty_type":"Question"
 		,"meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 1","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}}
 		,"text":{"type":"text","pretty_type":"Text","text":"How many roads must a man walk down before you can call him a man?","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}
-		,"images": [
-			{
-				"type":"image"
-				,"pretty_type":"Image"
-				,"dimensions": 
+		,"images": {
+			"entries": 
+				[
 					{
-					"type": "dimensions" 
-					,"width": "600" 
-					,"height": "600"
-					}
-
-				,"alt":
-					{
-					"type":"text"
-					,"pretty_type":"Text"
-					,"text":"this is the alt text for this image."
-					,"settings":
-						{
-						"edit":
+						"type":"image"
+						,"pretty_type":"Image"
+						,"src": "img/tree.jpg"
+						,"dimensions": 
 							{
-							"editable":true
-							,"locked":true
-							,"allow_type_change":false
+							"type": "dimensions" 
+							,"width": "300" 
+							,"height": "300"
 							}
-						,"optional":false
-						,"type":"single"
-						}
-						,"options":{"include":true}
-					}
-
-				,"description":
-					{
-					"type":"text"
-					,"pretty_type":"Text"
-					,"text":"this is the decription text for this image."
-					,"settings":
-						{
-						"edit":{ "editable":true,"locked":false,"allow_type_change":false } 
-						,"optional":false
-						,"type":"multiple"
-						}
-						,"options":{"include":true}
-					}
-
-			}
-				
-		]
 		
+						,"alt":
+							{
+							"type":"text"
+							,"pretty_type":"Text"
+							,"text":"this is the alt text for this image."
+							,"settings":
+								{
+								"edit":
+									{
+									"editable":true
+									,"locked":true
+									,"allow_type_change":false
+									}
+								,"optional":false
+								,"type":"single"
+								}
+								,"options":{"include":true}
+							}
+		
+						,"description":
+							{
+							"type":"text"
+							,"pretty_type":"Text"
+							,"text":"this is the decription text for this image."
+							,"settings":
+								{
+								"edit":{ "editable":true,"locked":false,"allow_type_change":false } 
+								,"optional":false
+								,"type":"multiple"
+								}
+								,"options":{"include":true}
+							}
+		
+					}
+						
+				]
+			}
 		}
 		,{"type":"question","pretty_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 2","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}},"text":{"type":"text","pretty_type":"Text","text":"Do you like it?","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}
 		,{"type":"question","pretty_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 3","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}},"text":{"type":"text","pretty_type":"Text","text":"Can you taste the rainbow?","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}
@@ -81,7 +84,7 @@
 	,"navigation":
 		{
 		"type":"slide"
-		,"state":{"position":{"entry_index":7},"history":[]}
+		,"state":{"position":{"entry_index":0},"history":[]}
 		,"entry_of_entries":{"options":{"include":true},"settings":{"edit":{"editable":true,"locked":false},"optional":true},"type":"entry of entries","pretty_type":"Entry of entries"}
 		,"controls":
 			{

@@ -2,8 +2,19 @@
 	<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="$index == reactor.navigation.state.position.entry_index">
 
 		<div ng-if="!reactor.state.editing">
+
 			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
 			<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
+
+			<div ng-if="entry.images.entries.length > 0" style="width: 25% ; border:1pt solid #000 ; float: left ; margin-right: 1% ;">
+				<img ng-src="{{entry.images.entries[0].src}}" alt="{{entry.images.entries[0].alt.text}}" style="width: 100% ; height: auto ;" />
+				<!--
+				<p><strong>Description</strong>: {{entry.images.entries[0].description.text}}</p>
+				<p><strong>Alt</strong>: {{entry.images.entries[0].alt.text}}</p>
+				-->
+			</div>
+
+
 			<!--<div class="text_container">{{entry.text.text}}</div>-->
 			<div class="text_container">{{entry.text.text}}</div>
 		</div>
@@ -16,6 +27,16 @@
 			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
 
 			<h1 style="clear: both;"><span reactor-text text="entry.meta.title"></span></h1>
+			
+			<div ng-if="entry.images.entries.length > 0" style="width: {{entry.images.entries[0].dimensions.width }}px; border:1pt solid #000 ; float: left ; margin-right: 1rem ;">
+				<img ng-src="{{entry.images.entries[0].src}}" alt="{{entry.images.entries[0].alt.text}}" style="width: {{entry.images.entries[0].dimensions.width }}px; height: {{entry.images.entries[0].dimensions.height }}px;" />
+				<!--
+				<p><strong>Description</strong>: {{entry.images.entries[0].description.text}}</p>
+				<p><strong>Alt</strong>: {{entry.images.entries[0].alt.text}}</p>
+				-->
+			</div>
+
+			
 			<div reactor-text text="entry.text"></div>
 		</div>
 
