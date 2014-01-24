@@ -5,30 +5,33 @@
 
 
 	<!-- if available to edit -->
+	<!--
 	<div ng-if="!image.settings.edit.locked" ng-switch="image.settings.type">
 
 		<div style="width:100%;" ng-switch-when="single">
-			<!--<input 
+			<input 
 				type="text" 
 				ng-disabled="!image.options.include || image.settings.edit.locked" 
 				style="width:100%; margin:0px ; padding:0px ;"
 				value="image.text" 
 				ng-model="image.text" 
-			/>-->
+			/>
 		</div>
 
 		<div ng-switch-when="multiple">
-			<!--<textarea 
+			<textarea 
 				ng-disabled="!image.options.include || image.settings.edit.locked" 
 				class="full_width" 
 				ng-model="image.text" 
 				>
-			</textarea>-->
-			<p ng-if="image.settings.edit.locked">{{image.text}}</p>
+			</textarea>
+			<p ng-if="image.settings.edit.locked"><img src="{{image.src}}" alt="{{image.alt}}" /></p>
 		</div>
 		
 	</div>
-	
+	-->
+<p ng-if="image.settings.edit.locked"><img src="{{image.src}}" alt="{{image.alt}}" /></p>
+
 
 <!-- if not available to edit -->
-<p ng-if="image.settings.edit.locked"><span unlocker settings="image.settings"></span>{{image.src}}</p>
+<p ng-if="image.settings.edit.locked"><span unlocker settings="image.settings"></span><img src="{{image.src}}" alt="{{image.alt}}" /></p>
