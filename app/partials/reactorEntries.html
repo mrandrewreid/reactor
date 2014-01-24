@@ -6,13 +6,15 @@
 			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
 			<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
 
-			<div ng-if="entry.images.entries.length > 0" style="width: 25% ; border:1pt solid #000 ; float: left ; margin-right: 1% ;">
-				<img ng-src="{{entry.images.entries[0].src}}" alt="{{entry.images.entries[0].alt.text}}" style="width: 100% ; height: auto ;" />
+			<div ng-if="entry.images.entries.length > 0" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; ">
+				<img reactor-image image="entry.images.entries[0]" />
+			</div>
+			<!--<div ng-if="entry.images.entries.length > 0" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; "><img ng-src="{{entry.images.entries[0].src}}" alt="{{entry.images.entries[0].alt.text}}" style="width: 98% ; margin: 1% ; height: auto ;" /></div>-->
+
 				<!--
 				<p><strong>Description</strong>: {{entry.images.entries[0].description.text}}</p>
 				<p><strong>Alt</strong>: {{entry.images.entries[0].alt.text}}</p>
 				-->
-			</div>
 
 
 			<!--<div class="text_container">{{entry.text.text}}</div>-->

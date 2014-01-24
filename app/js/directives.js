@@ -172,6 +172,20 @@ angular.module( 'reactor_directives', [] ).
 
 	})
 	
+	.directive('reactorImage', function () {
+
+		return {
+
+			restrict: 'A',
+			scope: {
+				image: "="
+			},
+			templateUrl: 'partials/reactorImage.html?t=' + new Date() 
+
+		}
+
+	})
+	
 	
 	.directive('myCurrentTime', function($interval, dateFilter) {
 		 
