@@ -172,6 +172,22 @@ angular.module( 'reactor_directives', [] ).
 
 	})
 	
+	
+	.directive('reactorImageContainer', function () {
+
+		return {
+
+			restrict: 'A',
+			scope: {
+				image: "="
+			},
+			templateUrl: 'partials/reactorImageContainer.html?t=' + new Date() 
+
+		}
+
+	})
+
+	
 	.directive('reactorImage', function () {
 
 		return {

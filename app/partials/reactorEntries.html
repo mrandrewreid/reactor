@@ -6,18 +6,13 @@
 			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
 			<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
 
+			<!--
 			<div ng-if="entry.images.entries.length > 0" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; ">
-				<img reactor-image image="entry.images.entries[0]" />
+				<span reactor-image image="entry.images.entries[0]"></span>
 			</div>
-			<!--<div ng-if="entry.images.entries.length > 0" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; "><img ng-src="{{entry.images.entries[0].src}}" alt="{{entry.images.entries[0].alt.text}}" style="width: 98% ; margin: 1% ; height: auto ;" /></div>-->
+			-->
+			<span ng-if="entry.images.entries.length > 0" reactor-image-container image="entry.images.entries[0]"></span>
 
-				<!--
-				<p><strong>Description</strong>: {{entry.images.entries[0].description.text}}</p>
-				<p><strong>Alt</strong>: {{entry.images.entries[0].alt.text}}</p>
-				-->
-
-
-			<!--<div class="text_container">{{entry.text.text}}</div>-->
 			<div class="text_container">{{entry.text.text}}</div>
 		</div>
 
@@ -30,13 +25,12 @@
 
 			<h1 style="clear: both;"><span reactor-text text="entry.meta.title"></span></h1>
 			
-			<div ng-if="entry.images.entries.length > 0" style="width: {{entry.images.entries[0].dimensions.width }}px; border:1pt solid #000 ; float: left ; margin-right: 1rem ;">
-				<img ng-src="{{entry.images.entries[0].src}}" alt="{{entry.images.entries[0].alt.text}}" style="width: {{entry.images.entries[0].dimensions.width }}px; height: {{entry.images.entries[0].dimensions.height }}px;" />
-				<!--
-				<p><strong>Description</strong>: {{entry.images.entries[0].description.text}}</p>
-				<p><strong>Alt</strong>: {{entry.images.entries[0].alt.text}}</p>
-				-->
+			<span ng-if="entry.images.entries.length > 0" reactor-image-container image="entry.images.entries[0]"></span>
+			<!--
+			<div ng-if="entry.images.entries.length > 0" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; ">
+				<span reactor-image image="entry.images.entries[0]"></span>
 			</div>
+			-->
 
 			
 			<div reactor-text text="entry.text"></div>
