@@ -27,6 +27,10 @@
 					{
 						"type":"image"
 						,"pretty_type":"Image"
+
+						,"settings": {	"edit":{ "editable":true, "locked":true, "allow_type_change":false } ,"optional":false }
+						,"options":{"include":true}
+
 						,"src": "img/tree.jpg"
 						,"dimensions": 
 							{
@@ -72,7 +76,25 @@
 						
 				]
 			}
+		,"answers": {
+				"type":"answers"
+				,"pretty_type": "Answers"
+				,"entries": [
+					{
+						"type":"answer"
+						,"pretty_type": "Answer"
+						,"text":{"type":"text","pretty_type":"Text","text":"17","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}
+					}
+					,{
+						"type":"answer"
+						,"pretty_type": "Answer"
+						,"text":{"type":"text","pretty_type":"Text","text":"Its a rhetorical question, dufus.","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}
+					}
+					
+				]
+			}
 		}
+		
 		,{"type":"question","pretty_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 2","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}},"text":{"type":"text","pretty_type":"Text","text":"Do you like it?","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}
 		,{"type":"question","pretty_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 3","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}},"text":{"type":"text","pretty_type":"Text","text":"Can you taste the rainbow?","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}
 		,{"type":"question","pretty_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 4","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}},"text":{"type":"text","pretty_type":"Text","text":"Are we there yet?","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}

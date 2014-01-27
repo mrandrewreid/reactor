@@ -1,3 +1,9 @@
-<div style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; " class="image_container">
-	<span reactor-image image="image"></span>
+<div ng-if="reactor.state.editing" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; " class="image_container">
+	<span unlocker settings="image.settings"></span>
+	<span class="controls" reactor-controls element="image" ng-if="image.settings.edit.editable && !image.settings.edit.locked"></span>
+	<span reactor-image image="image" reactor="reactor"></span>
+</div>
+
+<div ng-if="!reactor.state.editing" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; " class="image_container">
+	<span reactor-image image="image" reactor="reactor"></span>
 </div>

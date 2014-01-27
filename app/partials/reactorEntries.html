@@ -6,14 +6,16 @@
 			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
 			<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
 
-			<!--
-			<div ng-if="entry.images.entries.length > 0" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; ">
-				<span reactor-image image="entry.images.entries[0]"></span>
-			</div>
-			-->
-			<span ng-if="entry.images.entries.length > 0" reactor-image-container image="entry.images.entries[0]"></span>
-
 			<div class="text_container">{{entry.text.text}}</div>
+	
+			<span ng-if="entry.images.entries.length > 0" reactor-image-container reactor="reactor" image="entry.images.entries[0]"></span>
+
+			<div class="text_container">
+				<ul ng-if="entry.answers.entries.length > 0" style="list-style-type: none;">
+					<li ng-repeat="answer in entry.answers.entries"><label><input type="checkbox">{{answer.text.text}}</label></li>
+				</ul>
+			</div>
+
 		</div>
 
 		<div ng-if="reactor.state.editing">
@@ -24,16 +26,17 @@
 			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
 
 			<h1 style="clear: both;"><span reactor-text text="entry.meta.title"></span></h1>
-			
-			<span ng-if="entry.images.entries.length > 0" reactor-image-container image="entry.images.entries[0]"></span>
-			<!--
-			<div ng-if="entry.images.entries.length > 0" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; ">
-				<span reactor-image image="entry.images.entries[0]"></span>
-			</div>
-			-->
 
-			
 			<div reactor-text text="entry.text"></div>
+		
+			<span ng-if="entry.images.entries.length > 0" reactor-image-container reactor="reactor" image="entry.images.entries[0]"></span>		
+
+			<div class="text_container">
+				<ul ng-if="entry.answers.entries.length > 0" style="list-style-type: none;">
+					<li ng-repeat="answer in entry.answers.entries"><span reactor-text text="answer.text"></span></li>
+				</ul>
+			</div>
+
 		</div>
 
 	</li>

@@ -179,7 +179,8 @@ angular.module( 'reactor_directives', [] ).
 
 			restrict: 'A',
 			scope: {
-				image: "="
+				image: "=",
+				reactor: "="
 			},
 			templateUrl: 'partials/reactorImageContainer.html?t=' + new Date() 
 
@@ -194,7 +195,8 @@ angular.module( 'reactor_directives', [] ).
 
 			restrict: 'A',
 			scope: {
-				image: "="
+				image: "=",
+				reactor: "="
 			},
 			templateUrl: 'partials/reactorImage.html?t=' + new Date() 
 
