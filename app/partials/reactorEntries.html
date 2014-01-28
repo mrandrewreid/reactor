@@ -1,6 +1,18 @@
 
 	<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="$index == reactor.navigation.state.position.entry_index">
 
+
+		<span ng-switch="entry.type">
+		
+			<div ng-switch-when="question" reactor-question reactor="reactor" entry="entry" index="$index"></div>
+			<div ng-switch-when="slide" reactor-slide reactor="reactor" entry="entry" index="$index"></div>
+			<!--<div ng-if="!reactor.state.editing"></div>-->
+
+		</span>
+
+
+
+		<!--
 		<div ng-if="!reactor.state.editing">
 
 			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
@@ -38,5 +50,6 @@
 			</div>
 
 		</div>
+		-->
 
 	</li>

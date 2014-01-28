@@ -1,0 +1,11 @@
+<label ng-if="!reactor.state.editing">
+	<input type="checkbox" />
+	<div class="text_container">{{answer.text.text}}</div>
+</label>
+
+
+<label ng-if="reactor.state.editing">
+	<div class="text_container">
+		<span reactor-text text="answer.text"></span>
+	</div>
+</label>
