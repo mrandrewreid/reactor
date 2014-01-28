@@ -295,8 +295,30 @@ ul.tabs
 				margin: 1% 0 ;
 				padding: 1% ;
 				background-color: #fff ;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+
+.reactor
+	.answers
+		li.selected_true
+			{
+				border: 1pt solid #000 
 			}
 			
+.reactor .answers li.selected_true:hover
+			{
+				border: 1pt solid #000 
+			}
+			
+
+
+
+
 .reactor 
 	.answers 
 		.answer_indicator
@@ -311,6 +333,21 @@ ul.tabs
 
 .reactor
 	.answers
+		li
+			{
+				border: 1pt solid #eee ;
+				background: #eee ;
+			}
+
+.reactor
+	.answers
+		li:hover
+			{
+				border: 1pt solid #aaa ;
+			}
+
+.reactor
+	.answers
 		li.true
 			{
 				border: 1pt solid #cfc ;
@@ -321,7 +358,14 @@ ul.tabs
 	.answers
 		.false
 			{
-				border: none ;
+				border: 1pt solid #eee ;
+			}
+			
+.reactor
+	.answers
+		.false:hover
+			{
+				border: 1pt solid #eee ;
 			}
 
 .reactor
