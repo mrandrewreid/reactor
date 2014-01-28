@@ -89,7 +89,15 @@ angular.module( 'reactor.controllers', [] ).
 			$scope.reactor.add = function( collection , entry_type ) {
 
 				var result = $scope.modifierService.add( collection , entry_type ) ;
-				if ( result.success == true ) $scope.navigationService.last( $scope.reactor ) ;
+				if ( result.success == true ) {
+				
+					switch ( entry_type ) {
+						case 'slide': $scope.navigationService.last( $scope.reactor ) ; break ;
+						case 'question': $scope.navigationService.last( $scope.reactor ) ; break ;
+						default: break ;
+					}
+					
+				}
 
 			}
 

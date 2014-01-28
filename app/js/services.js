@@ -97,6 +97,18 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 
 					switch ( new_entry_type ) {
 
+						case 'answer' :
+
+							new_entry = { 
+								type: "answer"
+								,pretty_type: "Answer"
+								,text: { type: "text", pretty_type: "Text", text: "This is the text for answer " + ( data.length + 1 ) , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: false , type: "multiple" } ,options: { include: true } 
+								}
+							} ;
+
+						break ;
+
+
 						case 'slide' :
 
 							new_entry = { 
@@ -109,31 +121,66 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 
 						break ;
 						
-						case 'question' :
-
-							new_entry = { 
-								type: "question",
-								pretty_type: "Question",
-								meta: { title: { type: "title", pretty_type: "Title", text: "Question " + ( data.length + 1 ) , settings: { edit: { editable: false , locked: true , allow_type_change: false } , optional: false , type: "single" } , options: { include: true } } },
-								text: { type: "text", pretty_type: "Text", text: "Enter your question... " , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "multiple" } ,options: { include: true } ,
-								answers: {
-									type: 'answers' ,
-									pretty_type: 'Answers' ,
-									entries: { 
-										type: "answer" , 
-										pretty_type: "Answer" ,
-										text: { 
-											type: "text", 
-											pretty_type: "Text", 
-											text: "Enter your answer... " , 
-											settings: { 
-												edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "multiple" } ,
-												options: { include: true }
+						case 'question' :							
+							
+							new_entry = {
+								type:"question"
+								,pretty_type:"Question"
+								,meta:{
+									title:{type:"title"
+										,pretty_type:"Title"
+										,text:"Question " + ( data.length + 1 )
+										,settings:{edit:{editable:false,locked:true,allow_type_change:false},optional:false,type:"single"},options:{include:true}}},text:{type:"text",pretty_type:"Text"
+								,text:"Enter your question..."
+								,settings:{edit:{editable:true,locked:true,allow_type_change:false},optional:false,type:"multiple"},options:{include:true}}
+								,images:{entries:[{type:"image",pretty_type:"Image",settings:{edit:{editable:true,locked:true,allow_type_change:false},optional:false},options:{include:true},src:"img\/tree.jpg",dimensions:{type:"dimensions",width:"300",height:"300"},alt:{type:"text",pretty_type:"Text",text:"this is the alt text for this image.",settings:{edit:{editable:true,locked:true,allow_type_change:false},optional:false,type:"single"},options:{include:true}}
+								,description:{type:"text",pretty_type:"Text",text:"this is the decription text for this image.",settings:{edit:{editable:true,locked:false,allow_type_change:false},optional:false,type:"multiple"},options:{include:true}}}]}
+								,answers:{type:"answers",pretty_type:"Answers",entries:[
+									{
+										type:"answer"
+										,pretty_type:"Answer"
+										,text:{
+											type:"text"
+											,pretty_type:"Text"
+											,text: "This is the text for answer 1"
+											,settings:
+											{
+												edit:{
+													editable:true
+													,locked:true
+													,allow_type_change:false
+													}
+													,optional:false
+													,type:"multiple"
 											}
+											,options:{include:true}
 										}
 									}
-								}
-							} ;
+									
+									,{
+										type:"answer"
+										,pretty_type:"Answer"
+										,text:{
+											type:"text"
+											,pretty_type:"Text"
+											,text: "This is the text for answer 2"
+											,settings: {
+												edit:{
+													editable:true,
+													locked:true,
+													allow_type_change:false
+												}
+												,optional:false
+												,type:"multiple"
+											}
+											,options:{include:true}
+										}
+
+									}
+								]
+							}
+							};
+							
 
 						break ;			
 						

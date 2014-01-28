@@ -261,7 +261,98 @@ ul.tabs
 			}
 			
 			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reactor 
+	.answers 
+			{ 
+				overflow: hidden ; 
+				display: block ; 
+				width: auto ; 
+				list-style-type: none ;
+				margin: 0 ;
+				padding: 0 ;
+			}
+
+.reactor
+	.answers
+		li
+			{
+				margin: 1% 0 ;
+				padding: 1% ;
+				background-color: #fff ;
+			}
 			
+.reactor 
+	.answers 
+		.answer_indicator
+			{
+				float: left ; 
+				display: inline ; 
+				margin-right: 1rem ; 
+				padding: 0 1% ;
+				background: #ccc ;
+			}
+
+
+.reactor
+	.answers
+		li.true
+			{
+				border: 1pt solid #cfc ;
+				background: #cfc ;
+			}
+			
+.reactor
+	.answers
+		.false
+			{
+				border: none ;
+			}
+
+.reactor
+	.answers
+		li
+			label.answer_label
+			{
+				margin: 0 ;
+				padding: 1% ;
+				width: auto ;
+				display: block ;
+				overflow: hidden ;
+			}
+
+
+.reactor
+	.answers
+		li:hover
+			{
+				background-color: #eee ;
+			}
+
+.reactor
+	.answers
+		p
+			{
+				margin: 0px ;
+			}			
+
+
+
 			
 .grey
 	{ border: 1pt solid #ccc ; }

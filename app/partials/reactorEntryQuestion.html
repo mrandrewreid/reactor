@@ -7,14 +7,9 @@
 
 	<span ng-if="entry.images.entries.length > 0" reactor-image-container reactor="reactor" image="entry.images.entries[0]"></span>
 
-	<div class="text_container">
-		<ul ng-if="entry.answers.entries.length > 0" style="list-style-type: none;">
-			<!--<li ng-repeat="answer in entry.answers.entries"><label><input type="checkbox">{{answer.text.text}}</label></li>-->
-			<li ng-repeat="answer in entry.answers.entries" reactor-answer reactor="reactor" index="$index" answer="answer">
-			<!--<label><input type="checkbox">{{answer.text.text}}</label>-->
-			</li>
-		</ul>
-	</div>
+	<ul class="answers" ng-if="entry.answers.entries.length > 0">
+		<li ng-repeat="answer in entry.answers.entries" reactor-answer reactor="reactor" index="$index" answer="answer"></li>
+	</ul>
 
 </div>
 
@@ -34,10 +29,9 @@
 
 	<span ng-if="entry.images.entries.length > 0" reactor-image-container reactor="reactor" image="entry.images.entries[0]"></span>		
 
-	<div class="text_container">
-		<ul ng-if="entry.answers.entries.length > 0" style="list-style-type: none;">
-			<li class="answer" ng-repeat="answer in entry.answers.entries" reactor-answer reactor="reactor" index="$index" answer="answer"></li>
-		</ul>
-	</div>
+	<ul class="answers" ng-if="entry.answers.entries.length > 0">
+		<li ng-repeat="answer in entry.answers.entries" ng-class="[answer.correct]" reactor-answer reactor="reactor" index="$index" answer="answer"></li>
+		<li><input type="button" value="add an answer +" ng-click="reactor.add( entry.answers.entries ,'answer')"></li>
+	</ul>
 
 </div>
