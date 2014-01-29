@@ -36,6 +36,14 @@ angular.module( 'reactor.controllers', [] ).
 			function( $scope , $routeParams , $http , $location , server , navigationService , modifierService ) 
 		{
 
+
+
+
+
+
+		$scope.outputs = [ 'projector' , 'desktop' , 'tablet_portrait' , 'tablet_landscape' , 'mobile_portrait' , 'mobile_landscape' , 'print' ] ;
+		$scope.output = 'desktop' ;
+
 		$scope.reactor_id = $routeParams.reactor_id ;
 		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
 

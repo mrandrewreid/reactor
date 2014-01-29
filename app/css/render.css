@@ -162,6 +162,7 @@ ul.tabs
 				width: 96% ;
 				background: #f0f0f0 ; 
 				font-size: 1.2rem ; 
+				border: 1pt solid #ccc ;
 				/*height: 350px ;*/
 				overflow: auto ;
 			}
@@ -364,6 +365,13 @@ ul.tabs
 				border: 1pt solid #eee ;
 				background: #fff ;
 			}
+			
+.reactor
+	.answers
+		li:last-child
+			{
+				margin-bottom:0;
+			}
 
 .reactor
 	.answers
@@ -411,7 +419,7 @@ ul.tabs
 	.answers
 		li:hover
 			{
-				background-color: #eee ;
+				/*background-color: #eee ;*/
 			}
 
 .reactor
@@ -439,7 +447,14 @@ ul.tabs
 			}
 
 
+.projector 		{ font-size: xx-large ; }
+.desktop 			{ }
 
+.tablet_portrait 	{ width: 500px ; height: 900px ; margin: 1rem auto ; }
+.tablet_landscape { width: 900px ; height: 500px !important ; margin: 1rem auto ; }
+
+.mobile_portrait 	{ width: 320px ; height: 640px ; margin: 1rem auto ; }
+.mobile_landscape { width: 640px ; height: 320px ; margin: 1rem auto ; }
 
 
 
@@ -460,7 +475,7 @@ ul.tabs
 
 
 
-.grey strong { color: #ccc ; }
+.grey strong { color: #fff ; }
 .orange strong { color: #fff ; }
 .blue strong { color: #fff ; }
 

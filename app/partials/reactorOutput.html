@@ -1,4 +1,8 @@
-	<div class="reactor {{reactor.type}} {{reactor.theme.selected}} {{reactor.theme.corner_style}}">
+	<div 
+		class="reactor {{reactor.type}} {{reactor.theme.selected}} {{reactor.theme.corner_style}} {{output}}"
+		 ng-swipe-left="reactor.goto( 'next' )"
+		 ng-swipe-right="reactor.goto( 'previous' )"
+	>
 		
 		<div metadata reactor="reactor"></div>
 

@@ -26,7 +26,6 @@
 			</label> 
 			<!--<span ng-if="!reactor.state.editing">{{ reactor.theme.selected }}</span>-->
 		</span>
-		
 	
 		<span style="margin: 0 1rem ;">
 			<label for="corner_select"><strong>Corner style</strong>: 
@@ -49,6 +48,17 @@
 				<span ng-switch-when="rounded_20">Rounded (20px)</span>
 			</span>
 			-->
+		</span>
+		
+		
+		<span style="margin: 0 1rem ;">
+			<label for="preview_mode"><strong>Display format</strong>: 
+				<select
+					 name="output" 
+					 ng-model="output"
+					 ng-options="mode for mode in outputs">
+				</select>
+			</label>
 		</span>
 	</p>
 	
