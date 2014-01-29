@@ -121,6 +121,62 @@
 
 
 
+
+
+
+
+
+.grey 
+	.entries_controls 
+		input[type=button]
+			{ 
+				/*background-color: #ccc ;*/
+			}
+			
+.orange 
+	.entries_controls 
+		input[type=button]
+			{ 
+				background-color: #F0932D ;
+				color: #fff ;
+				border-width: 1pt ;
+			}
+			
+.blue 
+	.entries_controls 
+		input[type=button]
+			{ 
+				background-color: #4AB2D0 ;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .pagination
 	li 
 		a

@@ -19,20 +19,18 @@
 		<span style="margin: 0 1rem ;">
 			<label for="theme_select"><strong>Theme</strong>: 
 				<select
-					 ng-if="reactor.state.editing" 
 					 name="theme_select" 
 					 ng-model="reactor.theme.selected" 
 					 ng-options="theme for theme in reactor.theme.available_themes">
 				</select>
 			</label> 
-			<span ng-if="!reactor.state.editing">{{ reactor.theme.selected }}</span>
+			<!--<span ng-if="!reactor.state.editing">{{ reactor.theme.selected }}</span>-->
 		</span>
 		
 	
 		<span style="margin: 0 1rem ;">
 			<label for="corner_select"><strong>Corner style</strong>: 
 				<select
-					 ng-if="reactor.state.editing" 
 					 name="corner_select" 
 					 ng-model="reactor.theme.corner_style">
 					 <option value="">Square</option>
@@ -42,6 +40,7 @@
 					 <option value="rounded_20">Rounded (20px)</option>
 				</select>
 			</label>
+			<!--
 			<span ng-if="!reactor.state.editing" ng-switch="reactor.theme.corner_style">
 				<span ng-switch-when="">Square (0px)</span>
 				<span ng-switch-when="rounded_5">Rounded (5px)</span>
@@ -49,6 +48,7 @@
 				<span ng-switch-when="rounded_15">Rounded (15px)</span>
 				<span ng-switch-when="rounded_20">Rounded (20px)</span>
 			</span>
+			-->
 		</span>
 	</p>
 	

@@ -14,7 +14,7 @@
 
 .reactor						
 			{ 
-				background: #eee ; 
+				background: #fff ; 
 				padding: 0rem ; 
 				clear: both ;
 				margin: 1rem 0 ; 
@@ -118,7 +118,7 @@ ul.tabs
 	.entries_container 
 			{ 
 				margin: 0 auto ; 
-				background: #eee ;
+				background: #fff ;
 				display: block ; 
 			}
 
@@ -160,7 +160,7 @@ ul.tabs
 				margin: 1% ; 
 				list-style-position: inside ; 
 				width: 96% ;
-				background: #fff ; 
+				background: #f0f0f0 ; 
 				font-size: 1.2rem ; 
 				/*height: 350px ;*/
 				overflow: auto ;
@@ -290,8 +290,8 @@ ul.tabs
 .reactor 
 	.question_text
 			{
-				background: #eee ;
-				border: 1pt solid #ddd ;
+				background: #ddd ;
+				border: 1pt solid #ccc ;
 				padding: .25rem 1rem ;
 				margin: 0 0 .5rem 0 ;
 			}
@@ -362,7 +362,7 @@ ul.tabs
 		li
 			{
 				border: 1pt solid #eee ;
-				background: #eee ;
+				background: #fff ;
 			}
 
 .reactor
@@ -457,6 +457,12 @@ ul.tabs
 	{ border: 1pt solid #4AB2D0 ; }
 
 
+
+
+
+.grey strong { color: #ccc ; }
+.orange strong { color: #fff ; }
+.blue strong { color: #fff ; }
 
 
 
