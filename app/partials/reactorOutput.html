@@ -1,8 +1,5 @@
-	<p>V: {{reactor.meta.version}}</p>
-	<p>Last modified: {{reactor.meta.modified | date:'medium' }}</p>
-	
 	<div class="reactor {{reactor.type}} {{reactor.theme.selected}} {{reactor.theme.corner_style}}">
-
+		
 		<div metadata reactor="reactor"></div>
 
 		<div class="entries_container">
@@ -20,7 +17,7 @@
 		<div 
 			navigation-controls 
 		 	reactor="reactor" 
-			class="entries_controls" 
+			class="entries_controls {{reactor.theme.corner_style}}" 
 			ng-if="reactor.navigation.controls.options.include && !reactor.state.editing && reactor.entries.length > 1"
 		>
 		</div>
@@ -37,7 +34,7 @@
 			navigation-controls-edit 
 		 	reactor="reactor" 
 		 	ng-if="reactor.navigation.controls.options.include && reactor.state.editing && reactor.entries.length > 1"
-		 	class="entries_controls"
+		 	class="entries_controls {{reactor.theme.corner_style}}"
 		>
 		</div>
 

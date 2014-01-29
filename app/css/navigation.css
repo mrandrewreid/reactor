@@ -2,8 +2,8 @@
 .entries_controls 
 			{ 
 				text-align: center ; 
-				background-color: #ddd ; 
-				padding: .25rem .25rem 1rem .25rem ;
+				background-color: #fff ; 
+				padding: .25rem ;
 			}
 
 
@@ -21,7 +21,7 @@
 				list-style-type: none ; 
 				display: block ; 
 				padding: 1rem 0px ; 
-				margin: 0px 0px 1rem 0px ; 
+				margin: 0 ; 
 				list-style-position: inside ; 
 				vertical-align: text-top ;
 				max-height: 1.1rem ;
@@ -31,7 +31,10 @@
 				-webkit-border-radius: 3px;
 				border-radius: 3px;
 				background: #fff ;
-
+				
+				-webkit-box-shadow: inset 1px 1px 3px 0px rgba(50, 50, 50, 0.6) ;
+				-moz-box-shadow:    inset 1px 1px 3px 0px rgba(50, 50, 50, 0.6) ;
+				box-shadow:         inset 1px 1px 3px 0px rgba(50, 50, 50, 0.6) ;
 			}
 
 .pagination
@@ -50,8 +53,74 @@
 
 				-webkit-border-radius: 3px;
 				border-radius: 3px;
+
+				border: 1pt solid ;
 			}
-			
+	
+.pagination
+	li.true
+			{
+				border: 1pt solid !important ;
+			}
+
+
+.grey
+	.pagination
+		li
+			{
+				background: #fff ;
+			}
+
+.grey
+	.pagination
+		li.true
+			{
+				border-color: #ccc !important ;
+				background: #ccc ;
+			}
+
+
+.orange
+	.pagination
+		li
+			{
+				border-color: #F0932D !important ;
+				background: #fff ;
+			}
+
+.orange
+	.pagination
+		li.true
+			{
+				border-color: #F0932D !important ;
+				background: #F0932D ;
+			}
+
+
+
+
+
+.blue
+	.pagination
+		li
+			{
+				border-color: #4AB2D0 !important ;
+				background: #fff ;
+			}
+
+.blue
+	.pagination
+		li.true
+			{
+				border-color: #4AB2D0 !important ;
+				background: #4AB2D0 ;
+			}
+
+
+
+
+
+
 .pagination
 	li 
 		a
@@ -72,4 +141,11 @@
 				margin-right: .6rem ;
 				margin-bottom: 1px ;
 				margin-left: .4rem ;
+			}
+			
+.pagination
+	li
+		input[type=radio]
+			{
+				opacity: 0.01 ;
 			}

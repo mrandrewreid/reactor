@@ -1,9 +1,9 @@
-<div ng-if="reactor.state.editing" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; " class="image_container">
+<div ng-if="reactor.state.editing" style="width: 30% ; float: left ; margin-right: 1% ; background: #ccc ; " class="image_container  {{reactor.theme.corner_style}}">
 	<span unlocker settings="image.settings"></span>
 	<span class="controls" reactor-controls element="image" ng-if="image.settings.edit.editable && !image.settings.edit.locked"></span>
-	<span reactor-image image="image" reactor="reactor"></span>
+	<span reactor-image image="image" reactor="reactor" style="display:inline-block;"></span>
 </div>
 
-<div ng-if="!reactor.state.editing" style="width: 25% ; float: left ; margin-right: 1% ; background: #ccc ; " class="image_container">
-	<span reactor-image image="image" reactor="reactor"></span>
+<div ng-if="!reactor.state.editing" style="width: 30% ; float: left ; margin-right: 1% ; background: #ccc ; " class="image_container {{reactor.theme.corner_style}}">
+	<span reactor-image image="image" reactor="reactor" style="display:inline-block;"></span>
 </div>

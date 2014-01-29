@@ -1,55 +1,6 @@
-
-	<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}}" ng-if="$index == reactor.navigation.state.position.entry_index">
-
-
-		<span ng-switch="entry.type">
-		
-			<div ng-switch-when="question" reactor-question reactor="reactor" entry="entry" index="$index"></div>
-			<div ng-switch-when="slide" reactor-slide reactor="reactor" entry="entry" index="$index"></div>
-			<!--<div ng-if="!reactor.state.editing"></div>-->
-
-		</span>
-
-
-
-		<!--
-		<div ng-if="!reactor.state.editing">
-
-			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
-			<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
-
-			<div class="text_container">{{entry.text.text}}</div>
-	
-			<span ng-if="entry.images.entries.length > 0" reactor-image-container reactor="reactor" image="entry.images.entries[0]"></span>
-
-			<div class="text_container">
-				<ul ng-if="entry.answers.entries.length > 0" style="list-style-type: none;">
-					<li ng-repeat="answer in entry.answers.entries"><label><input type="checkbox">{{answer.text.text}}</label></li>
-				</ul>
-			</div>
-
-		</div>
-
-		<div ng-if="reactor.state.editing">
-
-			<input style="float: right ;" type="button" value="x" ng-click="reactor.remove( reactor.entries , $index )">
-
-			<span style="float: left; " includer element="reactor.navigation.entry_of_entries"></span>
-			<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="$index"></span></p>
-
-			<h1 style="clear: both;"><span reactor-text text="entry.meta.title"></span></h1>
-
-			<div reactor-text text="entry.text"></div>
-		
-			<span ng-if="entry.images.entries.length > 0" reactor-image-container reactor="reactor" image="entry.images.entries[0]"></span>		
-
-			<div class="text_container">
-				<ul ng-if="entry.answers.entries.length > 0" style="list-style-type: none;">
-					<li ng-repeat="answer in entry.answers.entries"><span reactor-text text="answer.text"></span></li>
-				</ul>
-			</div>
-
-		</div>
-		-->
-
-	</li>
+<li ng-repeat="entry in reactor.entries" class="entry {{entry.type}} {{reactor.theme.corner_style}}" ng-if="$index == reactor.navigation.state.position.entry_index">
+	<span ng-switch="entry.type">
+		<div ng-switch-when="question" reactor-question reactor="reactor" entry="entry" index="$index"></div>
+		<div ng-switch-when="slide" reactor-slide reactor="reactor" entry="entry" index="$index" class="{{reactor.theme.corner_style}}"></div>
+	</span>
+</li>

@@ -1,4 +1,17 @@
 /* CSS Document */
+.toolbar
+			{
+				border: 1pt solid #ddd ;
+				background: #eee ;
+				padding: 0 ;
+			}
+			
+.toolbar p
+			{
+				padding: 0 ;
+				font-size: .7rem ;
+			}
+
 .reactor						
 			{ 
 				background: #eee ; 
@@ -8,6 +21,8 @@
 				min-height: 700px ;
 				overflow: auto ;
 			}
+			
+
 
 h1 p {margin:0; padding:0;}
 
@@ -147,6 +162,8 @@ ul.tabs
 				width: 96% ;
 				background: #fff ; 
 				font-size: 1.2rem ; 
+				/*height: 350px ;*/
+				overflow: auto ;
 			}
 			
 .reactor
@@ -270,7 +287,14 @@ ul.tabs
 
 
 
-
+.reactor 
+	.question_text
+			{
+				background: #eee ;
+				border: 1pt solid #ddd ;
+				padding: .25rem 1rem ;
+				margin: 0 0 .5rem 0 ;
+			}
 
 
 
@@ -286,6 +310,8 @@ ul.tabs
 				list-style-type: none ;
 				margin: 0 ;
 				padding: 0 ;
+				height: 220px;
+				overflow: auto ;
 			}
 
 .reactor
@@ -397,6 +423,10 @@ ul.tabs
 
 
 
+.entries_controls
+			{ 
+				margin: 1% ; 
+			}
 .entries_controls input[type=button]
 			{
 				margin: 1% 2px ;
@@ -425,6 +455,68 @@ ul.tabs
 	
 .blue
 	{ border: 1pt solid #4AB2D0 ; }
+
+
+
+
+
+.reactor.grey
+	.answers
+		li.selected_true
+			{
+				border-color: #ccc !important ;
+			}
+
+.reactor.orange
+	.answers
+		li.selected_true
+			{
+				border-color: #F0932D !important ;
+			}
+
+.reactor.blue
+	.answers
+		li.selected_true
+			{
+				border-color: #4AB2D0 !important ;
+				font-size: 5rem ;
+			}
+
+
+
+
+
+
+.grey.toolbar
+	{ background-color: #ccc ; }
+	
+.orange.toolbar
+	{ background-color: #F0932D ; }
+	
+.blue.toolbar
+	{ background-color: #4AB2D0 ; }
+	
+	
+	
+	
+	
+	
+	
+	
+.grey h1
+	{ color: #ccc ; }
+	
+.orange h1
+	{ color: #F0932D ; }
+	
+.blue h1
+	{ color: #4AB2D0 ; }
+	
+	
+	
+	
+	
+	
 	
 
 

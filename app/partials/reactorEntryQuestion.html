@@ -3,12 +3,14 @@
 	<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="index"></span></p>
 	<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
 
-	<div class="text_container">{{entry.text.text}}</div>
+	<div class="question_text {{reactor.theme.corner_style}}">
+		<div class="text_container">{{entry.text.text}}</div>
+	</div>
 
 	<span ng-if="entry.images.entries.length > 0" reactor-image-container reactor="reactor" image="entry.images.entries[0]"></span>
 
 	<ul class="answers" ng-if="entry.answers.entries.length > 0">
-		<li ng-repeat="answer in entry.answers.entries" ng-class="['selected_' + answer.selected]" reactor-answer reactor="reactor" index="$index" answer="answer" ng-click="answer.selected = true"></li>
+		<li ng-repeat="answer in entry.answers.entries" ng-class="['selected_' + answer.selected , reactor.theme.corner_style]" reactor-answer reactor="reactor" index="$index" answer="answer" ng-click="answer.selected = true"></li>
 	</ul>
 
 </div>
@@ -25,13 +27,15 @@
 
 	<h1 style="clear: both;"><span reactor-text text="entry.meta.title"></span></h1>
 
-	<div reactor-text text="entry.text"></div>
+	<div class="question_text {{reactor.theme.corner_style}}">
+		<div reactor-text text="entry.text"></div>
+	</div>
 
 	<span ng-if="entry.images.entries.length > 0" reactor-image-container reactor="reactor" image="entry.images.entries[0]"></span>		
 
 	<ul class="answers" ng-if="entry.answers.entries.length > 0">
-		<li ng-repeat="answer in entry.answers.entries" ng-class="[answer.correct]" reactor-answer reactor="reactor" index="$index" answer="answer"></li>
-		<li><input type="button" value="add an answer +" ng-click="reactor.add( entry.answers.entries ,'answer')"></li>
+		<li class=" {{reactor.theme.corner_style}}"><input type="button" value="add an answer +" ng-click="reactor.add( entry.answers.entries ,'answer')"></li>
+		<li ng-repeat="answer in entry.answers.entries" ng-class="[answer.correct ,  reactor.theme.corner_style]" reactor-answer reactor="reactor" index="$index" answer="answer"></li>
 	</ul>
 
 </div>
