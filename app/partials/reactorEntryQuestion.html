@@ -1,4 +1,4 @@
-<div ng-if="!reactor.state.editing" class="question">
+<div ng-if="!reactor.state.editing">
 
 	<p class="entry_of_entries" ng-if="reactor.navigation.entry_of_entries.options.include"><span entry-of-entries reactor="reactor" index="index"></span></p>
 	<h1 ng-if="entry.meta.title.options.include" class="entry_title">{{entry.meta.title.text}}</h1>
@@ -8,7 +8,7 @@
 	<span ng-if="entry.images.entries.length > 0" reactor-image-container reactor="reactor" image="entry.images.entries[0]"></span>
 
 	<ul class="answers" ng-if="entry.answers.entries.length > 0">
-		<li ng-repeat="answer in entry.answers.entries" ng-class="['selected_' + answer.selected]" reactor-answer reactor="reactor" index="$index" answer="answer"></li>
+		<li ng-repeat="answer in entry.answers.entries" ng-class="['selected_' + answer.selected]" reactor-answer reactor="reactor" index="$index" answer="answer" ng-click="answer.selected = true"></li>
 	</ul>
 
 </div>
@@ -16,7 +16,7 @@
 
 
 
-<div ng-if="reactor.state.editing" class="question">
+<div ng-if="reactor.state.editing">
 
 	<input style="float: right ;" type="button" value="x" ng-click="reactor.remove( reactor.entries , index )">
 

@@ -2,20 +2,36 @@
 
 
 
-<label>Edit<input type="radio" name="edit_mode" ng-value="true" ng-model="reactor.state.editing" /></label>
-<label>Preview<input type="radio" name="edit_mode" ng-value="false" ng-model="reactor.state.editing" /></label>
+<span style="margin-right: 1rem ;"><label>Edit<input type="radio" name="edit_mode" ng-value="true" ng-model="reactor.state.editing" /></label></span>
+<span style="margin-right: 1rem ;"><label>Preview<input type="radio" name="edit_mode" ng-value="false" ng-model="reactor.state.editing" /></label></span>
 
-<label for="theme_select">Theme: 
-	<select
-		 ng-if="reactor.state.editing" 
-		 name="theme_select" 
-		 ng-model="reactor.theme.selected" 
-		 ng-options="theme for theme in reactor.theme.available_themes">
-	</select>
-</label> 
+<span style="margin-right: 1rem ;">
+	<label for="corner_select">Corner style: 
+		<select
+			 ng-if="reactor.state.editing" 
+			 name="corner_select" 
+			 ng-model="reactor.theme.corner_style">
+			 <option value="">Square</option>
+			 <option value="rounded_5">Rounded (5px)</option>
+			 <option value="rounded_10">Rounded (10px)</option>
+			 <option value="rounded_15">Rounded (15px)</option>
+			 <option value="rounded_20">Rounded (10px)</option>
+		</select>
+		<span ng-if="!reactor.state.editing">{{reactor.theme.corner_style}}</span>
+	</label>
+</span>
 
-<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
-
+<span style="margin-right: 1rem ;">
+	<label for="theme_select">Theme: 
+		<select
+			 ng-if="reactor.state.editing" 
+			 name="theme_select" 
+			 ng-model="reactor.theme.selected" 
+			 ng-options="theme for theme in reactor.theme.available_themes">
+		</select>
+	</label> 
+	<span ng-if="!reactor.state.editing">{{reactor.theme.selected}}</span>
+</span>
 
 
 

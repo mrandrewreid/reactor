@@ -292,7 +292,7 @@ ul.tabs
 	.answers
 		li
 			{
-				margin: 1% 0 ;
+				margin: 0 0 1% 0 ;
 				padding: 1% ;
 				background-color: #fff ;
 				-webkit-touch-callout: none;
@@ -397,6 +397,25 @@ ul.tabs
 
 
 
+.entries_controls input[type=button]
+			{
+				margin: 1% 2px ;
+			}
+
+
+.text_container
+			{
+				padding: 1% 0 ;
+			}
+
+
+
+
+
+
+
+
+
 			
 .grey
 	{ border: 1pt solid #ccc ; }
@@ -407,3 +426,34 @@ ul.tabs
 .blue
 	{ border: 1pt solid #4AB2D0 ; }
 	
+
+
+
+
+.rounded_5
+	{
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
+.rounded_10
+	{
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+
+.rounded_15
+	{
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+	}
+
+.rounded_20
+	{
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+	}
