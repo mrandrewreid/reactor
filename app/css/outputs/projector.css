@@ -1,1 +1,25 @@
-.projector 		{ font-size: xx-large ; }
+.projector 		{ font-size: 1.5rem ; width: 1024px ; height: 768px ; margin: 1rem auto ; position: relative ; }
+
+.projector	
+	h1		
+			{ font-size: 3rem ; }
+			
+.projector	
+	.question 
+		h1		
+			{ font-size: 1.8rem ; }
+
+.projector
+	.entry
+			{
+				font-size: 1.5rem ;
+			}
+
+.projector 
+	.answers
+			{ height: 230px ; }
+			
+
+.projector 
+	.entries_controls
+			{ position: absolute !important ; bottom: 0 !important ; left: 1% ; width: 96% ; }

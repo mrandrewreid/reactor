@@ -41,7 +41,7 @@ angular.module( 'reactor.controllers', [] ).
 
 		$scope.display = {
 			output: {
-				entries: [ 'mobile' , 'tablet' , 'desktop' , 'projector' , 'print' ] ,
+				entries: [ 'mobile' , 'tablet' , 'desktop' , 'projector' , 'hdtv' , 'print' ] ,
 				selected: 'desktop'
 			},
 			orientation: { 
