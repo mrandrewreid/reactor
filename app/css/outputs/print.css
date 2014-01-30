@@ -1,2 +1,23 @@
 /* CSS Document */
-.print * { display: block !important ; color: #000 !important ; background-color: transparent !important ; float: none !important ; max-height:none !important ; max-width: 94% !important ; height:auto !important ; width: auto !important ; }
+.print 		{ font-size: 1.5rem ; height: 100% ; position: relative ; }
+
+.print	
+	h1		
+			{ font-size: 3rem ; color: #000 !important ; }
+
+.print
+	.entry
+			{ background-color: transparent ; }
+
+.print	
+	.question 
+		h1		
+			{ font-size: 2.2rem ; }
+			
+.print 
+	.answers
+			{ height: auto ; }
+
+.print 
+	.entries_controls
+			{ display: none ; }

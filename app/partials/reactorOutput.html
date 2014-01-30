@@ -1,9 +1,10 @@
+
 	<div 
 		class="reactor {{reactor.type}} {{reactor.theme.selected}} {{reactor.theme.corner_style}} {{display.output.selected}} {{display.orientation.selected}}"
 		 ng-swipe-left="reactor.goto( 'next' )"
 		 ng-swipe-right="reactor.goto( 'previous' )"
 	>
-		
+
 		<div metadata reactor="reactor"></div>
 
 		<div class="entries_container">
@@ -13,7 +14,7 @@
 				<input ng-switch-when="quiz" type="button" value="add a question +" ng-click="reactor.add( reactor.entries ,'question')">
 			</div>
 
-			<ul reactor-entries reactor="reactor" class="entries" style="list-style-type: none ;"></ul>
+			<ul reactor-entries reactor="reactor" display="display" class="entries" style="list-style-type: none ;"></ul>
 			
 		</div>
 

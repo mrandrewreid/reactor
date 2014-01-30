@@ -13,7 +13,7 @@
 .blue.toolbar
 			{ background-color: #4AB2D0 ; }
 
-.reactor.blue
+.blue
 	.answers
 		li.selected_true
 			{
@@ -21,6 +21,26 @@
 				font-size: 5rem ;
 			}
 
-	
+.blue
+	.pagination
+		li
+			{
+				border-color: #4AB2D0 !important ;
+				background: #fff ;
+			}
 
+.blue
+	.pagination
+		li.true
+			{
+				border-color: #4AB2D0 !important ;
+				background: #4AB2D0 ;
+			}
+			
+.blue 
+	.entries_controls 
+		input[type=button]
+			{ 
+				background-color: #4AB2D0 ;
+			}
 	

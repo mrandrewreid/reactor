@@ -62,7 +62,8 @@ angular.module( 'reactor_directives', [] ).
 			restrict: 'A',
 			scope: {
 				reactor: "=",
-				index: "="
+				index: "=" ,
+				display: "="
 			},
 			templateUrl: 'partials/reactorEntries.html?t=' + new Date() 
 		}

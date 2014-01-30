@@ -13,9 +13,35 @@
 .orange.toolbar
 			{ background-color: #F0932D ; }
 
-.reactor.orange
+.orange
 	.answers
 		li.selected_true
 			{
 				border-color: #F0932D !important ;
+			}
+
+
+.orange
+	.pagination
+		li
+			{
+				border-color: #F0932D !important ;
+				background: #fff ;
+			}
+
+.orange
+	.pagination
+		li.true
+			{
+				border-color: #F0932D !important ;
+				background: #F0932D ;
+			}
+			
+.orange 
+	.entries_controls 
+		input[type=button]
+			{ 
+				background-color: #F0932D ;
+				color: #fff ;
+				border-width: 1pt ;
 			}

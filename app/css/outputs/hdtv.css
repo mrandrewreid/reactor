@@ -15,5 +15,8 @@
 			
 .hdtv
 	.pagination
+			{ font-size: .5rem !important ; }
+.hdtv
+	.pagination
 		li
-			{ font-size: .5rem !important ; min-width: .5rem ; }
+			{ min-width: .5rem ; }

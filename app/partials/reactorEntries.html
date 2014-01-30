@@ -1,7 +1,7 @@
 <li 
 	ng-repeat="entry in reactor.entries"
 	 class="entry {{entry.type}} {{reactor.theme.corner_style}}"
-	 ng-if="$index == reactor.navigation.state.position.entry_index"
+	 ng-if="$index == reactor.navigation.state.position.entry_index || display.output.selected == 'print'"
 >
 	<span ng-switch="entry.type">
 		<div ng-switch-when="question" reactor-question reactor="reactor" entry="entry" index="$index"></div>
