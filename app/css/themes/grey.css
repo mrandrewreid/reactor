@@ -1,0 +1,21 @@
+/* CSS Document */
+.grey
+			{ border: 1pt solid #ccc ; }
+
+.grey 
+	h1
+			{ color: #ccc ; }
+
+.grey 
+	strong 
+			{ color: #fff ; }
+
+.grey.toolbar
+			{ background-color: #ccc ; }
+
+.reactor.grey
+	.answers
+		li.selected_true
+			{
+				border-color: #ccc !important ;
+			}

@@ -1,0 +1,26 @@
+/* CSS Document */
+.blue
+			{ border: 1pt solid #4AB2D0 ; }
+
+.blue 
+	h1
+			{ color: #4AB2D0 ; }
+	
+.blue 
+	strong 
+			{ color: #fff ; }
+
+.blue.toolbar
+			{ background-color: #4AB2D0 ; }
+
+.reactor.blue
+	.answers
+		li.selected_true
+			{
+				border-color: #4AB2D0 !important ;
+				font-size: 5rem ;
+			}
+
+	
+
+	

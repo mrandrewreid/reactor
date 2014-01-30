@@ -1,0 +1,4 @@
+/* CSS Document */
+
+.mobile_portrait 	{ width: 320px ; max-height: 640px ; overflow: auto !important ; margin: 1rem auto ; }
+.mobile_landscape { width: 640px ; height: 320px ; overflow: auto !important ; margin: 1rem auto ; }

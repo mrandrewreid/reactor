@@ -1,0 +1,21 @@
+/* CSS Document */
+.orange
+			{ border: 1pt solid #F0932D ; }
+
+.orange 
+	h1
+			{ color: #F0932D ; }
+
+.orange 
+	strong 
+			{ color: #fff ; }
+
+.orange.toolbar
+			{ background-color: #F0932D ; }
+
+.reactor.orange
+	.answers
+		li.selected_true
+			{
+				border-color: #F0932D !important ;
+			}

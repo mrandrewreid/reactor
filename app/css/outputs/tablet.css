@@ -1,0 +1,4 @@
+/* CSS Document */
+
+.tablet_portrait 	{ width: 500px ; height: 900px ; overflow: auto !important ; margin: 1rem auto ; }
+.tablet_landscape { width: 900px ; height: 500px !important ; overflow: auto !important ; margin: 1rem auto ; }
