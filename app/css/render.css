@@ -43,7 +43,10 @@ ul.tabs
 			{
 				display: inline-block ;
 			}
-.tabs li a
+
+.tabs 
+	li 
+		a
 			{
 				text-decoration: none ;
 				padding: .25rem 1rem ;
@@ -52,18 +55,23 @@ ul.tabs
 				display: block ;
 				color: #222 ;
 			}
-			
-.tabs li a:visited
+
+.tabs 
+	li 
+		a:visited
 			{
 				background: #aaa ;
 				color: #222 ;
 			}
-			
+
 .tabs li a:hover, .tabs li a:focus
 			{
 				border: 1pt solid #aaa ;
 				color: #000 ;
 			}
+
+
+
 
 .reactor
 	.interaction_meta_data
@@ -73,6 +81,9 @@ ul.tabs
 				font-size: .8rem ;
 				position: relative ;
 			}
+
+
+
 
 .reactor
 	.interaction_meta_data
@@ -84,7 +95,7 @@ ul.tabs
 				padding: 1% ;
 				border-bottom: 1pt solid #aaa ;
 			}
-	
+
 
 			
 

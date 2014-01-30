@@ -1,7 +1,7 @@
 /* CSS Document */
 
 .tablet			
-			{ overflow: auto !important ; margin: 1rem auto ; }
+			{ overflow: auto !important ; margin: 1rem auto ; position: relative ; }
 
 			
 .tablet.landscape 
@@ -10,3 +10,14 @@
 .tablet.portrait 
 			{ width: 768px ; height: 1024px ; }
 
+.tablet 
+	.entries_controls
+			{ position: absolute !important ; bottom: 0 !important ; left: 1% ; width: 96% ; }
+			
+.tablet.landscape 
+	.answers
+			{ height: 320px ; }
+			
+.tablet.portrait 
+	.answers
+			{ height: 500px ; }

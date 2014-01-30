@@ -8,3 +8,26 @@
 			
 .mobile.portrait 
 			{ max-width: 480px ; max-height: 800px ; }
+
+
+.mobile
+	.entry_of_entries
+			{ display: none ; }
+			
+			
+.mobile.portrait 
+	.image_container
+			{ display: block !important ; float: none !important ; width: 100% !important ; margin: .25rem auto !important ; }
+			
+
+.mobile.portrait 
+	.answers
+			{
+				height: auto ;
+			}
+			
+.mobile.portrait 
+	.pagination
+			{
+				display: none ;
+			}
