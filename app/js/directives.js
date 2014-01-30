@@ -23,8 +23,7 @@ angular.module( 'reactor_directives', [] ).
 			restrict: 'A',
 			scope: {
 				reactor: "=",
-				outputs: "=",
-				output: "="
+				display: "="
 			},
 			templateUrl: 'partials/reactorToolbar.html?t=' + new Date() 
 		}
@@ -37,7 +36,7 @@ angular.module( 'reactor_directives', [] ).
 			restrict: 'A',
 			scope: {
 				reactor: "=",
-				output: "="
+				display: "="
 			},
 			templateUrl: 'partials/reactorOutput.html?t=' + new Date() 
 		}

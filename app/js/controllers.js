@@ -39,10 +39,17 @@ angular.module( 'reactor.controllers', [] ).
 
 
 
+		$scope.display = {
+			output: {
+				entries: [ 'mobile' , 'tablet' , 'desktop' , 'projector' , 'print' ] ,
+				selected: 'desktop'
+			},
+			orientation: { 
+				entries: [ 'portrait' , 'landscape' ] ,
+				selected: 'portrait' 
+			}
+		}
 
-
-		$scope.outputs = [ 'projector' , 'desktop' , 'tablet_portrait' , 'tablet_landscape' , 'mobile_portrait' , 'mobile_landscape' , 'print' ] ;
-		$scope.output = 'desktop' ;
 
 		$scope.reactor_id = $routeParams.reactor_id ;
 		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;

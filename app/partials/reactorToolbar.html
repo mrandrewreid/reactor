@@ -2,10 +2,13 @@
 
 	<span style="float:left; margin-right: 1rem;"><a class="button" ng-click="reactor.save()">Save</a><a class="button" ng-click="reactor.export()">Export</a></span>
 
+
 	<span style="margin: .5rem 1rem ; float: right ;">
 		<label><strong>Preview</strong><input type="radio" name="edit_mode" ng-value="false" ng-model="reactor.state.editing" /></label>
 		<label><strong>Edit</strong><input type="radio" name="edit_mode" ng-value="true" ng-model="reactor.state.editing" /></label>
 	</span>
+
+
 
 	<p>
 		<strong>Version</strong>: {{reactor.meta.version}}.<br>
@@ -23,8 +26,7 @@
 					 ng-model="reactor.theme.selected" 
 					 ng-options="theme for theme in reactor.theme.available_themes">
 				</select>
-			</label> 
-			<!--<span ng-if="!reactor.state.editing">{{ reactor.theme.selected }}</span>-->
+			</label>
 		</span>
 	
 		<span style="margin: 0 1rem ;">
@@ -39,24 +41,28 @@
 					 <option value="rounded_20">Rounded (20px)</option>
 				</select>
 			</label>
-			<!--
-			<span ng-if="!reactor.state.editing" ng-switch="reactor.theme.corner_style">
-				<span ng-switch-when="">Square (0px)</span>
-				<span ng-switch-when="rounded_5">Rounded (5px)</span>
-				<span ng-switch-when="rounded_10">Rounded (10px)</span>
-				<span ng-switch-when="rounded_15">Rounded (15px)</span>
-				<span ng-switch-when="rounded_20">Rounded (20px)</span>
-			</span>
-			-->
 		</span>
 		
 		
 		<span style="margin: 0 1rem ;">
-			<label for="preview_mode"><strong>Display format</strong>: 
+			<label for="output"><strong>Display format</strong>: 
 				<select
 					 name="output" 
-					 ng-model="output"
-					 ng-options="mode for mode in outputs">
+					 ng-model="display.output.selected"
+					 ng-options="mode for mode in display.output.entries">
+				</select>
+			</label>
+		</span>
+		
+		
+		<span style="margin: 0 1rem ;">
+			<label for="orientation"><strong>Orientation</strong>: 
+				<select
+					 name="orientation" 
+					 ng-model="display.orientation.selected"
+					 ng-options="opt for opt in display.orientation.entries"
+					 ng-disabled="display.output.selected == 'desktop' || display.output.selected == 'projector' "
+					 >
 				</select>
 			</label>
 		</span>

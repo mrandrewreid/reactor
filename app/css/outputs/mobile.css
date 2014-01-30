@@ -1,4 +1,11 @@
 /* CSS Document */
 
-.mobile_portrait 	{ width: 320px ; max-height: 640px ; overflow: auto !important ; margin: 1rem auto ; }
-.mobile_landscape { width: 640px ; height: 320px ; overflow: auto !important ; margin: 1rem auto ; }
+.mobile			
+			{ overflow: auto !important ; margin: 1rem auto ; background-color: #69E3C4 ; }
+
+			
+.mobile.landscape 
+			{ width: 640px ; height: 320px ; }
+			
+.mobile.portrait 
+			{ width: 320px ; height: 640px ; }
