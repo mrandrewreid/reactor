@@ -1,16 +1,16 @@
 <!-- playback, correct -->
 <span class="feedback" ng-if="!reactor.state.editing && answer.correct">
-	<span class="feedback_text" ng-if="answer.selected">
-		<span ng-if="answer.feedback.correct.text == 'auto'">@auto Correct</span>
-		<span ng-if="answer.feedback.correct.text != 'auto'">Custom... {{answer.feedback.correct.text.text}}</span>
+	<span class="feedback_text" ng-if="answer.selected" ng-switch="answer.feedback.correct.text.text">
+		<span ng-switch-when="auto">Correct</span>
+		<span ng-switch-default>{{answer.feedback.correct.text.text}}</span>
 	</span>
 </span>
 
 <!-- playback, incorrect -->
 <span class="feedback" ng-if="!reactor.state.editing && !answer.correct">
-	<span class="feedback_text" ng-if="answer.selected">
-		<span ng-if="answer.feedback.incorrect.text == 'auto'">@auto Incorrect</span>
-		<span ng-if="answer.feedback.correct.text != 'auto'">Custom... {{answer.feedback.incorrect.text.text}}</span>
+	<span class="feedback_text" ng-if="answer.selected" ng-switch="answer.feedback.correct.text.text">
+		<span ng-switch-when="auto">Incorrect</span>
+		<span ng-switch-default>{{answer.feedback.incorrect.text.text}}</span>
 	</span>
 </span>
 
