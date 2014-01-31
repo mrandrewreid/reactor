@@ -1,8 +1,8 @@
 /* CSS Document */
-.desktop 			{ min-height: 700px ; max-width: 1200px ; margin: 1rem auto ; }
+.desktop 			{ min-height: 960px ; max-width: 1200px ; margin: 1rem auto ; }
 
 .desktop 
 		.answers 
 			{
-				height: 300px ;
+				height: 500px ;
 			}

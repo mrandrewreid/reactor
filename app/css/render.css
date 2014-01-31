@@ -376,7 +376,20 @@ ul.tabs
 			.feedback
 			{
 				display: block ;
-				margin-top: 1% ;
+				margin-top: 1rem ;
+				background: #B31B1D ;
+				border: 1pt solid #fff ;
+				color: #fff ;
+				padding: 1% ;
+			}
+			
+.reactor
+	.answers 
+		li[rel=true].selected_true 
+			.feedback
+			{
+				background: #39AE0D ;
+				color: #fff ;
 			}
 
 
