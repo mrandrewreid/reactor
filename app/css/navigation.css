@@ -42,7 +42,7 @@
 			{
 				vertical-align: middle ;
 				display: inline-block ; 
-				min-width: 2rem ; 
+				min-width: 1rem ; 
 				/*min-height: 1rem ; */
 				background-color: #fff ; 
 				margin: 0px .5rem ; 
@@ -51,8 +51,9 @@
 				-webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 				box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 
-				-webkit-border-radius: 3px;
-				border-radius: 3px;
+				-webkit-border-radius: 500px;
+				-moz-border-radius: 500px;
+				border-radius: 500px;
 
 				border: 1pt solid ;
 			}
@@ -82,9 +83,9 @@
 				box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
 				cursor: pointer ;
 				margin-top: -1px ;
-				margin-right: .6rem ;
+				/* margin-right: .525rem ; */
 				margin-bottom: 1px ;
-				margin-left: .4rem ;
+				/* margin-left: .759rem ; */
 			}
 			
 .pagination

@@ -50,6 +50,26 @@
 				border-color: #4AB2D0 ;
 				background-color: #fff ;
 			}
+			
+.blue
+	.pagination
+		li:hover
+			{
+				border-color: #4AB2D0 ;
+				background-color: #fff ;
+				background-color: #9AD4E4  ;
+			}
+			
+.blue
+	.pagination
+		li:active,
+.blue
+	.pagination
+		li:focus		
+			{
+				background-color: #4AB2D0 ;
+				border-color: #fff ;
+			}
 
 .blue
 	.pagination
@@ -64,4 +84,5 @@
 		input[type=button]
 			{ 
 				background-color: #4AB2D0 ;
+				color: #fff ;
 			}
