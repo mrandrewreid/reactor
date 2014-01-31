@@ -8,8 +8,10 @@ var reactor_app = angular.module('reactor', [
   'ngResource',
   'reactor.filters',
   'reactor.services',
+  'app_directives',
   'reactor_directives',
   'reactor_question_directives',
+  'reactor_navigation_directives',
   'reactor.controllers'
 ]).
 config( [ '$routeProvider' , function( $routeProvider ) {
