@@ -1,9 +1,66 @@
-<input type="button" 
-	ng-repeat="button in reactor.navigation.controls.buttons" 
-	class="{{button.subtype}}_entry_button" 
-	value="{{button.label}}" 
-	ng-click="reactor.goto( button.response )" 
-	ng-if="button.include"
-/>
+<span ng-switch="display.output.selected">
+
+	<span ng-switch-when="hdtv">
+		<input type="button" 
+			ng-repeat="button in reactor.navigation.controls.buttons" 
+			class="{{button.subtype}}_entry_button" 
+			value="{{button.label}}" 
+			ng-click="reactor.goto( button.response )" 
+			ng-if="button.include"
+		/>
+	</span>
+
+	<span ng-switch-when="projector">
+		<input type="button" 
+			ng-repeat="button in reactor.navigation.controls.buttons" 
+			class="{{button.subtype}}_entry_button" 
+			value="{{button.label}}" 
+			ng-click="reactor.goto( button.response )" 
+			ng-if="button.include"
+		/>
+	</span>
+
+	<span ng-switch-when="desktop">
+		<input type="button" 
+			ng-repeat="button in reactor.navigation.controls.buttons" 
+			class="{{button.subtype}}_entry_button" 
+			value="{{button.label}}" 
+			ng-click="reactor.goto( button.response )" 
+			ng-if="button.include"
+		/>
+	</span>
+
+	<span ng-switch-when="tablet">
+		<input type="button" 
+			ng-repeat="button in reactor.navigation.controls.buttons" 
+			class="{{button.subtype}}_entry_button" 
+			value="{{button.mobile_label}}" 
+			ng-click="reactor.goto( button.response )" 
+			ng-if="button.include"
+		/>
+	</span>
+
+	<span ng-switch-when="mobile">
+		<input type="button" 
+			ng-repeat="button in reactor.navigation.controls.buttons" 
+			class="{{button.subtype}}_entry_button" 
+			value="{{button.mobile_label}}" 
+			ng-click="reactor.goto( button.response )" 
+			ng-if="button.include"
+		/>
+	</span>
+
+	<span ng-switch-default>
+		<input type="button" 
+			ng-repeat="button in reactor.navigation.controls.buttons" 
+			class="{{button.subtype}}_entry_button" 
+			value="{{button.label}}" 
+			ng-click="reactor.goto( button.response )" 
+			ng-if="button.include"
+		/>
+	</span>
+
+</span>
 
 <div pagination reactor="reactor" ng-if="reactor.navigation.controls.pagination.options.include"></div>
+

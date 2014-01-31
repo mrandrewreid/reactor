@@ -9,6 +9,7 @@ var reactor_app = angular.module('reactor', [
   'reactor.filters',
   'reactor.services',
   'reactor_directives',
+  'reactor_question_directives',
   'reactor.controllers'
 ]).
 config( [ '$routeProvider' , function( $routeProvider ) {

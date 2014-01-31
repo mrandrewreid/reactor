@@ -1,6 +1,8 @@
 <!--<div class="entries_controls" ng-if="reactor.navigation.controls.options.include && reactor.state.editing">-->
 	<span ng-repeat="button in reactor.navigation.controls.buttons" class="{{button.subtype}}_entry_button">
-		<input ng-disabled="reactor.navigation.controls.settings.edit.locked" type="checkbox" ng-model="button.include" /><input ng-disabled="reactor.navigation.controls.settings.edit.locked" type="text" size="8" ng-model="button.label" />
+		<input ng-disabled="reactor.navigation.controls.settings.edit.locked" type="checkbox" ng-model="button.include" />
+		<input ng-disabled="reactor.navigation.controls.settings.edit.locked" type="text" size="8" ng-model="button.label" />
+		<input ng-disabled="reactor.navigation.controls.settings.edit.locked" type="text" size="4" ng-model="button.mobile_label" />
 	</span>
 
 	<br />

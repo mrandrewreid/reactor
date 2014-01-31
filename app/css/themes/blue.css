@@ -1,40 +1,62 @@
 /* CSS Document */
 .blue
-			{ border: 1pt solid #4AB2D0 ; }
+			{ 
+				border: 1pt solid #4AB2D0 ; 
+			}
 
 .blue 
 	h1
-			{ color: #4AB2D0 ; }
+			{ 
+				color: #4AB2D0 ; 
+			}
 	
 .blue 
 	strong 
-			{ color: #fff ; }
+			{ 
+				color: #fff ; 
+			}
 
 .blue.toolbar
-			{ background-color: #4AB2D0 ; }
+			{ 
+				background-color: #4AB2D0 ; 
+			}
 
 .blue
 	.answers
 		li.selected_true
 			{
+				background-color: #4AB2D0 ;
+				border-color: #4AB2D0 ;
+			}
+			
+.blue
+	.answers
+		li:hover
+			{
 				border-color: #4AB2D0 !important ;
-				font-size: 5rem ;
+			}
+			
+.blue
+	.answers
+		li:active
+			{
+				border-color: #000 ;
 			}
 
 .blue
 	.pagination
 		li
 			{
-				border-color: #4AB2D0 !important ;
-				background: #fff ;
+				border-color: #4AB2D0 ;
+				background-color: #fff ;
 			}
 
 .blue
 	.pagination
 		li.true
 			{
-				border-color: #4AB2D0 !important ;
-				background: #4AB2D0 ;
+				border-color: #fff !important ;
+				background-color: #4AB2D0 ;
 			}
 			
 .blue 
@@ -43,4 +65,3 @@
 			{ 
 				background-color: #4AB2D0 ;
 			}
-	

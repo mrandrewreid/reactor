@@ -13,7 +13,7 @@
 	button
 			{ 
 				font-size: 1.2rem ;
-				/*background: #eee ; */
+				/*background-color: #eee ; */
 			}
 
 .pagination
@@ -30,7 +30,7 @@
 
 				-webkit-border-radius: 3px;
 				border-radius: 3px;
-				background: #fff ;
+				background-color: #fff ;
 				
 				-webkit-box-shadow: inset 1px 1px 3px 0px rgba(50, 50, 50, 0.6) ;
 				-moz-box-shadow:    inset 1px 1px 3px 0px rgba(50, 50, 50, 0.6) ;
@@ -44,7 +44,7 @@
 				display: inline-block ; 
 				min-width: 2rem ; 
 				/*min-height: 1rem ; */
-				background: #fff ; 
+				background-color: #fff ; 
 				margin: 0px .5rem ; 
 				padding: 0px ;
 

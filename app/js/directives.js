@@ -71,7 +71,7 @@ angular.module( 'reactor_directives', [] ).
 	})
 	
 
-
+/*
 	.directive( 'reactorQuestion' , function () {
 
 		return {
@@ -100,7 +100,7 @@ angular.module( 'reactor_directives', [] ).
 		}
 
 	})
-	
+*/	
 	
 	.directive( 'reactorSlide' , function () {
 
@@ -123,8 +123,8 @@ angular.module( 'reactor_directives', [] ).
 		return {
 			restrict: 'A',
 			scope: {
-				reactor: "="
-				
+				reactor: "=",
+				display: "="
 			},
 			templateUrl: 'partials/navigationControls.html?t=' + new Date() 
 		}
@@ -136,7 +136,8 @@ angular.module( 'reactor_directives', [] ).
 		return {
 			restrict: 'A',
 			scope: {
-				reactor: "="
+				reactor: "=",
+				display: "="
 			},
 			templateUrl: 'partials/navigationControls.edit.html?t=' + new Date() 
 		}
@@ -150,6 +151,7 @@ angular.module( 'reactor_directives', [] ).
 			restrict: 'A',
 			scope: {
 				reactor: "=",
+				display: "=",
 				index: "="
 			},
 			templateUrl: 'partials/entryOfEntries.html?t=' + new Date() 
@@ -174,7 +176,8 @@ angular.module( 'reactor_directives', [] ).
 		return {
 			restrict: 'A',
 			scope: {
-				reactor: "="
+				reactor: "=",
+				display: "="
 			},
 			templateUrl: 'partials/pagination.html?t=' + new Date() 
 		}

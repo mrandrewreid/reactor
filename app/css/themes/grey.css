@@ -25,7 +25,7 @@
 	.pagination
 		li
 			{
-				background: #fff ;
+				background-color: #fff ;
 			}
 
 .grey
@@ -33,7 +33,7 @@
 		li.true
 			{
 				border-color: #ccc !important ;
-				background: #ccc ;
+				background-color: #ccc ;
 			}
 
 .grey 

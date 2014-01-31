@@ -6,7 +6,7 @@ html		{
 				font-size: large ; 
 			}
 body		{ 
-				background: #fff ; 
+				background-color: #fff ; 
 				/*max-width: 1000px ; */
 				margin: 0rem auto 0rem auto ; 
 				/* padding: 0 1rem 1rem ;  */
@@ -43,7 +43,7 @@ h1	textarea
 .filename		
 			{ 
 				font-size: .65rem ; 
-				background: #eee ; 
+				background-color: #eee ; 
 				padding: .5rem ; 
 				margin: 0 1rem ; 
 				font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace ; 
@@ -73,7 +73,7 @@ h1	textarea
 				margin: 0 ; 
 				padding: 5px ; 
 				font-size: 8pt ; 
-				background: #fff ;
+				background-color: #fff ;
 				color: #000 ;
 			}
 .controls span

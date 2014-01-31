@@ -81,7 +81,7 @@
 	{
 		display: inline-block ;
 		border: 1pt outset #aaa ;
-		background: #aaa ;
+		background-color: #aaa ;
 		padding: .5rem ;
 		min-width: 5rem ;
 		text-align: center ;
@@ -110,7 +110,7 @@ a:hover.button
 	{
 		display: inline-block ;
 		border: 1pt outset #4AB2D0 ;
-		background: #4AB2D0 ;
+		background-color: #4AB2D0 ;
 		color: #fff ;
 		cursor: default ;
 	}
@@ -119,7 +119,7 @@ a:active.button
 	{
 		display: inline-block ;
 		border: 1pt inset #4AB2D0 ;
-		background: #4AB2D0 ;
+		background-color: #4AB2D0 ;
 		color: #2C6B7D ;
 		cursor: default ;
 		margin: 1pt 2pt 2pt 2pt ;
@@ -153,7 +153,7 @@ a:active.button
 	{
 		display: inline-block ;
 		border: 1pt outset #aaa ;
-		background: #aaa ;
+		background-color: #aaa ;
 		padding: .5rem ;
 		min-width: 5rem ;
 		text-align: center ;
@@ -179,14 +179,14 @@ a:hover.toggle_button:not(.selected)
 	{
 		border-color: #4AB2D0 ;
 		color: #000 ;
-		background: #ccc ;
+		background-color: #ccc ;
 	}
 	
 .toggle_button.selected
 	{
 		display: inline-block ;
 		border: 1pt inset  #4AB2D0 ;
-		background: #4AB2D0 ;
+		background-color: #4AB2D0 ;
 		color: #fff ;
 		cursor: default ;
 	}

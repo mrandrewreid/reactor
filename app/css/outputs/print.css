@@ -1,9 +1,9 @@
 /* CSS Document */
-.print 		{ font-size: 1.5rem ; height: 100% ; position: relative ; }
+.print 		{ font-size: .9rem ; height: 100% ; position: relative ; }
 
 .print	
 	h1		
-			{ font-size: 3rem ; color: #000 !important ; }
+			{ font-size: 1.3rem ; color: #000 !important ; }
 
 .print
 	.entry
@@ -12,7 +12,7 @@
 .print	
 	.question 
 		h1		
-			{ font-size: 2.2rem ; }
+			{ font-size: 1.2rem ; }
 			
 .print 
 	.answers

@@ -13,7 +13,7 @@
 
 
 
-/*.entries				{ background: #eee ; padding: 1rem ; clear: both ; margin: 1rem 0rem ; height: auto ; }*/
+/*.entries				{ background-color: #eee ; padding: 1rem ; clear: both ; margin: 1rem 0rem ; height: auto ; }*/
 
 .slideshow
 	.entry 
@@ -25,7 +25,7 @@
 .slideshow
 	.image				
 			{ 
-				background: #369 ; 
+				background-color: #369 ; 
 				margin: 1em ; 
 				display: block ; 
 				float: left ; 
@@ -37,7 +37,7 @@
 				display: block ; 
 				border: 1pt solid #aaa ; 
 				padding: 1rem ; 
-				background: #ddd ; 
+				background-color: #ddd ; 
 				width: auto ; 
 				overflow: hidden ; 
 			}
@@ -47,7 +47,7 @@
 		> .image
 			{ 
 				border: 1pt solid #aaa ; 
-				background: #58b ; 
+				background-color: #58b ; 
 				padding: 0rem ; 
 				clear: both ; 
 				margin: 1rem ; 

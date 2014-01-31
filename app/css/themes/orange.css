@@ -26,7 +26,7 @@
 		li
 			{
 				border-color: #F0932D !important ;
-				background: #fff ;
+				background-color: #fff ;
 			}
 
 .orange
@@ -34,7 +34,7 @@
 		li.true
 			{
 				border-color: #F0932D !important ;
-				background: #F0932D ;
+				background-color: #F0932D ;
 			}
 			
 .orange 
