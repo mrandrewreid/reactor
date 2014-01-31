@@ -1,6 +1,5 @@
 <!-- playback, correct -->
 <span class="feedback" ng-if="!reactor.state.editing && answer.correct">
-	<span class="feedback_sprite"></span>
 	<span class="feedback_text" ng-if="answer.selected">
 		<span ng-if="answer.feedback.correct.text == 'auto'">@auto Correct</span>
 		<span ng-if="answer.feedback.correct.text != 'auto'">Custom... {{answer.feedback.correct.text.text}}</span>
@@ -9,7 +8,6 @@
 
 <!-- playback, incorrect -->
 <span class="feedback" ng-if="!reactor.state.editing && !answer.correct">
-	<span class="feedback_sprite"></span>
 	<span class="feedback_text" ng-if="answer.selected">
 		<span ng-if="answer.feedback.incorrect.text == 'auto'">@auto Incorrect</span>
 		<span ng-if="answer.feedback.correct.text != 'auto'">Custom... {{answer.feedback.incorrect.text.text}}</span>
@@ -18,5 +16,5 @@
 
 <!-- edit -->
 <span ng-if="reactor.state.editing">
-	<span class="feedback_sprite"></span>
+	EDIT
 </span>
