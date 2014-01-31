@@ -35,3 +35,16 @@ angular.module( 'reactor_question_directives', [] )
 		}
 
 	})
+	
+	.directive( 'reactorFeedback' , function () {
+
+		return {
+			restrict: 'A',
+			scope: {
+				reactor: "=",
+				answer: "="
+			},
+			templateUrl: 'partials/reactorFeedback.html?t=' + new Date() 
+		}
+
+	})

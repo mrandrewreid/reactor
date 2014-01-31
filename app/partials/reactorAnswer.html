@@ -4,10 +4,6 @@
 	<input ng-disabled="answer.selected" type="checkbox" ng-model="answer.selected" style="float:left; margin-right: 1rem ; margin-left: -10000rem ; opacity: 0;" />
 	<span class="text_container">{{answer.text.text}}</span>
 </label>
-<span class="feedback" ng-if="answer.selected && !reactor.state.editing">
-	<p ng-if="answer.correct">Correct</p>
-	<p ng-if="!answer.correct">Incorrect</p>
-</span>
 
 
 <div ng-if="reactor.state.editing">
@@ -18,3 +14,5 @@
 		<span ng-if="reactor.state.editing" reactor-text text="answer.text" class="text_container answer_label"></span>
 	</div>
 </div>
+
+<span reactor-feedback reactor="reactor" answer="answer"></span>

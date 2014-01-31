@@ -333,7 +333,7 @@ ul.tabs
 				padding: 1% ;
 				background-color: #fff ;
 				
-				background-image: url(../img/sprites/feedback.png) !important ;
+				/*background-image: url(../img/sprites/feedback.png) !important ;*/
 				background-repeat: no-repeat !important ;
 				background-position: right -4px ;
 				
@@ -352,15 +352,10 @@ ul.tabs
 		li.selected_true
 			{
 				border: 1pt solid #000 ;
-				background-position: right -68px ;
+				/*background-position: right -68px ;*/
 			}
 			
-.reactor
-	.answers
-		li[rel=true].selected_true
-			{
-				background-position: right -132px ;
-			}
+
 
 
 
@@ -376,11 +371,52 @@ ul.tabs
 		li.selected_true 
 			.feedback
 			{
-				text-indent: -10000px ;
-				height: .01pt ;
-				overflow: hidden ;
+				display: inline-block ;
 			}
 
+
+
+.reactor
+	.answers
+		li
+			.feedback_sprite
+				{
+					display: inline-block ;
+					background-image: url(../img/sprites/feedback.png) !important ;
+					background-repeat: no-repeat !important ;
+					background-position: center 0 ;
+					min-height: 64px ;
+					min-width: 64px ;
+					border: 1pt dashed #ccc ;
+				}
+
+.reactor
+	.answers
+		li.selected_true
+			.feedback_sprite
+				{
+					display: inline-block ;
+					background-image: url(../img/sprites/feedback.png) !important ;
+					background-repeat: no-repeat !important ;
+					background-position: center -64px ;
+					min-height: 64px ;
+					min-width: 64px ;
+					border: 1pt dashed #ccc ;
+				}
+
+.reactor
+	.answers
+		li[rel=true].selected_true
+			.feedback_sprite
+				{
+					display: inline-block ;
+					background-image: url(../img/sprites/feedback.png) !important ;
+					background-repeat: no-repeat !important ;
+					background-position: center -128px ;
+					min-height: 64px ;
+					min-width: 64px ;
+					border: 1pt dashed #ccc ;
+				}
 
 .reactor 
 	.answers 
