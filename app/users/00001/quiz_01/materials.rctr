@@ -1,8 +1,13 @@
 {"id":"quiz_01","editable":true,"state":{"editing":true},"type":"quiz","pretty_type":"Quiz","child_type":"question","pretty_child_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"A reactor quiz","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":true,"type":"single"},"options":{"include":true}},"description":{"type":"description","pretty_type":"Description","text":"I have edited this title.","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":true},"optional":true,"type":"multiple"},"options":{"include":true}},"author":{"first_name":"Bill","last_name":"Bagins","organisation":""},"created":"date created","modified":"2014-01-30T09:50:39.671Z","version":60},"theme":{"selected":"blue","available_themes":["grey","blue","orange"],"corner_style":"rounded_5"},"instructions":{"type":"instruction","pretty_type":"Instructions","text":"My instructions for you are simple. Be safe.","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":true},"optional":true,"type":"single"},"options":{"include":true}},"entries":[{"type":"question","pretty_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 1","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}},"text":{"type":"text","pretty_type":"Text","text":"How many roads must a man walk down before you can call him a man?","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}},"images":{"entries":[{"type":"image","pretty_type":"Image","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true},"src":"img\/tree.jpg","dimensions":{"type":"dimensions","width":"300","height":"300"},"alt":{"type":"text","pretty_type":"Text","text":"this is the alt text for this image.","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}},"description":{"type":"text","pretty_type":"Text","text":"this is the decription text for this image.","settings":{"edit":{"editable":true,"locked":false,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}]},"answers":{"type":"answers","pretty_type":"Answers","entries":[{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -49,9 +54,14 @@
 		}
 	,"correct":true,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"17","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -98,9 +108,14 @@
 		}
 	,"correct":false,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"It's a rhetorical question, dufus.","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}]}},{"type":"question","pretty_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 1","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}},"text":{"type":"text","pretty_type":"Text","text":"How many roads must a man walk down before you can call him a man?","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}},"images":{"entries":[{"type":"image","pretty_type":"Image","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true},"src":"img\/tree.jpg","dimensions":{"type":"dimensions","width":"300","height":"300"},"alt":{"type":"text","pretty_type":"Text","text":"this is the alt text for this image.","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}},"description":{"type":"text","pretty_type":"Text","text":"this is the decription text for this image.","settings":{"edit":{"editable":true,"locked":false,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}]},"answers":{"type":"answers","pretty_type":"Answers","entries":[{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -147,9 +162,14 @@
 		}
 	,"correct":false,"selected":true,"text":{"type":"text","pretty_type":"Text","text":"17","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -196,9 +216,14 @@
 		}
 	,"correct":true,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"It's a rhetorical question, dufus.","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -245,9 +270,14 @@
 		}
 	,"correct":false,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"This is the text for answer 3","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}]}},{"type":"question","pretty_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 5","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}},"text":{"type":"text","pretty_type":"Text","text":"Enter your question...","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}},"images":{"entries":[{"type":"image","pretty_type":"Image","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true},"src":"img\/tree.jpg","dimensions":{"type":"dimensions","width":"300","height":"300"},"alt":{"type":"text","pretty_type":"Text","text":"this is the alt text for this image.","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}},"description":{"type":"text","pretty_type":"Text","text":"this is the decription text for this image.","settings":{"edit":{"editable":true,"locked":false,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}]},"answers":{"type":"answers","pretty_type":"Answers","entries":[{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -294,9 +324,14 @@
 		}
 	,"correct":true,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"This is the text for answer 1","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -343,9 +378,14 @@
 		}
 	,"correct":true,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"Changed it. Booya!","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -392,9 +432,14 @@
 		}
 	,"correct":false,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"This is the text for answer 3","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -441,9 +486,14 @@
 		}
 	,"correct":true,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"This is the text for answer 4","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -490,9 +540,14 @@
 		}
 	,"correct":true,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"This is the text for answer 5","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -539,9 +594,14 @@
 		}
 	,"correct":false,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"This is the text for answer 6","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -588,9 +648,14 @@
 		}
 	,"correct":false,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"This is the text for answer 7","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}]}},{"type":"question","pretty_type":"Question","meta":{"title":{"type":"title","pretty_type":"Title","text":"Question 6","settings":{"edit":{"editable":false,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}}},"text":{"type":"text","pretty_type":"Text","text":"Enter your question...","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}},"images":{"entries":[{"type":"image","pretty_type":"Image","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true},"src":"img\/tree.jpg","dimensions":{"type":"dimensions","width":"300","height":"300"},"alt":{"type":"text","pretty_type":"Text","text":"this is the alt text for this image.","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"single"},"options":{"include":true}},"description":{"type":"text","pretty_type":"Text","text":"this is the decription text for this image.","settings":{"edit":{"editable":true,"locked":false,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}}]},"answers":{"type":"answers","pretty_type":"Answers","entries":[{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -640,9 +705,14 @@
 {
 	"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -712,9 +782,14 @@
 
 {"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{
@@ -761,9 +836,14 @@
 		}
 	,"correct":false,"selected":false,"text":{"type":"text","pretty_type":"Text","text":"Expunge","settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false,"type":"multiple"},"options":{"include":true}}},{"type":"answer"
 	,"pretty_type":"Answer"
+,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
 	,"feedback":
 		{
-			"correct": 
+			"type":"feedback"
+			,"pretty_type":"Feedback"
+			,"settings":{"edit":{"editable":true,"locked":true,"allow_type_change":false},"optional":false},"options":{"include":true}
+			,"correct":
+ 
 				{
 					"text":
 						{

@@ -15,6 +15,9 @@
 </span>
 
 <!-- edit -->
-<span ng-if="reactor.state.editing">
-	EDIT
-</span>
+<div ng-if="reactor.state.editing" style="clear:both ; margin: 1% ; padding: 1% ;">
+	<div style=" display: block; width: auto ; overflow: hidden ; padding:0px ;">
+		<p class="feedback_text"><span style="display: inline ; float: left ; font-size: 1rem ;">Correct:</span> <span reactor-text text="answer.feedback.correct.text" class="text_container"></span></p>
+		<p class="feedback_text"><span style="display: inline ; float: left ; font-size: 1rem ;">Incorrect:</span> <span reactor-text text="answer.feedback.incorrect.text" class="text_container"></span></p>
+	</div>
+</div>
