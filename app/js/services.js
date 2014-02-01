@@ -1,7 +1,7 @@
 'use strict';
 
 /* Services */
-
+/**/
 var reactor_services = angular.module( 'reactor.services', [] ) ;
 	reactor_services.factory( 'server' , [ '$http' , '$resource' ,
 		function( $http , $resource ) {
