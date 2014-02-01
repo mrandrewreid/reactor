@@ -242,11 +242,21 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 					// every object requires options and settings EXCEPT new options or settings objects //
 					switch ( details.type ) {
 
+						case 'author' :	; break ;
+						
+						case 'theme' :	; break ;
+
+						case 'state' :	; break ;
+
 						case 'settings' :	; break ;
 
 						case 'options' : 	; break ;
 						
 						case 'edit' : 		; break ;
+	
+						case 'question' : 		; break ;
+					
+						case 'quiz' : 		; break ;
 						
 						default :
 							new_obj.settings = this.create( { type: 'settings' } ) ;
@@ -268,6 +278,22 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 
 					// if this object matches any of these switch options, append or modify it according to its type //
 					switch ( details.type ) {
+
+						case 'author' :
+							new_obj.first_name ="Bill" ;
+							new_obj.last_name = "Bagins" ;
+							new_obj.organisation = "VoodooMonkey" ;
+						break ;
+						
+						case 'state' :
+							new_obj.editing = false ;
+						break ;
+						
+						case 'theme' :
+							new_obj.selected = "grey" ;
+							new_obj.available_themes = [ "grey" , "blue" , "orange" ] ;
+							new_obj.corner_style = "rounded_5" ;
+						break ;
 
 						case 'edit' :
 							new_obj.editable = true ;
@@ -345,74 +371,125 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 							new_obj.text = this.create( { type: 'text' } ) ;
 							new_obj.images = this.create( { type: 'images' } ) ;
 						break ;
-
-/*					
-						case 'question' :							
-							
-							new_obj = {
-								type:"question"
-								,pretty_type:"Question"
-								,meta:{
-									title:{type:"title"
-										,pretty_type:"Title"
-										,text:"Question " + ( data.length + 1 )
-										,settings:{edit:{editable:false,locked:true,allow_type_change:false},optional:false,type:"single"},options:{include:true}}},text:{type:"text",pretty_type:"Text"
-								,text:"Enter your question..."
-								,settings:{edit:{editable:true,locked:true,allow_type_change:false},optional:false,type:"multiple"},options:{include:true}}
-								,images:{entries:[{type:"image",pretty_type:"Image",settings:{edit:{editable:true,locked:true,allow_type_change:false},optional:false},options:{include:true},src:"img\/tree.jpg",dimensions:{type:"dimensions",width:"300",height:"300"},alt:{type:"text",pretty_type:"Text",text:"this is the alt text for this image.",settings:{edit:{editable:true,locked:true,allow_type_change:false},optional:false,type:"single"},options:{include:true}}
-								,description:{type:"text",pretty_type:"Text",text:"this is the decription text for this image.",settings:{edit:{editable:true,locked:false,allow_type_change:false},optional:false,type:"multiple"},options:{include:true}}}]}
-								,answers:{type:"answers",pretty_type:"Answers",entries:[
-									{
-										type:"answer"
-										,pretty_type:"Answer"
-										,text:{
-											type:"text"
-											,pretty_type:"Text"
-											,text: "This is the text for answer 1"
-											,settings:
-											{
-												edit:{
-													editable:true
-													,locked:true
-													,allow_type_change:false
-													}
-													,optional:false
-													,type:"multiple"
-											}
-											,options:{include:true}
-										}
-									}
-									
-									,{
-										type:"answer"
-										,pretty_type:"Answer"
-										,text:{
-											type:"text"
-											,pretty_type:"Text"
-											,text: "This is the text for answer 2"
-											,settings: {
-												edit:{
-													editable:true,
-													locked:true,
-													allow_type_change:false
-												}
-												,optional:false
-												,type:"multiple"
-											}
-											,options:{include:true}
-										}
-
-									}
+						
+						case 'question' :
+							new_obj.meta = this.create( { type: 'meta' } ) ;
+							new_obj.text = this.create( { type: 'text' } ) ;
+							new_obj.description = this.create( { type: 'description' } ) ;
+							new_obj.images = this.create( { type: 'images' } ) ;
+							new_obj.answers = this.create( { type: 'answers' } ) ;
+						break ;
+						
+						case 'question' :
+							new_obj.meta = this.create( { type: 'meta' } ) ;
+							new_obj.text = this.create( { type: 'text' } ) ;
+							new_obj.description = this.create( { type: 'description' } ) ;
+							new_obj.images = this.create( { type: 'images' } ) ;
+							new_obj.answers = this.create( { type: 'answers' } ) ;
+						break ;
+						
+						case 'quiz' :
+							new_obj.id = "quiz_" + new Date() ;
+							new_obj.editable = true ;
+							new_obj.state = this.create( { type: 'state' } ) ;
+							new_obj.child_type = "question" ;
+							new_obj.pretty_child_type = "Question" ;
+							new_obj.meta = this.create( { type: 'meta' } ) ;
+							new_obj.author = this.create( { type: 'author' } ) ;
+							new_obj.created = new Date() ;
+							new_obj.modified = new Date() ;
+							new_obj.version = 0 ;
+							new_obj.theme = this.create( { type: 'theme' } ) ;
+							new_obj.instructions = this.create( { type: 'text' } ) ;
+							new_obj.entries = [ this.create( { type: 'question' } ) ];
+							new_obj.navigation = {
+							  type: "slide",
+							  state: {
+								position: {
+								  entry_index: 3
+								},
+								history: []
+							  },
+							  entry_of_entries: {
+								options: {
+								  include: true
+								},
+								settings: {
+								  edit: {
+									editable: true,
+									locked: false
+								  },
+								  optional: true
+								},
+								type: "entry of entries",
+								pretty_type: "Entry of entries"
+							  },
+							  controls: {
+								type: "navigation controls",
+								pretty_type: "Navigation controls",
+								settings: {
+								  edit: {
+									editable: true,
+									locked: true
+								  },
+								  optional: true
+								},
+								options: {
+								  include: true
+								},
+								pagination: {
+								  type: "pagination",
+								  pretty_type: "Pagination",
+								  settings: {
+									edit: {
+									  editable: true,
+									  locked: true
+									},
+									optional: true
+								  },
+								  options: {
+									include: true
+								  },
+								  format: "numerical"
+								},
+								buttons: [
+								  {
+									type: "button",
+									subtype: "first",
+									include: true,
+									label: "First",
+									response: "first",
+									mobile_label: "|<"
+								  },
+								  {
+									type: "button",
+									subtype: "previous",
+									include: true,
+									label: "Previous",
+									response: "previous",
+									mobile_label: "<"
+								  },
+								  {
+									type: "button",
+									subtype: "next",
+									include: true,
+									label: "Next",
+									response: "next",
+									mobile_label: ">"
+								  },
+								  {
+									type: "button",
+									subtype: "last",
+									include: true,
+									label: "Last",
+									response: "last",
+									mobile_label: ">|"
+								  }
 								]
+							  }
 							}
-							};
-							
+						break ;
 
-						break ;			
-						*/
-						
-						
-						
 					}
 					
 					
@@ -420,21 +497,6 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 					return new_obj ;
 
 				} ;
-
-/*
-				modifierService.remove = function( data , index ) {
-					
-					if ( data.length > 1 && data.length > index ) { 
-						data.splice( index , 1 ) ;
-						return true ;
-					} else {
-						return false 
-					}
-
-					
-				}
-
-*/					
 
 			return creatorService ;
 		}
