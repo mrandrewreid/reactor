@@ -33,7 +33,8 @@ angular.module( 'reactor.controllers', [] ).
 			'server' , 
 			'navigationService',
 			'modifierService',
-			function( $scope , $routeParams , $http , $location , server , navigationService , modifierService ) 
+			'creatorService',
+			function( $scope , $routeParams , $http , $location , server , navigationService , modifierService , creatorService ) 
 		{
 
 
@@ -51,12 +52,21 @@ angular.module( 'reactor.controllers', [] ).
 		}
 
 
+
+
+
 		$scope.reactor_id = $routeParams.reactor_id ;
 		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
+
+
+		$scope.creatorService = creatorService ;
+
 
 		$http.get( 'users/00001/user.json' ).success( function( data ) {
 			$scope.user = data ;
 		});
+
+
 
 		$http.get( 'users/00001/' + $routeParams.reactor_id + '/materials.rctr' ).success( function( data ) {
 

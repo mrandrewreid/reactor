@@ -7,6 +7,13 @@
 <!-- show the toolbar for the reactor -->
 <div reactor-toolbar reactor="reactor" display="display" class=""></div>
 
+<div>
+	CreatorService Tests
+	<input type="button" ng-model='the_boobs' ng-click="the_boobs = creatorService.create( {type: 'answer' } )" value="Boobs" />
+	<p>{{the_boobs}}</p>
+	<p>The boobs go here: {{the_boobs.feedback.correct.text.text}}</p>
+	
+</div>
 		
 <!-- output the reactor -->
 <div reactor-output reactor="reactor" display="display" style="overflow: auto ;"></div>
