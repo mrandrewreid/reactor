@@ -255,6 +255,17 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 					}
 
 
+					// if 
+					if ( details.collection == true ) {
+						
+						new_obj.entries = [] ;
+						
+					}
+					
+					
+					
+
+
 					// if this object matches any of these switch options, append or modify it according to its type //
 					switch ( details.type ) {
 
@@ -275,9 +286,25 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 						case "text" :
 							new_obj.text = "@auto" ;
 						break ;
-
+						
 						case "title" :
 							new_obj.text = this.create( { type: 'text' } ) ;
+						break ;
+						
+						case "dimensions" :
+							new_obj.width = 32 ;
+							new_obj.height = 32 ;
+						break ;
+						
+						case 'image' :
+							new_obj.src = "img/placeholder.jpg" ;
+							new_obj.dimensions = this.create( { type: "dimensions" } ) ;
+							new_obj.alt = this.create( { type: "text" } ) ;
+							new_obj.description = this.create( { type: "text" } )
+						break ;
+						
+						case 'images' :
+							new_obj.entries = [this.create( { type: 'image' } ) ];
 						break ;
 
 						case "correct" :
@@ -292,42 +319,34 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 							new_obj.correct = this.create( { type: 'incorrect' } ) ;
 							new_obj.incorrect = this.create( { type: 'incorrect' } ) ;
 						break ;
- 
+
 						case 'answer' :
 							new_obj.text = this.create( { type: 'text' } ) ;
 							new_obj.feedback = this.create( { type: 'feedback' } ) ;
 							new_obj.correct = true ;
 							new_obj.selected = false ;
 						break ;
-
-/*						
+						
+						case 'answers' :
+							new_obj.entries = [ this.create( { type: 'answer' } ) , this.create( { type: 'answer' } ) ] ;
+							new_obj.entries[ 1 ].correct = false ;
+						break ;
 
 						case 'meta' :
-
-							new_obj = { 
-								type: "meta"
-								,pretty_type: "Meta"
-								,title: this.create( { type: 'text'} )
-								,title: this.create( { type: 'text'} )
-								,title: this.create( { type: 'text'} )
-							} ;
-
-						break ;
+							new_obj.title = this.create( { type: 'title'} ) ;
+							new_obj.description = this.create( { type: 'text'} ) ;
+							new_obj.instructions = this.create( { type: 'text'} ) ;
+							new_obj.version = 0 ;
+						break ;						
 
 
 						case 'slide' :
-
-							new_obj = { 
-								type: "slide",
-								pretty_type: "Slide",
-								meta: { 
-									title: { type: "title", pretty_type: "Title", text: "Slide " + ( data.length + 1 ) , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "single" } , options: { include: true } } },
-									text: { type: "text", pretty_type: "Text", text: "This is the text for slide " + ( data.length + 1 ) , settings: { edit: { editable: true , locked: true , allow_type_change: false } , optional: true , type: "multiple" } ,options: { include: true } 
-								}
-							} ;
-
+							new_obj.meta = this.create( { type: 'meta' } ) ;
+							new_obj.text = this.create( { type: 'text' } ) ;
+							new_obj.images = this.create( { type: 'images' } ) ;
 						break ;
-						
+
+/*					
 						case 'question' :							
 							
 							new_obj = {

@@ -9,10 +9,10 @@
 
 <div>
 	CreatorService Tests
-	<input type="button" ng-model='the_boobs' ng-click="the_boobs = creatorService.create( {type: 'answer' } )" value="Boobs" />
-	<p>{{the_boobs}}</p>
-	<p>The boobs go here: {{the_boobs.feedback.correct.text.text}}</p>
-	
+	<input type="button" ng-model='the_boobs' ng-click="the_boobs = creatorService.create( { type: 'answers' } )" value="Boobs" />
+	<p style="max-height: 50px ; overflow: auto ;">{{the_boobs}}</p>
+	<p>The boobs go here: {{the_boobs.entries.length}}</p>
+
 </div>
 		
 <!-- output the reactor -->
