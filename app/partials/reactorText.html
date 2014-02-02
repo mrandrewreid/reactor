@@ -27,8 +27,18 @@
 			<p ng-if="text.settings.edit.locked">{{text.text}}</p>
 		</div>
 		
+		<div ng-switch-default>
+			<textarea 
+				ng-disabled="!text.options.include || text.settings.edit.locked" 
+				class="full_width" 
+				ng-model="text.text" 
+				>
+			</textarea>
+			<p ng-if="text.settings.edit.locked">{{text.text}}</p>
+		</div>
+		
 	</div>
-	
+
 
 <!-- if not available to edit -->
 <p ng-if="text.settings.edit.locked"><span unlocker settings="text.settings"></span>{{text.text}}</p>

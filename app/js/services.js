@@ -315,9 +315,20 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 						
 						case "title" :
 							new_obj.text = "@auto" ;
-							new_obj.type = 'text' ;
-							new_obj.pretty_type = this.prettyUp( new_obj.type ) ;
-							details.subtype = 'title' ; 
+							new_obj.settings.type = 'single' ;
+							//new_obj.type = 'text' ;
+							//new_obj.pretty_type = this.prettyUp( new_obj.type ) ;
+							//details.subtype = 'title' ; 
+						break ;
+						
+						case "instructions" :
+							new_obj.text = "@auto" ;
+							new_obj.settings.type = 'multiple' ;
+						break ;
+						
+						case "description" :
+							new_obj.text = "@auto" ;
+							new_obj.settings.type = 'multiple' ;
 						break ;
 						
 						case "dimensions" :
@@ -363,8 +374,8 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 
 						case 'meta' :
 							new_obj.title = this.create( { type: 'title'} ) ;
-							new_obj.description = this.create( { type: 'text'} ) ;
-							new_obj.instructions = this.create( { type: 'text'} ) ;
+							new_obj.description = this.create( { type: 'description'} ) ;
+							new_obj.instructions = this.create( { type: 'instructions'} ) ;
 							new_obj.version = 0 ;
 						break ;						
 
@@ -441,7 +452,7 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 						break ;
 						
 						case 'quiz' :
-							new_obj.id = "quiz_" + new Date() ;
+							new_obj.id = details.id ;
 							new_obj.editable = true ;
 							new_obj.state = this.create( { type: 'state' } ) ;
 							new_obj.child_type = "question" ;
@@ -452,7 +463,7 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 							new_obj.modified = new Date() ;
 							new_obj.version = 0 ;
 							new_obj.theme = this.create( { type: 'theme' } ) ;
-							new_obj.instructions = this.create( { type: 'text' } ) ;
+							new_obj.instructions = this.create( { type: 'instructions' } ) ;
 							new_obj.entries = [ this.create( { type: 'question' } ) , this.create( { type: 'question' } ) ] ;
 							new_obj.navigation = this.create( {type: 'navigation' }) ; 
 
