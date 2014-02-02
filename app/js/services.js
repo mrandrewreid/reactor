@@ -91,11 +91,11 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 
 			var modifierService = {} ;
 
-				modifierService.add = function( data , new_entry_type ) {
+				modifierService.add = function( data , new_entry ) {
 
-					var new_entry = {} ;
-
-					switch ( new_entry_type ) {
+					//var new_entry = {} ;
+/*
+					switch ( new_entry ) {
 
 						case 'answer' :
 
@@ -186,7 +186,7 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 						
 						
 					}
-	
+*/	
 					data.push( new_entry ) ;
 					
 					return { success: true , new_position: data.length - 1 } ;
@@ -273,7 +273,22 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 					}
 					
 					
-					
+					if ( details.reactor == true ) {
+
+							new_obj.id = details.id ;
+							new_obj.editable = true ;
+							new_obj.state = this.create( { type: 'state' } ) ;
+							new_obj.meta = this.create( { type: 'meta' } ) ;
+							new_obj.author = this.create( { type: 'author' } ) ;
+							new_obj.created = new Date() ;
+							new_obj.modified = new Date() ;
+							new_obj.version = 0 ;
+							new_obj.theme = this.create( { type: 'theme' } ) ;
+							new_obj.instructions = this.create( { type: 'instructions' } ) ;
+							new_obj.entries = [] ;
+							new_obj.navigation = this.create( {type: 'navigation' }) ;
+
+					}
 
 
 					// if this object matches any of these switch options, append or modify it according to its type //
@@ -394,14 +409,6 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 							new_obj.answers = this.create( { type: 'answers' } ) ;
 						break ;
 						
-						case 'question' :
-							new_obj.meta = this.create( { type: 'meta' } ) ;
-							new_obj.text = this.create( { type: 'text' } ) ;
-							new_obj.description = this.create( { type: 'description' } ) ;
-							new_obj.images = this.create( { type: 'images' } ) ;
-							new_obj.answers = this.create( { type: 'answers' } ) ;
-						break ;
-						
 						case 'navigation state' :
 							new_obj = {
 								position: { entry_index: 0 },
@@ -450,22 +457,14 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 							}
 
 						break ;
-						
+
 						case 'quiz' :
-							new_obj.id = details.id ;
-							new_obj.editable = true ;
-							new_obj.state = this.create( { type: 'state' } ) ;
+
+							new_obj.entries.push( this.create( { type: 'question' } ) ) ;
+							new_obj.entries.push( this.create( { type: 'question' } ) ) ;
+							new_obj.navigation = this.create( {type: 'navigation' } ) ; 
 							new_obj.child_type = "question" ;
 							new_obj.pretty_child_type = "Question" ;
-							new_obj.meta = this.create( { type: 'meta' } ) ;
-							new_obj.author = this.create( { type: 'author' } ) ;
-							new_obj.created = new Date() ;
-							new_obj.modified = new Date() ;
-							new_obj.version = 0 ;
-							new_obj.theme = this.create( { type: 'theme' } ) ;
-							new_obj.instructions = this.create( { type: 'instructions' } ) ;
-							new_obj.entries = [ this.create( { type: 'question' } ) , this.create( { type: 'question' } ) ] ;
-							new_obj.navigation = this.create( {type: 'navigation' }) ; 
 
 						break ;
 

@@ -4,15 +4,19 @@
 
 
 	<span style="margin: .5rem 1rem ; float: right ;">
-		<label><strong>Preview</strong><input type="radio" name="edit_mode" ng-value="false" ng-model="reactor.state.editing" /></label>
-		<label><strong>Edit</strong><input type="radio" name="edit_mode" ng-value="true" ng-model="reactor.state.editing" /></label>
+		<label><input type="radio" name="edit_mode" ng-value="false" ng-model="reactor.state.editing" /><strong>Preview</strong></label>
+		<label><input type="radio" name="edit_mode" ng-value="true" ng-model="reactor.state.editing" /><strong>Edit</strong></label>
 	</span>
 
 
 
 	<p>
+		<strong>ID</strong>: {{ reactor.id }}
 		<strong>Version</strong>: {{reactor.meta.version}}.<br>
-		<strong>Last modified</strong>: {{reactor.meta.modified | date:'medium' }}
+		<strong>Last modified</strong>: 
+		<span ng-if="reactor.meta.modified">{{reactor.meta.modified | date:'medium' }}</span>
+		<span ng-if="!reactor.meta.modified">-</span>
+
 	</p>
 
 
