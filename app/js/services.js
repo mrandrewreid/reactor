@@ -314,7 +314,10 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 						break ;
 						
 						case "title" :
-							new_obj.text = this.create( { type: 'text' } ) ;
+							new_obj.text = "@auto" ;
+							new_obj.type = 'text' ;
+							new_obj.pretty_type = this.prettyUp( new_obj.type ) ;
+							details.subtype = 'title' ; 
 						break ;
 						
 						case "dimensions" :
