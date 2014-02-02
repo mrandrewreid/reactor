@@ -5,34 +5,16 @@
 
 
 <!-- show the toolbar for the reactor -->
-<div reactor-toolbar reactor="reactor" display="display" class=""></div>
+<div reactor-toolbar reactor="the_boobs" display="display" class=""></div>
 
 <div>
 	CreatorService Tests
 	<input type="button" ng-model='the_boobs' ng-click="the_boobs = creatorService.create( { type: 'quiz' } )" value="Boobs" />
-	<div style="position:absolute; overflow: auto ; width: 450px ; height: 60% ; right:0px ; background: #fff ; padding: 1% ; border: 1pt solid #ccc ;">
-		<p>ID: {{the_boobs.id}}</p>
-		<p>Entries.length: {{the_boobs.entries.length}}</p>
-		<p>Editable: {{the_boobs.editable}}</p>
-		<p>State: {{the_boobs.state}}</p>
-		<p>Child: {{the_boobs.child_type}}</p>
-		<p>Pretty child: {{the_boobs.pretty_child_type}}</p>
-		<p>Meta: {{the_boobs.meta}}</p>
-		<p>Author: {{the_boobs.author}}</p>
-		<p>Created: {{the_boobs.created}}</p>
-		<p>Modified: {{the_boobs.modified}}</p>
-		<p>Version: {{the_boobs.version}}</p>
-		<p>Theme: {{the_boobs.theme}}</p>
-		<p>Instructions: {{the_boobs.instructions}}</p>
-		<p>Entries: {{the_boobs.entries}}</p>
-		<!--<div reactor-output reactor="the_boobs" display="display" style="overflow: auto ;"></div>-->
-	</div>
-
-
 
 	<div reactor-output reactor="the_boobs" entry="the_boobs" display="display"></div>
 
 	<br style="clear:both;" />
+
 </div>
 
 
@@ -41,8 +23,8 @@
 
 
 
+<!-- show the toolbar for the reactor -->
+<div reactor-toolbar reactor="reactor" display="display" class=""></div>
 	
 <!-- output the reactor -->
 <div reactor-output reactor="reactor" display="display" style="overflow: auto ;"></div>
-
-<div><textarea>{{ reactor.navigation | json }}</textarea></div>

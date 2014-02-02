@@ -391,6 +391,55 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 							new_obj.answers = this.create( { type: 'answers' } ) ;
 						break ;
 						
+						case 'navigation state' :
+							new_obj = {
+								position: { entry_index: 0 },
+								history: []
+							}
+						break ;
+						
+						case 'entry of entries' :
+							// don't really have to do much here //
+						break ;
+						
+						case 'pagination' :
+						
+							new_obj.format = "numerical" ;
+
+						break ;
+						
+						case 'button' :
+							new_obj.subtype = details.subtype ;
+							new_obj.include = details.include ;
+							new_obj.label = details.label ;
+							new_obj.mobile_label = details.mobile_label ;
+							new_obj.response = details.response ;
+						break ;
+						
+						case 'navigation controls' :
+							
+							new_obj.pagination = this.create( 'pagination' ) ;
+							
+							var first_button = this.create( { type: 'button' , subtype: 'first' , include: true , label: 'First' , response: 'first' , mobile_label: '|<' } ) ;
+							var previous_button = this.create( { type: 'button' , subtype: 'previous' , include: true , label: 'Previous' , response: 'previous' , mobile_label: '<' } ) ;
+							var next_button = this.create( { type: 'button' , subtype: 'next' , include: true , label: 'Next' , response: 'next' , mobile_label: '>' } ) ;
+							var last_button = this.create( { type: 'button' , subtype: 'last' , include: true , label: 'Last' , response: 'last' , mobile_label: '>|' } ) ;
+
+							new_obj.buttons = [ first_button , previous_button , next_button , last_button ] ;
+							
+						break ;
+						
+						case 'navigation' :
+
+							new_obj = {
+							  type: "slide",
+							  state: this.create( { type: 'navigation state' } ) 
+							  ,entry_of_entries: this.create( { type: 'entry of entries' } ) 
+							  ,controls: this.create( { type: 'navigation controls'} )
+							}
+
+						break ;
+						
 						case 'quiz' :
 							new_obj.id = "quiz_" + new Date() ;
 							new_obj.editable = true ;
@@ -404,93 +453,9 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 							new_obj.version = 0 ;
 							new_obj.theme = this.create( { type: 'theme' } ) ;
 							new_obj.instructions = this.create( { type: 'text' } ) ;
-							new_obj.entries = [ this.create( { type: 'question' } ) ];
-							new_obj.navigation = {
-							  type: "slide",
-							  state: {
-								position: {
-								  entry_index: 3
-								},
-								history: []
-							  },
-							  entry_of_entries: {
-								options: {
-								  include: true
-								},
-								settings: {
-								  edit: {
-									editable: true,
-									locked: false
-								  },
-								  optional: true
-								},
-								type: "entry of entries",
-								pretty_type: "Entry of entries"
-							  },
-							  controls: {
-								type: "navigation controls",
-								pretty_type: "Navigation controls",
-								settings: {
-								  edit: {
-									editable: true,
-									locked: true
-								  },
-								  optional: true
-								},
-								options: {
-								  include: true
-								},
-								pagination: {
-								  type: "pagination",
-								  pretty_type: "Pagination",
-								  settings: {
-									edit: {
-									  editable: true,
-									  locked: true
-									},
-									optional: true
-								  },
-								  options: {
-									include: true
-								  },
-								  format: "numerical"
-								},
-								buttons: [
-								  {
-									type: "button",
-									subtype: "first",
-									include: true,
-									label: "First",
-									response: "first",
-									mobile_label: "|<"
-								  },
-								  {
-									type: "button",
-									subtype: "previous",
-									include: true,
-									label: "Previous",
-									response: "previous",
-									mobile_label: "<"
-								  },
-								  {
-									type: "button",
-									subtype: "next",
-									include: true,
-									label: "Next",
-									response: "next",
-									mobile_label: ">"
-								  },
-								  {
-									type: "button",
-									subtype: "last",
-									include: true,
-									label: "Last",
-									response: "last",
-									mobile_label: ">|"
-								  }
-								]
-							  }
-							}
+							new_obj.entries = [ this.create( { type: 'question' } ) , this.create( { type: 'question' } ) ] ;
+							new_obj.navigation = this.create( {type: 'navigation' }) ; 
+
 						break ;
 
 					}
