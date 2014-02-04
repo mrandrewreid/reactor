@@ -80,7 +80,7 @@ angular.module( 'reactor.controllers', [] ).
 			$scope.reactor.export = 		function() { 
 				alert( 'export' ) ;
 			} ;
-	
+
 			$scope.reactor.changeEditMode = function( bool ) {
 				$scope.reactor.state.editing = bool ;
 				var numerical_bool = 0 ;
@@ -259,6 +259,103 @@ angular.module( 'reactor.controllers', [] ).
 	});
 
   }])
+
+
+
+
+
+
+
+
+	.controller(
+		'Template'
+		,[ 
+			'$scope' , 
+			'$routeParams' , 
+			'$http' , 
+			'$location' , 
+			'server' , 
+			'navigationService',
+			'modifierService',
+			'creatorService',
+			function( $scope , $routeParams , $http , $location , server , navigationService , modifierService , creatorService ) 
+		{
+
+		$scope.creatorService = creatorService ;
+
+		$scope.display = {
+			output: {
+				entries: [ 'mobile' , 'tablet' , 'desktop' , 'projector' , 'hdtv' , 'print' ] ,
+				selected: 'desktop'
+			},
+			orientation: { 
+				entries: [ 'portrait' , 'landscape' ] ,
+				selected: 'portrait' 
+			}
+		}
+
+		$scope.reactor_id = $routeParams.reactor_id ;
+		$scope.title = { text: 'HERE IS A TITLE' , include: true } ;
+
+		$http.get( 'users/00001/user.json' ).success( function( data ) {
+			$scope.user = data ;
+		});
+
+		$scope.navigationService = navigationService ;
+		$scope.server = server ;
+		$scope.modifierService = modifierService ;
+
+		$scope.reactor = $scope.creatorService.create( { type: 'reactor_template' , reactor: true } ) ;
+
+		$scope.reactor.add = function( collection , entry_type ) {
+			
+			var new_entry = $scope.creatorService.create( { type: entry_type } ) ;
+			var result = $scope.modifierService.add( collection , new_entry ) ;
+
+			if ( result.success == true ) {
+			
+				switch ( entry_type ) {
+					case 'slide': $scope.navigationService.last( $scope.reactor ) ; break ;
+					case 'question': $scope.navigationService.last( $scope.reactor ) ; break ;
+					default: break ;
+				}
+				
+			}
+
+		}
+
+
+
+		$scope.reactor.remove = function( collection , index ) {
+
+			var item_to_remove = collection[ index ] ;
+			var item_type_in_lower_case = item_to_remove.pretty_type.toLowerCase();
+			var carry_on = confirm( 'Are you sure you want to delete this ' + item_type_in_lower_case + '?' ) ;
+			if ( carry_on ) {
+
+				$scope.navigationService.previous( $scope.reactor ) ;
+
+				var result = $scope.modifierService.remove( collection , index ) ;
+			}
+			//if ( result.success == true ) $scope.navigationService.last( $scope.reactor ) ;
+
+		}
+
+		//$http.get( 'users/00001/' + $routeParams.reactor_id + '/materials.rctr' ).success( function( data ) {});
+
+  }])
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   .controller('MyCtrl1', [ '$scope' , function( $scope ) {

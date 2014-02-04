@@ -1,9 +1,65 @@
-<!--<textarea ng-if="reactor.options.dev" style="display: inline-block ; width: 30% ; height: 100% ; left:0px ; top: 0px ; background: #000 ; color: #fff ; font-size: xx-small ; position: absolute ; float: left ;">{{ reactor | json }}</textarea>-->
 
-<h1 style="display:none ;">Edit</h1>
 
-<!-- show the toolbar for the reactor -->
-<p reactor-toolbar reactor="reactor"></p>
+<h1 style="display:none ;">Template</h1>
 
-<!-- output the reactor -->
-<div reactor-output reactor="reactor"></div>
+<div style="width: 64% ; display: inline-block ; margin: 1% ; padding: 1% ;">
+	<!-- show the toolbar for the reactor -->
+	<p reactor-toolbar reactor="reactor" display="display"></p>
+	<!-- output the reactor -->
+	<div reactor-output reactor="reactor" display="display"></div>
+</div>
+
+
+<div style="width: 26% ; display: inline-block ; vertical-align:top; margin: 1% ; padding: 1% ; font-size: x-small ;">
+	<!-- show the toolbar for the reactor -->
+
+	<div style="display: inline-block ; vertical-align: top ;">
+		<select ng-model="selected" size="20" style="width:100px" multiple="false">
+			<option ng-repeat="(key, value) in reactor">{{key}}</option>
+		</select>
+	</div>
+	<!--<p reactor="reactor"><textarea style="width:100%; height: 500px;">{{reactor|json}}</textarea></p>-->
+	
+		
+		<!--<p>{{reactor[ selected ] | json}}</p>-->
+	<div style="display: inline-block ;  vertical-align: top ;" data="reactor[ selected ]" r-data-editor></div>
+	
+	
+	
+	<div style="display: inline-block ;  vertical-align: top ;">
+		<select ng-model="addable" size="20" style="width:100px" multiple="false">
+			<option value="entries">Entries</option>
+			<option value="author">author</option>
+			<option value="state">state</option>
+			<option value="theme">theme</option>
+			<option value="edit">edit</option>
+			<option value="settings">settings</option>
+			<option value="options">options</option>
+			<option value="text">text</option>
+			<option value="title">title</option>
+			<option value="instructions">instructions</option>
+			<option value="description">description</option>
+			<option value="dimensions">dimensions</option>
+			<option value="image">image</option>
+			<option value="images">images</option>
+			<option value="correct">correct</option>
+			<option value="incorrect">incorrect</option>
+			<option value="feedback">feedback</option>
+			<option value="answer">answer</option>
+			<option value="answers">answers</option>
+			<option value="meta">meta</option>
+			<option value="slide">slide</option>
+			<option value="question">question</option>
+			<option value="navigation state">navigation state</option>
+			<option value="entry of entries">entry of entries</option>
+			<option value="pagination">pagination</option>
+			<option value="button">button</option>
+			<option value="navigation controls">navigation controls</option>
+			<option value="navigation">navigation</option>
+			<option value="quiz">quiz</option>
+		</select>
+		<br>
+		<input type="button" ng-click="creatorService.createAndAddTo( { type: addable } , reactor[ selected ] , addable )" value="add" />
+	</div>
+		
+</div>

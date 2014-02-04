@@ -20,8 +20,20 @@ angular.module( 'reactor_directives', [] )
 	})
 	
 
-	.directive( 'reactorOutput' , function () {
 
+	.directive('rDataEditor', function() {
+		return {
+			restrict: 'A',
+			scope: {
+				data: "="
+			},
+			templateUrl: 'partials/dataEditor.html?t=' + new Date() 
+		} ;
+	})
+	
+
+
+	.directive( 'reactorOutput' , function () {
 		return {
 			restrict: 'A',
 			scope: {

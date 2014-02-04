@@ -24,6 +24,8 @@ config( [ '$routeProvider' , function( $routeProvider ) {
   
   $routeProvider.when( '/create/:new_reactor_type/:new_reactor_id/:editing' , { templateUrl: 'partials/create.html', controller: 'Create' });
 
+  $routeProvider.when( '/template', { templateUrl: 'partials/template.html', controller: 'Template' });
+
   $routeProvider.when( '/edit', { templateUrl: 'partials/edit.html', controller: 'Edit' });
 
   $routeProvider.when( '/view1', { templateUrl: 'partials/partial1.html', controller: 'MyCtrl1' });
