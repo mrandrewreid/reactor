@@ -1,4 +1,4 @@
-<div ng-if="!text.settings.edit.locked" class="controls">
+<div ng-if="!text.settings.edit.locked" class="controls" ng-dblclick="text.settings.edit.locked = true">
 	<span unlocker settings="text.settings"></span>
 	<span reactor-controls element="text" ng-if="text.settings.edit.editable && !text.settings.edit.locked"></span>
 </div>
@@ -41,4 +41,4 @@
 
 
 <!-- if not available to edit -->
-<p ng-if="text.settings.edit.locked"><span unlocker settings="text.settings"></span>{{text.text}}</p>
+<p ng-if="text.settings.edit.locked" ng-dblclick="text.settings.edit.locked = false"><span unlocker settings="text.settings"></span>{{text.text}}</p>
