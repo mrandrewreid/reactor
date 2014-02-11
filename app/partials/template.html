@@ -22,9 +22,33 @@
 	
 		
 		<!--<p>{{reactor[ selected ] | json}}</p>-->
-	<div style="display: inline-block ;  vertical-align: top ;" data="reactor[ selected ]" r-data-editor></div>
-	
-	
+	<div ng-switch="reactor[ selected ]" style="display: inline-block ; border: 1pt solid #ccc ; vertical-align: top ; width: 100px; ">
+
+		<span 
+			ng-switch-when="'[object Object]'" 
+			style="display: inline-block ;  vertical-align: top ;" 
+			data="reactor[ selected ]" 
+			r-data-editor>
+		</span>
+
+		<span 
+			ng-switch-when="" 
+			style="display: inline-block ; border: 1pt solid #ccc ; vertical-align: top ; width: 100px; "
+			>
+			It's nothing! {{reactor[selected]}}
+		</span>
+		
+		<span ng-switch-default style="display: inline-block ; border: 1pt solid #ccc ; vertical-align: top ; width: 100px; ">
+			It's NOT nothing! {{reactor[selected]}}
+			<label style=" max-width: 96% ;">Selected: <input style="display: inline-block; max-width: 90% ;" type="text" ng-model="reactor[ selected ]" /></label>
+		</span>
+
+	</div>
+
+	<div ng-if="reactor[ selected ] == '[object Object]' " style="display: inline-block ;  vertical-align: top ;" data="reactor[ selected ]" r-data-editor></div>
+
+
+	<br />
 	
 	<div style="display: inline-block ;  vertical-align: top ;">
 		<select ng-model="addable" size="20" style="width:100px" multiple="false">

@@ -233,7 +233,17 @@ var reactor_services = angular.module( 'reactor.services', [] ) ;
 					
 				}
 
-
+				creatorService.createAndAddTo = function( details , receiver , property_name ) {
+					
+					var new_obj = this.create( details ) ;
+					if ( property_name ) {
+						receiver[ property_name ] = new_obj ;
+					} else {
+						receiver.push( new_obj ) ;
+					}
+					
+				}
+				
 
 				creatorService.create = function( details ) {
 
